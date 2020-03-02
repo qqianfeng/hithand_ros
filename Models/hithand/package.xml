@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package>
+  <name>hithand</name>
+  <version>0.0.3</version>
+  <description>SDF description for HBP Husky</description>
+
+  <maintainer email="qian.feng@tum.de">Qian Feng</maintainer>
+  <author email="qian.feng@tum.de">Qian Feng</author>
+
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <export>
+  </export>
+</package>
