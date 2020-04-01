@@ -6,6 +6,8 @@ a robot model of hithand on gazebo
  folder of gazebo models
 3. Experiments/template_hithand_holodeck:
  folder of neurorobotic platform
+4. meshes
+collision and visual 3D models here. All other meshes folder should be a symlink to this.
 
 Contact:
 qian.feng@tum.de

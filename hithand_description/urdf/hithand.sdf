@@ -61,11 +61,11 @@
         </geometry>
       </collision>
       <visual name='Right_Index_Basecover_visual'>
-        <pose frame=''>0 0 0 1.57 -0 0</pose>
+        <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-basecover.stl</uri>
+            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-basecover.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -112,11 +112,11 @@
         </geometry>
       </collision>
       <visual name='Right_Index_Phoaprox_visual'>
-        <pose frame=''>0 0 0 -1.57 0 0</pose>
+        <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phaprox.stl</uri>
+            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phaprox.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -163,11 +163,11 @@
         </geometry>
       </collision>
       <visual name='Right_Index_Phamed_visual'>
-        <pose frame=''>0 0 0 -1.57 0 0</pose>
+        <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phamed.stl</uri>
+            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phamed.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -214,11 +214,11 @@
         </geometry>
       </collision>
       <visual name='Right_Index_Phadist_visual'>
-        <pose frame=''>0 0 0 -1.57 0 0</pose>
+        <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phadist.stl</uri>
+            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phadist.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -265,11 +265,11 @@
         </geometry>
       </collision>
       <visual name='Right_Little_Basecover_visual'>
-        <pose frame=''>0 0 0 1.57 -0 0</pose>
+        <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-basecover.stl</uri>
+            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-basecover.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -316,11 +316,11 @@
         </geometry>
       </collision>
       <visual name='Right_Little_Phoaprox_visual'>
-        <pose frame=''>0 0 0 -1.57 0 0</pose>
+        <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phaprox.stl</uri>
+            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phaprox.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -367,11 +367,11 @@
         </geometry>
       </collision>
       <visual name='Right_Little_Phamed_visual'>
-        <pose frame=''>0 0 0 -1.57 0 0</pose>
+        <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phamed.stl</uri>
+            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phamed.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -418,11 +418,11 @@
         </geometry>
       </collision>
       <visual name='Right_Little_Phadist_visual'>
-        <pose frame=''>0 0 0 -1.57 0 0</pose>
+        <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phadist.stl</uri>
+            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phadist.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -469,11 +469,11 @@
         </geometry>
       </collision>
       <visual name='Right_Middle_Basecover_visual'>
-        <pose frame=''>0 0 0 1.57 -0 0</pose>
+        <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-basecover.stl</uri>
+            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-basecover.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -520,11 +520,11 @@
         </geometry>
       </collision>
       <visual name='Right_Middle_Phoaprox_visual'>
-        <pose frame=''>0 0 0 -1.57 0 0</pose>
+        <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phaprox.stl</uri>
+            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phaprox.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -571,11 +571,11 @@
         </geometry>
       </collision>
       <visual name='Right_Middle_Phamed_visual'>
-        <pose frame=''>0 0 0 -1.57 0 0</pose>
+        <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phamed.stl</uri>
+            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phamed.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -622,11 +622,11 @@
         </geometry>
       </collision>
       <visual name='Right_Middle_Phadist_visual'>
-        <pose frame=''>0 0 0 -1.57 0 0</pose>
+        <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phadist.stl</uri>
+            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phadist.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -673,11 +673,11 @@
         </geometry>
       </collision>
       <visual name='Right_Ring_Basecover_visual'>
-        <pose frame=''>0 0 0 1.57 -0 0</pose>
+        <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-basecover.stl</uri>
+            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-basecover.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -724,11 +724,11 @@
         </geometry>
       </collision>
       <visual name='Right_Ring_Phoaprox_visual'>
-        <pose frame=''>0 0 0 -1.57 0 0</pose>
+        <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phaprox.stl</uri>
+            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phaprox.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -775,11 +775,11 @@
         </geometry>
       </collision>
       <visual name='Right_Ring_Phamed_visual'>
-        <pose frame=''>0 0 0 -1.57 0 0</pose>
+        <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phamed.stl</uri>
+            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phamed.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -826,11 +826,11 @@
         </geometry>
       </collision>
       <visual name='Right_Ring_Phadist_visual'>
-        <pose frame=''>0 0 0 -1.57 0 0</pose>
+        <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phadist.stl</uri>
+            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phadist.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -877,11 +877,11 @@
         </geometry>
       </collision>
       <visual name='Right_Thumb_Basecover_visual'>
-        <pose frame=''>0 0 0 1.57 -0 0</pose>
+        <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-basecover.stl</uri>
+            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-basecover.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -928,11 +928,11 @@
         </geometry>
       </collision>
       <visual name='Right_Thumb_Phoaprox_visual'>
-        <pose frame=''>0 0 0 -1.57 0 0</pose>
+        <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phaprox.stl</uri>
+            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phaprox.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -979,11 +979,11 @@
         </geometry>
       </collision>
       <visual name='Right_Thumb_Phamed_visual'>
-        <pose frame=''>0 0 0 -1.57 0 0</pose>
+        <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phamed.stl</uri>
+            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phamed.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -1030,11 +1030,11 @@
         </geometry>
       </collision>
       <visual name='Right_Thumb_Phadist_visual'>
-        <pose frame=''>0 0 0 -1.57 0 0</pose>
+        <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phadist.stl</uri>
+            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phadist.dae</uri>
           </mesh>
         </geometry>
       </visual>

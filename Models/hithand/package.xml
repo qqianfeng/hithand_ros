@@ -2,7 +2,7 @@
 <package>
   <name>hithand</name>
   <version>0.0.3</version>
-  <description>SDF description for HBP Husky</description>
+  <description>SDF description for HBP Hithand</description>
 
   <maintainer email="qian.feng@tum.de">Qian Feng</maintainer>
   <author email="qian.feng@tum.de">Qian Feng</author>

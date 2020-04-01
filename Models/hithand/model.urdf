@@ -1,0 +1,739 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot name="hithand">
+  <material name="grey">
+    <color rgba=".2 .2 .2 1"/>
+  </material>
+  <material name="blue">
+    <color rgba="0 0 0.8 1"/>
+  </material>
+  <material name="white">
+    <color rgba="1 1 1 1"/>
+  </material>
+  <material name="lightblue">
+    <color rgba="0.2 0.4 0.8 1"/>
+  </material>
+ 
+ <link name="world"/>
+
+<joint name="fixed" type="fixed">
+    <parent link="world"/>
+    <child link="base_link"/>
+</joint>  
+<!-- Used for fixing robot to Gazebo 'base_link' -->
+  <link name="base_link">
+  	<inertial>
+      		<origin xyz="0.0 0.0 0.0"
+        		rpy="0 0 0" />
+      		<mass value="1.0"/>
+      		<inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    	</inertial>
+   	<visual>
+      		<origin rpy="0 0 0" xyz="0 0 0" />
+      		<geometry>
+        		<mesh filename="package://hithand/meshes/visual/hit-hand-2-palm-right.dae"/>
+      		</geometry>
+      		<material name="grey" />
+    	</visual>
+    	<collision>
+      		<origin rpy="0 0 0" xyz="0 0 0.09" />
+      		<geometry name="hithand_right_palm_collision">
+        		<cylinder length="0.180" radius="0.06" />
+      		</geometry>
+    	</collision>
+</link>
+
+<!-- ####################Thumb##########################  -->
+  <link name="Right_Thumb_Basecover">
+    	<inertial>
+      		<origin xyz="0 0 0"
+        		rpy="0 0 0" />
+      		<mass value="1.0" />
+      		<inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+      	</inertial>
+    	<visual>
+      		<origin xyz="0 0 0"
+        		rpy="0 0 0" />
+      		<geometry>
+			<!-- <mesh filename="file://$(arg meshDirectory)visual/hit-hand-2-finger-basecover.dae" /> -->
+			<mesh filename="package://hithand/meshes/visual/hit-hand-2-finger-basecover.dae"/>
+      		</geometry>
+		<material name="white"/>
+    	</visual>
+    	<collision>
+      		<origin xyz="0 0 0"
+        		rpy="0 0 0" />
+      		<geometry name='hithand_right_base_cover'>
+        		<cylinder length="0.180" radius="0.06" />
+      		</geometry>
+    	</collision>
+  </link>  
+
+  <joint name="Right_Thumb_1"
+    type="revolute">
+        <!-- joint origin in parent link frame -->
+    	<origin xyz="0.06217593 0.044372912 0.078734808"
+      		rpy="0.225810 -1.083656 0.411355" />
+    	<parent link="base_link" />
+    	<child link="Right_Thumb_Basecover" />
+	<axis xyz="0 0 1" />
+	<limit effort="30" lower="-0.50" upper="1.4" velocity="3.14"/>
+  </joint>
+
+  <link name="Right_Thumb_Phoaprox">
+        <inertial>
+                <origin xyz="0.06217593 0.044372912 0.078734808"
+                        rpy="0.225810 -1.083656 0.411355" />
+                <mass value="1.0" />
+                <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+        </inertial>
+        <visual>
+                <origin xyz="0 0 0"
+                        rpy="0 0 0" />
+                <geometry>
+                        <mesh filename="package://hithand/meshes/visual/hit-hand-2-finger-phaprox.dae" />
+                </geometry>
+		<material name="lightblue"/>
+        </visual>
+        <collision>
+                <origin xyz="0 0 0"
+                        rpy="0 0 0" />
+                <geometry name='hithand_right_phoarpox'>
+                        <cylinder length="0.180" radius="0.06" />
+                </geometry>
+        </collision>
+  </link>
+  
+  <joint name="Right_Thumb_2"
+    type="revolute">
+        <origin xyz="0 0 0 "
+                rpy="1.5708 0 0" />
+        <parent link="Right_Thumb_Basecover" />
+        <child link="Right_Thumb_Phoaprox" />
+        <axis xyz="0 0 1" />
+        <limit effort="30" lower="-0.50" upper="1.4" velocity="3.14"/>
+  </joint>
+  
+  <link name="Right_Thumb_Phamed">
+        <inertial>
+                <origin xyz="0 0 0"
+                        rpy="0 0 0" />
+                <mass value="1.0" />
+                <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+        </inertial>
+        <visual>
+                <origin xyz="0 0 0"
+                        rpy="0 0 0" />
+                <geometry>
+			<mesh filename="package://hithand/meshes/visual/hit-hand-2-finger-phamed.dae" />
+                </geometry>
+		<material name="white"/>
+        </visual>
+        <collision>
+                <origin xyz="0 0 0"
+                        rpy="0 0 0" />
+                <geometry name='hithand_right_phamed'>
+                        <cylinder length="0.180" radius="0.06" />
+                </geometry>
+        </collision>
+  </link>
+
+  <joint name="Right_Thumb_3"
+    type="revolute">
+        <origin xyz="0.055 0 0"
+                rpy="0 0 0" />
+        <parent link="Right_Thumb_Phoaprox" />
+        <child link="Right_Thumb_Phamed" />
+        <axis xyz="0 0 1" />
+        <limit effort="30" lower="-0.50" upper="1.4" velocity="3.14"/>
+  </joint>
+  
+  <link name="Right_Thumb_Phadist">
+        <inertial>
+                <origin xyz="0 0 0"
+                        rpy="0 0 0" />
+                <mass value="1.0" />
+                <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+        </inertial>
+        <visual>
+                <origin xyz="0 0 0"
+                        rpy="0 0 0" />
+                <geometry>
+                        <mesh filename="package://hithand/meshes/visual/hit-hand-2-finger-phadist.dae" />
+                </geometry>
+                <material name="lightblue"/>
+        </visual>
+        <collision>
+                <origin xyz="0 0 0"
+                        rpy="0 0 0" />
+                <geometry name='hithand_right_phadist'>
+                        <cylinder length="0.180" radius="0.06" />
+                </geometry>
+        </collision>
+  </link>
+
+  <joint name="Right_Thumb_4"
+    type="revolute">
+        <origin xyz="0.025 0 0"
+                rpy="0 0 -1.57" />
+        <parent link="Right_Thumb_Phamed" />
+        <child link="Right_Thumb_Phadist" />
+        <axis xyz="0 0 1" />
+        <limit effort="30" lower="-0.50" upper="1.4" velocity="3.14"/>
+  </joint>
+  <!-- #########################Thumb######################## -->
+
+
+<!-- ####################Index Finger##########################  -->
+  <link name="Right_Index_Basecover">
+    	<inertial>
+      		<origin xyz="0 0 0"
+        		rpy="0 0 0" />
+      		<mass value="1.0" />
+      		<inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+      	</inertial>
+    	<visual>
+      		<origin xyz="0 0 0"
+			rpy="0 0 0" />
+		<!-- 1.57 0 0 -->
+      		<geometry>
+	      		<mesh filename="package://hithand/meshes/visual/hit-hand-2-finger-basecover.dae" />
+      		</geometry>
+		<material name="white"/>
+    	</visual>
+    	<collision>
+      		<origin xyz="0 0 0"
+        		rpy="0 0 0" />
+      		<geometry name='hithand_right_base_cover'>
+        		<cylinder length="0.180" radius="0.06" />
+      		</geometry>
+    	</collision>
+  </link>  
+
+  <joint name="Right_Index_1"
+    type="revolute">
+    	<origin xyz="-0.002529881 0.03680013 0.107783545"
+      		rpy="3.054326 -1.570796 0.000000" />
+    	<parent link="base_link" />
+    	<child link="Right_Index_Basecover" />
+	<axis xyz="0 0 1" />
+	<limit effort="30" lower="-0.50" upper="1.4" velocity="3.14"/>
+  </joint>
+
+  <link name="Right_Index_Phoaprox">
+        <inertial>
+                <origin xyz="0.06217593 0.044372912 0.078734808"
+                        rpy="0.225810 -1.083656 0.411355" />
+                <mass value="1.0" />
+                <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+        </inertial>
+        <visual>
+                <origin xyz="0 0 0"
+                        rpy="0 0 0" />
+                <geometry>
+                        <mesh filename="package://hithand/meshes/visual/hit-hand-2-finger-phaprox.dae" />
+                </geometry>
+		<material name="lightblue"/>
+        </visual>
+        <collision>
+                <origin xyz="0 0 0"
+                        rpy="0 0 0" />
+                <geometry name='hithand_right_phoarpox'>
+                        <cylinder length="0.180" radius="0.06" />
+                </geometry>
+        </collision>
+  </link>
+  
+  <joint name="Right_Index_2"
+    type="revolute">
+        <origin xyz="0 0 0 "
+                rpy="1.5708 0 0" />
+        <parent link="Right_Index_Basecover" />
+        <child link="Right_Index_Phoaprox" />
+        <axis xyz="0 0 1" />
+        <limit effort="30" lower="-0.50" upper="1.4" velocity="3.14"/>
+  </joint>
+  
+  <link name="Right_Index_Phamed">
+        <inertial>
+                <origin xyz="0 0 0"
+                        rpy="0 0 0" />
+                <mass value="1.0" />
+                <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+        </inertial>
+        <visual>
+                <origin xyz="0 0 0"
+                        rpy="0 0 0" />
+                <geometry>
+                        <mesh filename="package://hithand/meshes/visual/hit-hand-2-finger-phamed.dae" />
+                </geometry>
+		<material name="white"/>
+        </visual>
+        <collision>
+                <origin xyz="0 0 0"
+                        rpy="0 0 0" />
+                <geometry name='hithand_right_phamed'>
+                        <cylinder length="0.180" radius="0.06" />
+                </geometry>
+        </collision>
+  </link>
+
+  <joint name="Right_Index_3"
+    type="revolute">
+        <origin xyz="0.055 0 0"
+                rpy="0 0 0" />
+        <parent link="Right_Index_Phoaprox" />
+        <child link="Right_Index_Phamed" />
+        <axis xyz="0 0 1" />
+        <limit effort="30" lower="-0.50" upper="1.4" velocity="3.14"/>
+  </joint>
+  
+  <link name="Right_Index_Phadist">
+        <inertial>
+                <origin xyz="0 0 0"
+                        rpy="0 0 0" />
+                <mass value="1.0" />
+                <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+        </inertial>
+        <visual>
+                <origin xyz="0 0 0"
+                        rpy="0 0 0" />
+                <geometry>
+                        <mesh filename="package://hithand/meshes/visual/hit-hand-2-finger-phadist.dae" />
+                </geometry>
+                <material name="lightblue"/>
+        </visual>
+        <collision>
+                <origin xyz="0 0 0"
+                        rpy="0 0 0" />
+                <geometry name='hithand_right_phadist'>
+                        <cylinder length="0.180" radius="0.06" />
+                </geometry>
+        </collision>
+  </link>
+
+  <joint name="Right_Index_4"
+    type="revolute">
+        <origin xyz="0.025 0 0"
+                rpy="0 0 -1.57" />
+        <parent link="Right_Index_Phamed" />
+        <child link="Right_Index_Phadist" />
+        <axis xyz="0 0 1" />
+        <limit effort="30" lower="-0.50" upper="1.4" velocity="3.14"/>
+  </joint>
+  <!-- #########################Index Finger######################## -->
+
+<!-- ####################Middle Finger##########################  -->
+  <link name="Right_Middle_Basecover">
+    	<inertial>
+      		<origin xyz="0 0 0"
+        		rpy="0 0 0" />
+      		<mass value="1.0" />
+      		<inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+      	</inertial>
+    	<visual>
+      		<origin xyz="0 0 0"
+        		rpy="0 0 0" />
+      		<geometry>
+	      		<mesh filename="package://hithand/meshes/visual/hit-hand-2-finger-basecover.dae" />
+      		</geometry>
+		<material name="white"/>
+    	</visual>
+    	<collision>
+      		<origin xyz="0 0 0"
+        		rpy="0 0 0" />
+      		<geometry name='hithand_right_base_cover'>
+        		<cylinder length="0.180" radius="0.06" />
+      		</geometry>
+    	</collision>
+  </link>
+
+  <joint name="Right_Middle_1"
+    type="revolute">
+    	<origin xyz="-0.0037 0.01  0.117783545"
+      		rpy="-3.141593 -1.570796 0.000000" />
+    	<parent link="base_link" />
+    	<child link="Right_Middle_Basecover" />
+	<axis xyz="0 0 1" />
+	<limit effort="30" lower="-0.50" upper="1.4" velocity="3.14"/>
+  </joint>
+
+  <link name="Right_Middle_Phoaprox">
+        <inertial>
+                <origin xyz="0.06217593 0.044372912 0.078734808"
+                        rpy="0.225810 -1.083656 0.411355" />
+                <mass value="1.0" />
+                <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+        </inertial>
+        <visual>
+                <origin xyz="0 0 0"
+                        rpy="0 0 0" />
+                <geometry>
+                        <mesh filename="package://hithand/meshes/visual/hit-hand-2-finger-phaprox.dae" />
+                </geometry>
+		<material name="lightblue"/>
+        </visual>
+        <collision>
+                <origin xyz="0 0 0"
+                        rpy="0 0 0" />
+                <geometry name='hithand_right_phoarpox'>
+                        <cylinder length="0.180" radius="0.06" />
+                </geometry>
+        </collision>
+  </link>
+
+  <joint name="Right_Middle_2"
+    type="revolute">
+        <origin xyz="0 0 0 "
+                rpy="1.5708 0 0" />
+        <parent link="Right_Middle_Basecover" />
+        <child link="Right_Middle_Phoaprox" />
+        <axis xyz="0 0 1" />
+        <limit effort="30" lower="-0.50" upper="1.4" velocity="3.14"/>
+  </joint>
+
+  <link name="Right_Middle_Phamed">
+        <inertial>
+                <origin xyz="0 0 0"
+                        rpy="0 0 0" />
+                <mass value="1.0" />
+                <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+        </inertial>
+        <visual>
+                <origin xyz="0 0 0"
+                        rpy="0 0 0" />
+                <geometry>
+                        <mesh filename="package://hithand/meshes/visual/hit-hand-2-finger-phamed.dae" />
+                </geometry>
+		<material name="white"/>
+        </visual>
+        <collision>
+                <origin xyz="0 0 0"
+                        rpy="0 0 0" />
+                <geometry name='hithand_right_phamed'>
+                        <cylinder length="0.180" radius="0.06" />
+                </geometry>
+        </collision>
+  </link>
+
+  <joint name="Right_Middle_3"
+    type="revolute">
+        <origin xyz="0.055 0 0"
+                rpy="0 0 0" />
+        <parent link="Right_Middle_Phoaprox" />
+        <child link="Right_Middle_Phamed" />
+        <axis xyz="0 0 1" />
+        <limit effort="30" lower="-0.50" upper="1.4" velocity="3.14"/>
+  </joint>
+
+  <link name="Right_Middle_Phadist">
+        <inertial>
+                <origin xyz="0 0 0"
+                        rpy="0 0 0" />
+                <mass value="1.0" />
+                <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+        </inertial>
+        <visual>
+                <origin xyz="0 0 0"
+                        rpy="0 0 0" />
+                <geometry>
+                        <mesh filename="package://hithand/meshes/visual/hit-hand-2-finger-phadist.dae" />
+                </geometry>
+                <material name="lightblue"/>
+        </visual>
+        <collision>
+                <origin xyz="0 0 0"
+                        rpy="0 0 0" />
+                <geometry name='hithand_right_phadist'>
+                        <cylinder length="0.180" radius="0.06" />
+                </geometry>
+        </collision>
+  </link>
+
+  <joint name="Right_Middle_4"
+    type="revolute">
+        <origin xyz="0.025 0 0"
+                rpy="0 0 -1.57" />
+        <parent link="Right_Middle_Phamed" />
+        <child link="Right_Middle_Phadist" />
+        <axis xyz="0 0 1" />
+        <limit effort="30" lower="-0.50" upper="1.4" velocity="3.14"/>
+  </joint>
+  <!-- #########################Middle Finger######################## -->
+
+<!-- ####################Ring Finger##########################  -->
+  <link name="Right_Ring_Basecover">
+    	<inertial>
+      		<origin xyz="0 0 0"
+        		rpy="0 0 0" />
+      		<mass value="1.0" />
+      		<inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+      	</inertial>
+    	<visual>
+      		<origin xyz="0 0 0"
+        		rpy="0 0 0" />
+      		<geometry>
+	      		<mesh filename="package://hithand/meshes/visual/hit-hand-2-finger-basecover.dae" />
+      		</geometry>
+		<material name="white"/>
+    	</visual>
+    	<collision>
+      		<origin xyz="0 0 0"
+        		rpy="0 0 0" />
+      		<geometry name='hithand_right_base_cover'>
+        		<cylinder length="0.180" radius="0.06" />
+      		</geometry>
+    	</collision>
+  </link>
+
+  <joint name="Right_Ring_1"
+    type="revolute">
+    	<origin xyz="0 -0.01680013 0.11258354"
+      		rpy="-3.054326 -1.570796 0.000000" />
+    	<parent link="base_link" />
+    	<child link="Right_Ring_Basecover" />
+	<axis xyz="0 0 1" />
+	<limit effort="30" lower="-0.50" upper="1.4" velocity="3.14"/>
+  </joint>
+
+  <link name="Right_Ring_Phoaprox">
+        <inertial>
+                <origin xyz="0.06217593 0.044372912 0.078734808"
+                        rpy="0.225810 -1.083656 0.411355" />
+                <mass value="1.0" />
+                <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+        </inertial>
+        <visual>
+                <origin xyz="0 0 0"
+                        rpy="0 0 0" />
+                <geometry>
+                        <mesh filename="package://hithand/meshes/visual/hit-hand-2-finger-phaprox.dae" />
+                </geometry>
+		<material name="lightblue"/>
+        </visual>
+        <collision>
+                <origin xyz="0 0 0"
+                        rpy="0 0 0" />
+                <geometry name='hithand_right_phoarpox'>
+                        <cylinder length="0.180" radius="0.06" />
+                </geometry>
+        </collision>
+  </link>
+
+  <joint name="Right_Ring_2"
+    type="revolute">
+        <origin xyz="0 0 0 "
+                rpy="1.5708 0 0" />
+        <parent link="Right_Ring_Basecover" />
+        <child link="Right_Ring_Phoaprox" />
+        <axis xyz="0 0 1" />
+        <limit effort="30" lower="-0.50" upper="1.4" velocity="3.14"/>
+  </joint>
+
+  <link name="Right_Ring_Phamed">
+        <inertial>
+                <origin xyz="0 0 0"
+                        rpy="0 0 0" />
+                <mass value="1.0" />
+                <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+        </inertial>
+        <visual>
+                <origin xyz="0 0 0"
+                        rpy="0 0 0" />
+                <geometry>
+                        <mesh filename="package://hithand/meshes/visual/hit-hand-2-finger-phamed.dae" />
+                </geometry>
+		<material name="white"/>
+        </visual>
+        <collision>
+                <origin xyz="0 0 0"
+                        rpy="0 0 0" />
+                <geometry name='hithand_right_phamed'>
+                        <cylinder length="0.180" radius="0.06" />
+                </geometry>
+        </collision>
+  </link>
+
+  <joint name="Right_Ring_3"
+    type="revolute">
+        <origin xyz="0.055 0 0"
+                rpy="0 0 0" />
+        <parent link="Right_Ring_Phoaprox" />
+        <child link="Right_Ring_Phamed" />
+        <axis xyz="0 0 1" />
+        <limit effort="30" lower="-0.50" upper="1.4" velocity="3.14"/>
+  </joint>
+
+  <link name="Right_Ring_Phadist">
+        <inertial>
+                <origin xyz="0 0 0"
+                        rpy="0 0 0" />
+                <mass value="1.0" />
+                <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+        </inertial>
+        <visual>
+                <origin xyz="0 0 0"
+                        rpy="0 0 0" />
+                <geometry>
+                        <mesh filename="package://hithand/meshes/visual/hit-hand-2-finger-phadist.dae" />
+                </geometry>
+                <material name="lightblue"/>
+        </visual>
+        <collision>
+                <origin xyz="0 0 0"
+                        rpy="0 0 0" />
+                <geometry name='hithand_right_phadist'>
+                        <cylinder length="0.180" radius="0.06" />
+                </geometry>
+        </collision>
+  </link>
+
+  <joint name="Right_Ring_4"
+    type="revolute">
+        <origin xyz="0.025 0 0"
+                rpy="0 0 -1.57" />
+        <parent link="Right_Ring_Phamed" />
+        <child link="Right_Ring_Phadist" />
+        <axis xyz="0 0 1" />
+        <limit effort="30" lower="-0.50" upper="1.4" velocity="3.14"/>
+  </joint>
+  <!-- #########################Ring Finger######################## -->
+
+<!-- ####################Little Finger##########################  -->
+  <link name="Right_Little_Basecover">
+    	<inertial>
+      		<origin xyz="0 0 0"
+        		rpy="0 0 0" />
+      		<mass value="1.0" />
+      		<inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+      	</inertial>
+    	<visual>
+      		<origin xyz="0 0 0"
+        		rpy="0 0 0" />
+      		<geometry>
+	      		<mesh filename="package://hithand/meshes/visual/hit-hand-2-finger-basecover.dae" />
+      		</geometry>
+		<material name="white"/>
+    	</visual>
+    	<collision>
+      		<origin xyz="0 0 0"
+        		rpy="0 0 0" />
+      		<geometry name='hithand_right_base_cover'>
+        		<cylinder length="0.180" radius="0.06" />
+      		</geometry>
+    	</collision>
+  </link>
+
+  <joint name="Right_Little_1"
+    type="revolute">
+    	<origin xyz="0.000971571 -0.0433963 0.093583545"
+      		rpy="-2.967060 -1.570796 0.000000" />
+    	<parent link="base_link" />
+    	<child link="Right_Little_Basecover" />
+	<axis xyz="0 0 1" />
+	<limit effort="30" lower="-0.50" upper="1.4" velocity="3.14"/>
+  </joint>
+
+  <link name="Right_Little_Phoaprox">
+        <inertial>
+                <origin xyz="0.06217593 0.044372912 0.078734808"
+                        rpy="0.225810 -1.083656 0.411355" />
+                <mass value="1.0" />
+                <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+        </inertial>
+        <visual>
+                <origin xyz="0 0 0"
+                        rpy="0 0 0" />
+                <geometry>
+                        <mesh filename="package://hithand/meshes/visual/hit-hand-2-finger-phaprox.dae" />
+                </geometry>
+		<material name="lightblue"/>
+        </visual>
+        <collision>
+                <origin xyz="0 0 0"
+                        rpy="0 0 0" />
+                <geometry name='hithand_right_phoarpox'>
+                        <cylinder length="0.180" radius="0.06" />
+                </geometry>
+        </collision>
+  </link>
+
+  <joint name="Right_Little_2"
+    type="revolute">
+        <origin xyz="0 0 0 "
+                rpy="1.5708 0 0" />
+        <parent link="Right_Little_Basecover" />
+        <child link="Right_Little_Phoaprox" />
+        <axis xyz="0 0 1" />
+        <limit effort="30" lower="-0.50" upper="1.4" velocity="3.14"/>
+  </joint>
+
+  <link name="Right_Little_Phamed">
+        <inertial>
+                <origin xyz="0 0 0"
+                        rpy="0 0 0" />
+                <mass value="1.0" />
+                <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+        </inertial>
+        <visual>
+                <origin xyz="0 0 0"
+                        rpy="0 0 0" />
+                <geometry>
+                        <mesh filename="package://hithand/meshes/visual/hit-hand-2-finger-phamed.dae" />
+                </geometry>
+		<material name="white"/>
+        </visual>
+        <collision>
+                <origin xyz="0 0 0"
+                        rpy="0 0 0" />
+                <geometry name='hithand_right_phamed'>
+                        <cylinder length="0.180" radius="0.06" />
+                </geometry>
+        </collision>
+  </link>
+
+  <joint name="Right_Little_3"
+    type="revolute">
+        <origin xyz="0.055 0 0"
+                rpy="0 0 0" />
+        <parent link="Right_Little_Phoaprox" />
+        <child link="Right_Little_Phamed" />
+        <axis xyz="0 0 1" />
+        <limit effort="30" lower="-0.50" upper="1.4" velocity="3.14"/>
+  </joint>
+
+  <link name="Right_Little_Phadist">
+        <inertial>
+                <origin xyz="0 0 0"
+                        rpy="0 0 0" />
+                <mass value="1.0" />
+                <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+        </inertial>
+        <visual>
+                <origin xyz="0 0 0"
+                        rpy="0 0 0" />
+                <geometry>
+                        <mesh filename="package://hithand/meshes/visual/hit-hand-2-finger-phadist.dae" />
+                </geometry>
+                <material name="lightblue"/>
+        </visual>
+        <collision>
+                <origin xyz="0 0 0"
+                        rpy="0 0 0" />
+                <geometry name='hithand_right_phadist'>
+                        <cylinder length="0.180" radius="0.06" />
+                </geometry>
+        </collision>
+  </link>
+
+  <joint name="Right_Little_4"
+    type="revolute">
+        <origin xyz="0.025 0 0"
+                rpy="0 0 -1.57" />
+        <parent link="Right_Little_Phamed" />
+        <child link="Right_Little_Phadist" />
+        <axis xyz="0 0 1" />
+        <limit effort="30" lower="-0.50" upper="1.4" velocity="3.14"/>
+  </joint>
+  <!-- #########################Little Finger######################## -->
+
+</robot>

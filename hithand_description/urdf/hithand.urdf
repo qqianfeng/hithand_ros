@@ -52,10 +52,10 @@
       	</inertial>
     	<visual>
       		<origin xyz="0 0 0"
-        		rpy="1.57 0 0" />
+        		rpy="0 0 0" />
       		<geometry>
-			<!-- <mesh filename="file://$(arg meshDirectory)visual/hit-hand-2-finger-basecover.stl" /> -->
-			<mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-basecover.stl"/>
+			<!-- <mesh filename="file://$(arg meshDirectory)visual/hit-hand-2-finger-basecover.dae" /> -->
+			<mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-basecover.dae"/>
       		</geometry>
 		<material name="white"/>
     	</visual>
@@ -88,9 +88,9 @@
         </inertial>
         <visual>
                 <origin xyz="0 0 0"
-                        rpy="-1.57 0 0" />
+                        rpy="0 0 0" />
                 <geometry>
-                        <mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-phaprox.stl" />
+                        <mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-phaprox.dae" />
                 </geometry>
 		<material name="lightblue"/>
         </visual>
@@ -122,9 +122,9 @@
         </inertial>
         <visual>
                 <origin xyz="0 0 0"
-                        rpy="-1.57 0 0" />
+                        rpy="0 0 0" />
                 <geometry>
-			<mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-phamed.stl" />
+			<mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-phamed.dae" />
                 </geometry>
 		<material name="white"/>
         </visual>
@@ -156,9 +156,9 @@
         </inertial>
         <visual>
                 <origin xyz="0 0 0"
-                        rpy="-1.57 0 0" />
+                        rpy="0 0 0" />
                 <geometry>
-                        <mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-phadist.stl" />
+                        <mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-phadist.dae" />
                 </geometry>
                 <material name="lightblue"/>
         </visual>
@@ -193,9 +193,10 @@
       	</inertial>
     	<visual>
       		<origin xyz="0 0 0"
-        		rpy="1.57 0 0" />
+			rpy="0 0 0" />
+		<!-- 1.57 0 0 -->
       		<geometry>
-	      		<mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-basecover.stl" />
+	      		<mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-basecover.dae" />
       		</geometry>
 		<material name="white"/>
     	</visual>
@@ -227,9 +228,9 @@
         </inertial>
         <visual>
                 <origin xyz="0 0 0"
-                        rpy="-1.57 0 0" />
+                        rpy="0 0 0" />
                 <geometry>
-                        <mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-phaprox.stl" />
+                        <mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-phaprox.dae" />
                 </geometry>
 		<material name="lightblue"/>
         </visual>
@@ -261,9 +262,9 @@
         </inertial>
         <visual>
                 <origin xyz="0 0 0"
-                        rpy="-1.57 0 0" />
+                        rpy="0 0 0" />
                 <geometry>
-                        <mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-phamed.stl" />
+                        <mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-phamed.dae" />
                 </geometry>
 		<material name="white"/>
         </visual>
@@ -295,9 +296,9 @@
         </inertial>
         <visual>
                 <origin xyz="0 0 0"
-                        rpy="-1.57 0 0" />
+                        rpy="0 0 0" />
                 <geometry>
-                        <mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-phadist.stl" />
+                        <mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-phadist.dae" />
                 </geometry>
                 <material name="lightblue"/>
         </visual>
@@ -331,9 +332,9 @@
       	</inertial>
     	<visual>
       		<origin xyz="0 0 0"
-        		rpy="1.57 0 0" />
+        		rpy="0 0 0" />
       		<geometry>
-	      		<mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-basecover.stl" />
+	      		<mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-basecover.dae" />
       		</geometry>
 		<material name="white"/>
     	</visual>
@@ -365,9 +366,9 @@
         </inertial>
         <visual>
                 <origin xyz="0 0 0"
-                        rpy="-1.57 0 0" />
+                        rpy="0 0 0" />
                 <geometry>
-                        <mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-phaprox.stl" />
+                        <mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-phaprox.dae" />
                 </geometry>
 		<material name="lightblue"/>
         </visual>
@@ -399,9 +400,9 @@
         </inertial>
         <visual>
                 <origin xyz="0 0 0"
-                        rpy="-1.57 0 0" />
+                        rpy="0 0 0" />
                 <geometry>
-                        <mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-phamed.stl" />
+                        <mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-phamed.dae" />
                 </geometry>
 		<material name="white"/>
         </visual>
@@ -433,9 +434,9 @@
         </inertial>
         <visual>
                 <origin xyz="0 0 0"
-                        rpy="-1.57 0 0" />
+                        rpy="0 0 0" />
                 <geometry>
-                        <mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-phadist.stl" />
+                        <mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-phadist.dae" />
                 </geometry>
                 <material name="lightblue"/>
         </visual>
@@ -469,9 +470,9 @@
       	</inertial>
     	<visual>
       		<origin xyz="0 0 0"
-        		rpy="1.57 0 0" />
+        		rpy="0 0 0" />
       		<geometry>
-	      		<mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-basecover.stl" />
+	      		<mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-basecover.dae" />
       		</geometry>
 		<material name="white"/>
     	</visual>
@@ -503,9 +504,9 @@
         </inertial>
         <visual>
                 <origin xyz="0 0 0"
-                        rpy="-1.57 0 0" />
+                        rpy="0 0 0" />
                 <geometry>
-                        <mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-phaprox.stl" />
+                        <mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-phaprox.dae" />
                 </geometry>
 		<material name="lightblue"/>
         </visual>
@@ -537,9 +538,9 @@
         </inertial>
         <visual>
                 <origin xyz="0 0 0"
-                        rpy="-1.57 0 0" />
+                        rpy="0 0 0" />
                 <geometry>
-                        <mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-phamed.stl" />
+                        <mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-phamed.dae" />
                 </geometry>
 		<material name="white"/>
         </visual>
@@ -571,9 +572,9 @@
         </inertial>
         <visual>
                 <origin xyz="0 0 0"
-                        rpy="-1.57 0 0" />
+                        rpy="0 0 0" />
                 <geometry>
-                        <mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-phadist.stl" />
+                        <mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-phadist.dae" />
                 </geometry>
                 <material name="lightblue"/>
         </visual>
@@ -607,9 +608,9 @@
       	</inertial>
     	<visual>
       		<origin xyz="0 0 0"
-        		rpy="1.57 0 0" />
+        		rpy="0 0 0" />
       		<geometry>
-	      		<mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-basecover.stl" />
+	      		<mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-basecover.dae" />
       		</geometry>
 		<material name="white"/>
     	</visual>
@@ -641,9 +642,9 @@
         </inertial>
         <visual>
                 <origin xyz="0 0 0"
-                        rpy="-1.57 0 0" />
+                        rpy="0 0 0" />
                 <geometry>
-                        <mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-phaprox.stl" />
+                        <mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-phaprox.dae" />
                 </geometry>
 		<material name="lightblue"/>
         </visual>
@@ -675,9 +676,9 @@
         </inertial>
         <visual>
                 <origin xyz="0 0 0"
-                        rpy="-1.57 0 0" />
+                        rpy="0 0 0" />
                 <geometry>
-                        <mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-phamed.stl" />
+                        <mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-phamed.dae" />
                 </geometry>
 		<material name="white"/>
         </visual>
@@ -709,9 +710,9 @@
         </inertial>
         <visual>
                 <origin xyz="0 0 0"
-                        rpy="-1.57 0 0" />
+                        rpy="0 0 0" />
                 <geometry>
-                        <mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-phadist.stl" />
+                        <mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-phadist.dae" />
                 </geometry>
                 <material name="lightblue"/>
         </visual>
