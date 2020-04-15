@@ -35,12 +35,12 @@
       		<material name="grey" />
     	</visual>
     	<collision>
-      		<origin rpy="0 0 0" xyz="0 0 0.09" />
+      		<origin rpy="0 0 0" xyz="0 0 0" />
       		<geometry name="hithand_right_palm_collision">
-        		<cylinder length="0.180" radius="0.06" />
+        		<mesh filename="package://hithand_description/meshes/visual/hit-hand-2-palm-right.dae"/>
       		</geometry>
     	</collision>
-</link>
+  </link>
 
 <!-- ####################Thumb##########################  -->
   <link name="Right_Thumb_Basecover">
@@ -63,7 +63,7 @@
       		<origin xyz="0 0 0"
         		rpy="0 0 0" />
       		<geometry name='hithand_right_base_cover'>
-        		<cylinder length="0.180" radius="0.06" />
+        		<cylinder length="0.001" radius="0.001" />
       		</geometry>
     	</collision>
   </link>  
@@ -95,10 +95,10 @@
 		<material name="lightblue"/>
         </visual>
         <collision>
-                <origin xyz="0 0 0"
+                <origin xyz="0.03 0 0"
                         rpy="0 0 0" />
                 <geometry name='hithand_right_phoarpox'>
-                        <cylinder length="0.180" radius="0.06" />
+                        <box size="0.03 0.03 0.02" />
                 </geometry>
         </collision>
   </link>
@@ -129,11 +129,11 @@
 		<material name="white"/>
         </visual>
         <collision>
-                <origin xyz="0 0 0"
+                <origin xyz="0.01 0 0"
                         rpy="0 0 0" />
                 <geometry name='hithand_right_phamed'>
-                        <cylinder length="0.180" radius="0.06" />
-                </geometry>
+			            <box size="0.01 0.02 0.02" />
+		</geometry>
         </collision>
   </link>
 
@@ -166,7 +166,7 @@
                 <origin xyz="0 0 0"
                         rpy="0 0 0" />
                 <geometry name='hithand_right_phadist'>
-                        <cylinder length="0.180" radius="0.06" />
+                        <mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-phadist.dae" />
                 </geometry>
         </collision>
   </link>
@@ -204,7 +204,7 @@
       		<origin xyz="0 0 0"
         		rpy="0 0 0" />
       		<geometry name='hithand_right_base_cover'>
-        		<cylinder length="0.180" radius="0.06" />
+        		<cylinder length="0.001" radius="0.001" />
       		</geometry>
     	</collision>
   </link>  
@@ -235,10 +235,10 @@
 		<material name="lightblue"/>
         </visual>
         <collision>
-                <origin xyz="0 0 0"
+                <origin xyz="0.03 0 0"
                         rpy="0 0 0" />
                 <geometry name='hithand_right_phoarpox'>
-                        <cylinder length="0.180" radius="0.06" />
+                        <box size="0.03 0.03 0.02" />
                 </geometry>
         </collision>
   </link>
@@ -269,11 +269,11 @@
 		<material name="white"/>
         </visual>
         <collision>
-                <origin xyz="0 0 0"
+                <origin xyz="0.01 0 0"
                         rpy="0 0 0" />
                 <geometry name='hithand_right_phamed'>
-                        <cylinder length="0.180" radius="0.06" />
-                </geometry>
+			            <box size="0.01 0.02 0.02" />
+		</geometry>
         </collision>
   </link>
 
@@ -306,7 +306,7 @@
                 <origin xyz="0 0 0"
                         rpy="0 0 0" />
                 <geometry name='hithand_right_phadist'>
-                        <cylinder length="0.180" radius="0.06" />
+                        <mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-phadist.dae" />
                 </geometry>
         </collision>
   </link>
@@ -342,7 +342,7 @@
       		<origin xyz="0 0 0"
         		rpy="0 0 0" />
       		<geometry name='hithand_right_base_cover'>
-        		<cylinder length="0.180" radius="0.06" />
+        		<cylinder length="0.001" radius="0.001" />
       		</geometry>
     	</collision>
   </link>
@@ -373,10 +373,10 @@
 		<material name="lightblue"/>
         </visual>
         <collision>
-                <origin xyz="0 0 0"
+                <origin xyz="0.03 0 0"
                         rpy="0 0 0" />
                 <geometry name='hithand_right_phoarpox'>
-                        <cylinder length="0.180" radius="0.06" />
+                        <box size="0.03 0.03 0.02" />
                 </geometry>
         </collision>
   </link>
@@ -407,11 +407,11 @@
 		<material name="white"/>
         </visual>
         <collision>
-                <origin xyz="0 0 0"
+                <origin xyz="0.01 0 0"
                         rpy="0 0 0" />
                 <geometry name='hithand_right_phamed'>
-                        <cylinder length="0.180" radius="0.06" />
-                </geometry>
+			            <box size="0.01 0.02 0.02" />
+		</geometry>
         </collision>
   </link>
 
@@ -444,7 +444,7 @@
                 <origin xyz="0 0 0"
                         rpy="0 0 0" />
                 <geometry name='hithand_right_phadist'>
-                        <cylinder length="0.180" radius="0.06" />
+                        <mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-phadist.dae" />
                 </geometry>
         </collision>
   </link>
@@ -480,7 +480,7 @@
       		<origin xyz="0 0 0"
         		rpy="0 0 0" />
       		<geometry name='hithand_right_base_cover'>
-        		<cylinder length="0.180" radius="0.06" />
+        		<cylinder length="0.001" radius="0.001" />
       		</geometry>
     	</collision>
   </link>
@@ -511,10 +511,10 @@
 		<material name="lightblue"/>
         </visual>
         <collision>
-                <origin xyz="0 0 0"
+                <origin xyz="0.03 0 0"
                         rpy="0 0 0" />
                 <geometry name='hithand_right_phoarpox'>
-                        <cylinder length="0.180" radius="0.06" />
+                        <box size="0.03 0.03 0.02" />
                 </geometry>
         </collision>
   </link>
@@ -545,11 +545,11 @@
 		<material name="white"/>
         </visual>
         <collision>
-                <origin xyz="0 0 0"
+                <origin xyz="0.01 0 0"
                         rpy="0 0 0" />
                 <geometry name='hithand_right_phamed'>
-                        <cylinder length="0.180" radius="0.06" />
-                </geometry>
+			            <box size="0.01 0.02 0.02" />
+		</geometry>
         </collision>
   </link>
 
@@ -582,7 +582,7 @@
                 <origin xyz="0 0 0"
                         rpy="0 0 0" />
                 <geometry name='hithand_right_phadist'>
-                        <cylinder length="0.180" radius="0.06" />
+                        <mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-phadist.dae" />
                 </geometry>
         </collision>
   </link>
@@ -618,7 +618,7 @@
       		<origin xyz="0 0 0"
         		rpy="0 0 0" />
       		<geometry name='hithand_right_base_cover'>
-        		<cylinder length="0.180" radius="0.06" />
+        		<cylinder length="0.001" radius="0.001" />
       		</geometry>
     	</collision>
   </link>
@@ -649,10 +649,10 @@
 		<material name="lightblue"/>
         </visual>
         <collision>
-                <origin xyz="0 0 0"
+                <origin xyz="0.03 0 0"
                         rpy="0 0 0" />
                 <geometry name='hithand_right_phoarpox'>
-                        <cylinder length="0.180" radius="0.06" />
+                        <box size="0.03 0.03 0.02" />
                 </geometry>
         </collision>
   </link>
@@ -683,11 +683,11 @@
 		<material name="white"/>
         </visual>
         <collision>
-                <origin xyz="0 0 0"
+                <origin xyz="0.01 0 0"
                         rpy="0 0 0" />
                 <geometry name='hithand_right_phamed'>
-                        <cylinder length="0.180" radius="0.06" />
-                </geometry>
+			            <box size="0.01 0.02 0.02" />
+		</geometry>
         </collision>
   </link>
 
@@ -720,7 +720,7 @@
                 <origin xyz="0 0 0"
                         rpy="0 0 0" />
                 <geometry name='hithand_right_phadist'>
-                        <cylinder length="0.180" radius="0.06" />
+                        <mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-phadist.dae" />
                 </geometry>
         </collision>
   </link>
@@ -735,5 +735,117 @@
         <limit effort="30" lower="-0.50" upper="1.4" velocity="3.14"/>
   </joint>
   <!-- #########################Little Finger######################## -->
+
+<gazebo reference="base_link">
+    <selfCollide>true</selfCollide>
+    <static>false</static>
+    <turnGravityOff>false</turnGravityOff>
+</gazebo>
+
+<gazebo reference="Right_Thumb_Basecover">
+    <selfCollide>true</selfCollide>
+    <static>false</static>
+    <turnGravityOff>false</turnGravityOff>
+</gazebo>
+<gazebo reference="Right_Thumb_Phoaprox">
+    <selfCollide>true</selfCollide>
+    <static>false</static>
+    <turnGravityOff>false</turnGravityOff>
+</gazebo>
+<gazebo reference="Right_Thumb_Phamed">
+    <selfCollide>true</selfCollide>
+    <static>false</static>
+    <turnGravityOff>false</turnGravityOff>
+</gazebo>
+<gazebo reference="Right_Thumb_Phadist">
+    <selfCollide>true</selfCollide>
+    <static>false</static>
+    <turnGravityOff>false</turnGravityOff>
+</gazebo>
+
+<gazebo reference="Right_Index_Basecover">
+    <selfCollide>true</selfCollide>
+    <static>false</static>
+    <turnGravityOff>false</turnGravityOff>
+</gazebo>
+<gazebo reference="Right_Index_Phoaprox">
+    <selfCollide>true</selfCollide>
+    <static>false</static>
+    <turnGravityOff>false</turnGravityOff>
+</gazebo>
+<gazebo reference="Right_Index_Phamed">
+    <selfCollide>true</selfCollide>
+    <static>false</static>
+    <turnGravityOff>false</turnGravityOff>
+</gazebo>
+<gazebo reference="Right_Index_Phadist">
+    <selfCollide>true</selfCollide>
+    <static>false</static>
+    <turnGravityOff>false</turnGravityOff>
+</gazebo>
+
+<gazebo reference="Right_Middle_Basecover">
+    <selfCollide>true</selfCollide>
+    <static>false</static>
+    <turnGravityOff>false</turnGravityOff>
+</gazebo>
+<gazebo reference="Right_Middle_Phoaprox">
+    <selfCollide>true</selfCollide>
+    <static>false</static>
+    <turnGravityOff>false</turnGravityOff>
+</gazebo>
+<gazebo reference="Right_Middle_Phamed">
+    <selfCollide>true</selfCollide>
+    <static>false</static>
+    <turnGravityOff>false</turnGravityOff>
+</gazebo>
+<gazebo reference="Right_Middle_Phadist">
+    <selfCollide>true</selfCollide>
+    <static>false</static>
+    <turnGravityOff>false</turnGravityOff>
+</gazebo>
+
+<gazebo reference="Right_Ring_Basecover">
+    <selfCollide>true</selfCollide>
+    <static>false</static>
+    <turnGravityOff>false</turnGravityOff>
+</gazebo>
+<gazebo reference="Right_Ring_Phoaprox">
+    <selfCollide>true</selfCollide>
+    <static>false</static>
+    <turnGravityOff>false</turnGravityOff>
+</gazebo>
+<gazebo reference="Right_Ring_Phamed">
+    <selfCollide>true</selfCollide>
+    <static>false</static>
+    <turnGravityOff>false</turnGravityOff>
+</gazebo>
+<gazebo reference="Right_Ring_Phadist">
+    <selfCollide>true</selfCollide>
+    <static>false</static>
+    <turnGravityOff>false</turnGravityOff>
+</gazebo>
+
+<gazebo reference="Right_Little_Basecover">
+    <selfCollide>true</selfCollide>
+    <static>false</static>
+    <turnGravityOff>false</turnGravityOff>
+</gazebo>
+<gazebo reference="Right_Little_Phoaprox">
+    <selfCollide>true</selfCollide>
+    <static>false</static>
+    <turnGravityOff>false</turnGravityOff>
+</gazebo>
+<gazebo reference="Right_Little_Phamed">
+    <selfCollide>true</selfCollide>
+    <static>false</static>
+    <turnGravityOff>false</turnGravityOff>
+</gazebo>
+<gazebo reference="Right_Little_Phadist">
+    <selfCollide>true</selfCollide>
+    <static>false</static>
+    <turnGravityOff>false</turnGravityOff>
+</gazebo>
+
 
 </robot>
