@@ -8,6 +8,126 @@
       </plugin>
     </gazebo>
 
+    <xacro:property name="selfCollideValue" value="true"/>
+    <xacro:property name="staticValue" value="true" />
+    <xacro:property name="turnGravityOffValue" value="false" />
 
+    <!--set static works only if no reference is specified -->
+    <gazebo>
+        <static>${staticValue}</static>
+        <turnGravityOff>${turnGravityOffValue}</turnGravityOff>
+    </gazebo>
+    <gazebo reference="base_link">
+        <selfCollide>${selfCollideValue}</selfCollide>
+        <static>${staticValue}</static>
+        <turnGravityOff>${turnGravityOffValue}</turnGravityOff>
+    </gazebo>
+
+    <gazebo reference="Right_Thumb_Basecover">
+        <selfCollide>${selfCollideValue}</selfCollide>
+        <static>false</static>
+        <turnGravityOff>${turnGravityOffValue}</turnGravityOff>
+        <mu1>0.2</mu1>
+        <mu2>0.2</mu2>
+    </gazebo>
+    <gazebo reference="Right_Thumb_Phoaprox">
+        <selfCollide>${selfCollideValue}</selfCollide>
+        <static>false</static>
+        <turnGravityOff>${turnGravityOffValue}</turnGravityOff>
+    </gazebo>
+    <gazebo reference="Right_Thumb_Phamed">
+        <selfCollide>${selfCollideValue}</selfCollide>
+        <static>false</static>
+        <turnGravityOff>${turnGravityOffValue}</turnGravityOff>
+    </gazebo>
+    <gazebo reference="Right_Thumb_Phadist">
+        <selfCollide>${selfCollideValue}</selfCollide>
+        <static>false</static>
+        <turnGravityOff>${turnGravityOffValue}</turnGravityOff>
+    </gazebo>
+
+    <gazebo reference="Right_Index_Basecover">
+        <selfCollide>${selfCollideValue}</selfCollide>
+        <static>${staticValue}</static>
+        <turnGravityOff>${turnGravityOffValue}</turnGravityOff>
+    </gazebo>
+    <gazebo reference="Right_Index_Phoaprox">
+        <selfCollide>${selfCollideValue}</selfCollide>
+        <static>${staticValue}</static>
+        <turnGravityOff>${turnGravityOffValue}</turnGravityOff>
+    </gazebo>
+    <gazebo reference="Right_Index_Phamed">
+        <selfCollide>${selfCollideValue}</selfCollide>
+        <static>${staticValue}</static>
+        <turnGravityOff>${turnGravityOffValue}</turnGravityOff>
+    </gazebo>
+    <gazebo reference="Right_Index_Phadist">
+        <selfCollide>${selfCollideValue}</selfCollide>
+        <static>${staticValue}</static>
+        <turnGravityOff>${turnGravityOffValue}</turnGravityOff>
+    </gazebo>
+
+    <gazebo reference="Right_Middle_Basecover">
+        <selfCollide>${selfCollideValue}</selfCollide>
+        <static>${staticValue}</static>
+        <turnGravityOff>${turnGravityOffValue}</turnGravityOff>
+    </gazebo>
+    <gazebo reference="Right_Middle_Phoaprox">
+        <selfCollide>${selfCollideValue}</selfCollide>
+        <static>${staticValue}</static>
+        <turnGravityOff>${turnGravityOffValue}</turnGravityOff>
+    </gazebo>
+    <gazebo reference="Right_Middle_Phamed">
+        <selfCollide>${selfCollideValue}</selfCollide>
+        <static>${staticValue}</static>
+        <turnGravityOff>${turnGravityOffValue}</turnGravityOff>
+    </gazebo>
+    <gazebo reference="Right_Middle_Phadist">
+        <selfCollide>${selfCollideValue}</selfCollide>
+        <static>${staticValue}</static>
+        <turnGravityOff>${turnGravityOffValue}</turnGravityOff>
+    </gazebo>
+
+    <gazebo reference="Right_Ring_Basecover">
+        <selfCollide>${selfCollideValue}</selfCollide>
+        <static>${staticValue}</static>
+        <turnGravityOff>${turnGravityOffValue}</turnGravityOff>
+    </gazebo>
+    <gazebo reference="Right_Ring_Phoaprox">
+        <selfCollide>${selfCollideValue}</selfCollide>
+        <static>${staticValue}</static>
+        <turnGravityOff>${turnGravityOffValue}</turnGravityOff>
+    </gazebo>
+    <gazebo reference="Right_Ring_Phamed">
+        <selfCollide>${selfCollideValue}</selfCollide>
+        <static>${staticValue}</static>
+        <turnGravityOff>${turnGravityOffValue}</turnGravityOff>
+    </gazebo>
+    <gazebo reference="Right_Ring_Phadist">
+        <selfCollide>${selfCollideValue}</selfCollide>
+        <static>${staticValue}</static>
+        <turnGravityOff>${turnGravityOffValue}</turnGravityOff>
+    </gazebo>
+
+    <gazebo reference="Right_Little_Basecover">
+        <selfCollide>${selfCollideValue}</selfCollide>
+        <static>${staticValue}</static>
+        <turnGravityOff>${turnGravityOffValue}</turnGravityOff>
+    </gazebo>
+    <gazebo reference="Right_Little_Phoaprox">
+        <selfCollide>${selfCollideValue}</selfCollide>
+        <static>${staticValue}</static>
+        <turnGravityOff>${turnGravityOffValue}</turnGravityOff>
+    </gazebo>
+    <gazebo reference="Right_Little_Phamed">
+        <selfCollide>${selfCollideValue}</selfCollide>
+        <static>${staticValue}</static>
+        <turnGravityOff>${turnGravityOffValue}</turnGravityOff>
+    </gazebo>
+    <gazebo reference="Right_Little_Phadist">
+        <selfCollide>${selfCollideValue}</selfCollide>
+        <static>${staticValue}</static>
+        <turnGravityOff>${turnGravityOffValue}</turnGravityOff>
+    </gazebo>
 
 </robot>
