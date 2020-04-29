@@ -1,13 +1,23 @@
 # hithand_gazebo
-a robot model of hithand on gazebo
-1. hithand_description:
- a source folder of catkin workspace
-2. Models/hithand:
- folder of gazebo models
-3. Experiments/template_hithand_holodeck:
- folder of neurorobotic platform
-4. meshes
-collision and visual 3D models here. All other meshes folder should be a symlink to this.
+## Introduction
+This repo runs the gazebo simulation with robot model of Hithand.
+## Directory layout
+
+    .
+    ├── hithand_description                   
+    ├── ├── meshes                        # 3d models of dae, stl
+    ├── ├── urdf                          # xacro, urdf and sdf files
+    ├── ├── launch 
+    ├── hithand_gazebo 
+    ├── ├── launch 
+    ├── ├── worlds
+    ├── hithand_control  
+    ├── ├── launch 
+    ├── ├── config
+    ├── Models                    # robot model file for inserting in gazebo
+    ├── Experiments               #  folder for running experiment in Neurorobotic latform
+    └── README.md
+    
 
 Contact:
 qian.feng@tum.de
