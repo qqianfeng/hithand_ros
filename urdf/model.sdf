@@ -15,11 +15,11 @@
         </inertia>
       </inertial>
       <collision name='base_link_collision'>
-        <pose frame=''>0 0 0.09 0 -0 0</pose>
+        <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.18</length>
-            <radius>0.06</radius>
+            <length>0.001</length>
+            <radius>0.001</radius>
           </cylinder>
         </geometry>
       </collision>
@@ -28,7 +28,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hithand/meshes/visual/hit-hand-2-palm-right.dae</uri>
+            <uri>model://hithand_description/meshes/visual/hit-hand-2-palm-right.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -55,8 +55,8 @@
         <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.18</length>
-            <radius>0.06</radius>
+            <length>0.001</length>
+            <radius>0.001</radius>
           </cylinder>
         </geometry>
       </collision>
@@ -65,7 +65,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hithand/meshes/visual/hit-hand-2-finger-basecover.dae</uri>
+            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-basecover.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -103,12 +103,11 @@
         </inertia>
       </inertial>
       <collision name='Right_Index_Phoaprox_collision'>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose frame=''>0.03 0 0 0 -0 0</pose>
         <geometry>
-          <cylinder>
-            <length>0.18</length>
-            <radius>0.06</radius>
-          </cylinder>
+          <box>
+            <size>0.03 0.03 0.02</size>
+          </box>
         </geometry>
       </collision>
       <visual name='Right_Index_Phoaprox_visual'>
@@ -116,7 +115,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hithand/meshes/visual/hit-hand-2-finger-phaprox.dae</uri>
+            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phaprox.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -154,12 +153,11 @@
         </inertia>
       </inertial>
       <collision name='Right_Index_Phamed_collision'>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose frame=''>0.01 0 0 0 -0 0</pose>
         <geometry>
-          <cylinder>
-            <length>0.18</length>
-            <radius>0.06</radius>
-          </cylinder>
+          <box>
+            <size>0.01 0.02 0.02</size>
+          </box>
         </geometry>
       </collision>
       <visual name='Right_Index_Phamed_visual'>
@@ -167,7 +165,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hithand/meshes/visual/hit-hand-2-finger-phamed.dae</uri>
+            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phamed.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -207,10 +205,10 @@
       <collision name='Right_Index_Phadist_collision'>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
-          <cylinder>
-            <length>0.18</length>
-            <radius>0.06</radius>
-          </cylinder>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phadist.dae</uri>
+          </mesh>
         </geometry>
       </collision>
       <visual name='Right_Index_Phadist_visual'>
@@ -218,7 +216,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hithand/meshes/visual/hit-hand-2-finger-phadist.dae</uri>
+            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phadist.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -259,8 +257,8 @@
         <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.18</length>
-            <radius>0.06</radius>
+            <length>0.001</length>
+            <radius>0.001</radius>
           </cylinder>
         </geometry>
       </collision>
@@ -269,7 +267,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hithand/meshes/visual/hit-hand-2-finger-basecover.dae</uri>
+            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-basecover.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -307,12 +305,11 @@
         </inertia>
       </inertial>
       <collision name='Right_Little_Phoaprox_collision'>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose frame=''>0.03 0 0 0 -0 0</pose>
         <geometry>
-          <cylinder>
-            <length>0.18</length>
-            <radius>0.06</radius>
-          </cylinder>
+          <box>
+            <size>0.03 0.03 0.02</size>
+          </box>
         </geometry>
       </collision>
       <visual name='Right_Little_Phoaprox_visual'>
@@ -320,7 +317,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hithand/meshes/visual/hit-hand-2-finger-phaprox.dae</uri>
+            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phaprox.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -358,12 +355,11 @@
         </inertia>
       </inertial>
       <collision name='Right_Little_Phamed_collision'>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose frame=''>0.01 0 0 0 -0 0</pose>
         <geometry>
-          <cylinder>
-            <length>0.18</length>
-            <radius>0.06</radius>
-          </cylinder>
+          <box>
+            <size>0.01 0.02 0.02</size>
+          </box>
         </geometry>
       </collision>
       <visual name='Right_Little_Phamed_visual'>
@@ -371,7 +367,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hithand/meshes/visual/hit-hand-2-finger-phamed.dae</uri>
+            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phamed.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -411,10 +407,10 @@
       <collision name='Right_Little_Phadist_collision'>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
-          <cylinder>
-            <length>0.18</length>
-            <radius>0.06</radius>
-          </cylinder>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phadist.dae</uri>
+          </mesh>
         </geometry>
       </collision>
       <visual name='Right_Little_Phadist_visual'>
@@ -422,7 +418,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hithand/meshes/visual/hit-hand-2-finger-phadist.dae</uri>
+            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phadist.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -463,8 +459,8 @@
         <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.18</length>
-            <radius>0.06</radius>
+            <length>0.001</length>
+            <radius>0.001</radius>
           </cylinder>
         </geometry>
       </collision>
@@ -473,7 +469,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hithand/meshes/visual/hit-hand-2-finger-basecover.dae</uri>
+            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-basecover.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -511,12 +507,11 @@
         </inertia>
       </inertial>
       <collision name='Right_Middle_Phoaprox_collision'>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose frame=''>0.03 0 0 0 -0 0</pose>
         <geometry>
-          <cylinder>
-            <length>0.18</length>
-            <radius>0.06</radius>
-          </cylinder>
+          <box>
+            <size>0.03 0.03 0.02</size>
+          </box>
         </geometry>
       </collision>
       <visual name='Right_Middle_Phoaprox_visual'>
@@ -524,7 +519,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hithand/meshes/visual/hit-hand-2-finger-phaprox.dae</uri>
+            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phaprox.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -562,12 +557,11 @@
         </inertia>
       </inertial>
       <collision name='Right_Middle_Phamed_collision'>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose frame=''>0.01 0 0 0 -0 0</pose>
         <geometry>
-          <cylinder>
-            <length>0.18</length>
-            <radius>0.06</radius>
-          </cylinder>
+          <box>
+            <size>0.01 0.02 0.02</size>
+          </box>
         </geometry>
       </collision>
       <visual name='Right_Middle_Phamed_visual'>
@@ -575,7 +569,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hithand/meshes/visual/hit-hand-2-finger-phamed.dae</uri>
+            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phamed.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -615,10 +609,10 @@
       <collision name='Right_Middle_Phadist_collision'>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
-          <cylinder>
-            <length>0.18</length>
-            <radius>0.06</radius>
-          </cylinder>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phadist.dae</uri>
+          </mesh>
         </geometry>
       </collision>
       <visual name='Right_Middle_Phadist_visual'>
@@ -626,7 +620,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hithand/meshes/visual/hit-hand-2-finger-phadist.dae</uri>
+            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phadist.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -667,8 +661,8 @@
         <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.18</length>
-            <radius>0.06</radius>
+            <length>0.001</length>
+            <radius>0.001</radius>
           </cylinder>
         </geometry>
       </collision>
@@ -677,7 +671,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hithand/meshes/visual/hit-hand-2-finger-basecover.dae</uri>
+            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-basecover.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -715,12 +709,11 @@
         </inertia>
       </inertial>
       <collision name='Right_Ring_Phoaprox_collision'>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose frame=''>0.03 0 0 0 -0 0</pose>
         <geometry>
-          <cylinder>
-            <length>0.18</length>
-            <radius>0.06</radius>
-          </cylinder>
+          <box>
+            <size>0.03 0.03 0.02</size>
+          </box>
         </geometry>
       </collision>
       <visual name='Right_Ring_Phoaprox_visual'>
@@ -728,7 +721,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hithand/meshes/visual/hit-hand-2-finger-phaprox.dae</uri>
+            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phaprox.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -766,12 +759,11 @@
         </inertia>
       </inertial>
       <collision name='Right_Ring_Phamed_collision'>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose frame=''>0.01 0 0 0 -0 0</pose>
         <geometry>
-          <cylinder>
-            <length>0.18</length>
-            <radius>0.06</radius>
-          </cylinder>
+          <box>
+            <size>0.01 0.02 0.02</size>
+          </box>
         </geometry>
       </collision>
       <visual name='Right_Ring_Phamed_visual'>
@@ -779,7 +771,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hithand/meshes/visual/hit-hand-2-finger-phamed.dae</uri>
+            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phamed.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -819,10 +811,10 @@
       <collision name='Right_Ring_Phadist_collision'>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
-          <cylinder>
-            <length>0.18</length>
-            <radius>0.06</radius>
-          </cylinder>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phadist.dae</uri>
+          </mesh>
         </geometry>
       </collision>
       <visual name='Right_Ring_Phadist_visual'>
@@ -830,7 +822,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hithand/meshes/visual/hit-hand-2-finger-phadist.dae</uri>
+            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phadist.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -871,8 +863,8 @@
         <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.18</length>
-            <radius>0.06</radius>
+            <length>0.001</length>
+            <radius>0.001</radius>
           </cylinder>
         </geometry>
       </collision>
@@ -881,7 +873,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hithand/meshes/visual/hit-hand-2-finger-basecover.dae</uri>
+            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-basecover.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -919,12 +911,11 @@
         </inertia>
       </inertial>
       <collision name='Right_Thumb_Phoaprox_collision'>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose frame=''>0.03 0 0 0 -0 0</pose>
         <geometry>
-          <cylinder>
-            <length>0.18</length>
-            <radius>0.06</radius>
-          </cylinder>
+          <box>
+            <size>0.03 0.03 0.02</size>
+          </box>
         </geometry>
       </collision>
       <visual name='Right_Thumb_Phoaprox_visual'>
@@ -932,7 +923,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hithand/meshes/visual/hit-hand-2-finger-phaprox.dae</uri>
+            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phaprox.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -970,12 +961,11 @@
         </inertia>
       </inertial>
       <collision name='Right_Thumb_Phamed_collision'>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose frame=''>0.01 0 0 0 -0 0</pose>
         <geometry>
-          <cylinder>
-            <length>0.18</length>
-            <radius>0.06</radius>
-          </cylinder>
+          <box>
+            <size>0.01 0.02 0.02</size>
+          </box>
         </geometry>
       </collision>
       <visual name='Right_Thumb_Phamed_visual'>
@@ -983,7 +973,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hithand/meshes/visual/hit-hand-2-finger-phamed.dae</uri>
+            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phamed.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -1023,10 +1013,10 @@
       <collision name='Right_Thumb_Phadist_collision'>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
-          <cylinder>
-            <length>0.18</length>
-            <radius>0.06</radius>
-          </cylinder>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phadist.dae</uri>
+          </mesh>
         </geometry>
       </collision>
       <visual name='Right_Thumb_Phadist_visual'>
@@ -1034,7 +1024,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hithand/meshes/visual/hit-hand-2-finger-phadist.dae</uri>
+            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phadist.dae</uri>
           </mesh>
         </geometry>
       </visual>
