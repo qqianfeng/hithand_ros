@@ -75,7 +75,8 @@
             <parent link="base_link" />
             <child link="Right_${prefix}_Basecover" />
         <axis xyz="0 0 1" />
-        <limit effort="30" lower="-0.50" upper="1.4" velocity="3.14"/>
+        <limit effort="1000" lower="-0.50" upper="1.4" velocity="3.14"/>
+          <dynamics damping="0.7" friction="0.5" />
       </joint>
 
       <link name="Right_${prefix}_Phoaprox">
@@ -117,7 +118,8 @@
             <parent link="Right_${prefix}_Basecover" />
             <child link="Right_${prefix}_Phoaprox" />
             <axis xyz="0 0 1" />
-            <limit effort="30" lower="-0.50" upper="1.4" velocity="3.14"/>
+            <limit effort="1000" lower="-0.50" upper="1.4" velocity="3.14"/>
+            <dynamics damping="0.7" friction="0.5" />
       </joint>
 
       <link name="Right_${prefix}_Phamed">
@@ -159,7 +161,8 @@
             <parent link="Right_${prefix}_Phoaprox" />
             <child link="Right_${prefix}_Phamed" />
             <axis xyz="0 0 1" />
-            <limit effort="30" lower="-0.50" upper="1.4" velocity="3.14"/>
+            <limit effort="1000" lower="-0.50" upper="1.4" velocity="3.14"/>
+          <dynamics damping="0.7" friction="0.5" />
       </joint>
 
       <link name="Right_${prefix}_Phadist">
@@ -201,7 +204,8 @@
             <parent link="Right_${prefix}_Phamed" />
             <child link="Right_${prefix}_Phadist" />
             <axis xyz="0 0 1" />
-            <limit effort="30" lower="-0.50" upper="1.4" velocity="3.14"/>
+            <limit effort="1000" lower="-0.50" upper="1.4" velocity="3.14"/>
+          <dynamics damping="0.7" friction="0.5" />
       </joint>
     </xacro:macro>
 
@@ -211,24 +215,24 @@
             rpy="0.225810 -1.083656 0.411355" />
     </xacro:finger>
 
-    <xacro:finger prefix="Index"  >
-        <origin xyz="-0.002529881 0.03680013 0.107783545"
-      		rpy="3.054326 -1.570796 0.000000" />
-    </xacro:finger>
+<!--    <xacro:finger prefix="Index"  >-->
+<!--        <origin xyz="-0.002529881 0.03680013 0.107783545"-->
+<!--      		rpy="3.054326 -1.570796 0.000000" />-->
+<!--    </xacro:finger>-->
 
 
-    <xacro:finger prefix="Middle"  >
-            <origin xyz="-0.0037 0.01  0.117783545"
-      		rpy="-3.141593 -1.570796 0.000000" />
-    </xacro:finger>
-    <xacro:finger prefix="Ring"   >
-            <origin xyz="0 -0.01680013 0.11258354"
-            rpy="-3.054326 -1.570796 0.000000" />
-    </xacro:finger>
-    <xacro:finger prefix="Little"  >
-            <origin xyz="0.000971571 -0.0433963 0.093583545"
-            rpy="-2.967060 -1.570796 0.000000" />
-    </xacro:finger>
+<!--    <xacro:finger prefix="Middle"  >-->
+<!--            <origin xyz="-0.0037 0.01  0.117783545"-->
+<!--      		rpy="-3.141593 -1.570796 0.000000" />-->
+<!--    </xacro:finger>-->
+<!--    <xacro:finger prefix="Ring"   >-->
+<!--            <origin xyz="0 -0.01680013 0.11258354"-->
+<!--            rpy="-3.054326 -1.570796 0.000000" />-->
+<!--    </xacro:finger>-->
+<!--    <xacro:finger prefix="Little"  >-->
+<!--            <origin xyz="0.000971571 -0.0433963 0.093583545"-->
+<!--            rpy="-2.967060 -1.570796 0.000000" />-->
+<!--    </xacro:finger>-->
 
 
 </robot>

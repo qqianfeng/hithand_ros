@@ -5,13 +5,16 @@
 
   <!-- load the controllers -->
   <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
-    output="screen" ns="/hithand" args="thumb1_position_controller thumb2_position_controller
-    thumb3_position_controller thumb4_position_controller
-    index1_position_controller index2_position_controller index3_position_controller index4_position_controller
-    middle1_position_controller middle2_position_controller middle3_position_controller middle4_position_controller
-    ring1_position_controller ring2_position_controller ring3_position_controller ring4_position_controller
-    little1_position_controller little2_position_controller little3_position_controller little4_position_controller
-    joint_state_controller"/>
+       output="screen" ns="/hithand" args="thumb3_position_controller joint_state_controller"/>
+<!--     output="screen" ns="/hithand" args="thumb1_position_controller thumb2_position_controller -->
+<!--     thumb3_position_controller thumb4_position_controller joint_state_controller"/> -->
+
+
+<!--     index1_position_controller index2_position_controller index3_position_controller index4_position_controller -->
+<!--     middle1_position_controller middle2_position_controller middle3_position_controller middle4_position_controller -->
+<!--     ring1_position_controller ring2_position_controller ring3_position_controller ring4_position_controller -->
+<!--     little1_position_controller little2_position_controller little3_position_controller little4_position_controller -->
+
 
   <!-- convert joint states to TF transforms for rviz, etc -->
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
