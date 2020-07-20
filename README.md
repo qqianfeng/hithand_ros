@@ -21,3 +21,10 @@ This repo runs the gazebo simulation with robot model of Hithand.
 
 Contact:
 qian.feng@tum.de
+
+## To Run
+```
+cp -r hithand_description hithand_control hithand_gazebo /path/to/catkin_ws/src 
+cd /path/to/catkin_ws 
+catkin_make 
+```
