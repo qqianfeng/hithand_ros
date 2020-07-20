@@ -1,6 +1,8 @@
 # hithand_gazebo
 ## Introduction
-This repo runs the gazebo simulation with robot model of Hithand.
+This repo runs the gazebo simulation with robot model of Hithand.  
+
+![Alt text](docs/HIT_Hand_II_444x600.jpg?raw=true "Title")
 ## Directory layout
 
     .
