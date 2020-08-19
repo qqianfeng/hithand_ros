@@ -6,10 +6,10 @@
     <transmission name="tran_${finger_name}_1">
       <type>transmission_interface/SimpleTransmission</type>
       <joint name="Right_${finger_name}_1">
-        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       </joint>
       <actuator name="motor_${finger_name}_1">
-        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
         <mechanicalReduction>1</mechanicalReduction>
       </actuator>
     </transmission>
@@ -17,10 +17,10 @@
     <transmission name="tran_${finger_name}_2">
         <type>transmission_interface/SimpleTransmission</type>
         <joint name="Right_${finger_name}_2">
-          <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+          <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
         </joint>
         <actuator name="motor_${finger_name}_2">
-          <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+          <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
           <mechanicalReduction>1</mechanicalReduction>
         </actuator>
       </transmission>
@@ -28,10 +28,10 @@
     <transmission name="tran_${finger_name}_3">
         <type>transmission_interface/SimpleTransmission</type>
         <joint name="Right_${finger_name}_3">
-          <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+          <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
         </joint>
         <actuator name="motor_${finger_name}_3">
-          <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+          <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
           <mechanicalReduction>1</mechanicalReduction>
         </actuator>
       </transmission>
@@ -39,10 +39,10 @@
     <transmission name="tran_${finger_name}_4">
         <type>transmission_interface/SimpleTransmission</type>
         <joint name="Right_${finger_name}_4">
-          <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+          <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
         </joint>
         <actuator name="motor_${finger_name}_4">
-          <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+          <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
           <mechanicalReduction>1</mechanicalReduction>
         </actuator>
       </transmission>
@@ -50,14 +50,14 @@
 
     <xacro:hithand_transmission finger_name="Thumb">
     </xacro:hithand_transmission>
-<!--    <xacro:hithand_transmission finger_name="Index">-->
-<!--    </xacro:hithand_transmission>-->
-<!--    <xacro:hithand_transmission finger_name="Middle">-->
-<!--    </xacro:hithand_transmission>-->
-<!--    <xacro:hithand_transmission finger_name="Ring">-->
-<!--    </xacro:hithand_transmission>-->
-<!--    <xacro:hithand_transmission finger_name="Little">-->
-<!--    </xacro:hithand_transmission>-->
+    <xacro:hithand_transmission finger_name="Index">
+    </xacro:hithand_transmission>
+    <xacro:hithand_transmission finger_name="Middle">
+    </xacro:hithand_transmission>
+    <xacro:hithand_transmission finger_name="Ring">
+    </xacro:hithand_transmission>
+    <xacro:hithand_transmission finger_name="Little">
+    </xacro:hithand_transmission>
 
 
 </robot>

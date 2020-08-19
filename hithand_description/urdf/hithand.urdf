@@ -8,51 +8,203 @@
   <transmission name="tran_Thumb_1">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="Right_Thumb_1">
-      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
     <actuator name="motor_Thumb_1">
-      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
   <transmission name="tran_Thumb_2">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="Right_Thumb_2">
-      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
     <actuator name="motor_Thumb_2">
-      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
   <transmission name="tran_Thumb_3">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="Right_Thumb_3">
-      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
     <actuator name="motor_Thumb_3">
-      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
   <transmission name="tran_Thumb_4">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="Right_Thumb_4">
-      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
     <actuator name="motor_Thumb_4">
-      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
-  <!--    <xacro:hithand_transmission finger_name="Index">-->
-  <!--    </xacro:hithand_transmission>-->
-  <!--    <xacro:hithand_transmission finger_name="Middle">-->
-  <!--    </xacro:hithand_transmission>-->
-  <!--    <xacro:hithand_transmission finger_name="Ring">-->
-  <!--    </xacro:hithand_transmission>-->
-  <!--    <xacro:hithand_transmission finger_name="Little">-->
-  <!--    </xacro:hithand_transmission>-->
+  <transmission name="tran_Index_1">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Right_Index_1">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_Index_1">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="tran_Index_2">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Right_Index_2">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_Index_2">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="tran_Index_3">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Right_Index_3">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_Index_3">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="tran_Index_4">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Right_Index_4">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_Index_4">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="tran_Middle_1">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Right_Middle_1">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_Middle_1">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="tran_Middle_2">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Right_Middle_2">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_Middle_2">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="tran_Middle_3">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Right_Middle_3">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_Middle_3">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="tran_Middle_4">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Right_Middle_4">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_Middle_4">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="tran_Ring_1">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Right_Ring_1">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_Ring_1">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="tran_Ring_2">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Right_Ring_2">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_Ring_2">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="tran_Ring_3">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Right_Ring_3">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_Ring_3">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="tran_Ring_4">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Right_Ring_4">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_Ring_4">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="tran_Little_1">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Right_Little_1">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_Little_1">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="tran_Little_2">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Right_Little_2">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_Little_2">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="tran_Little_3">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Right_Little_3">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_Little_3">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="tran_Little_4">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Right_Little_4">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_Little_4">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
   <gazebo>
     <plugin filename="libgazebo_ros_control.so" name="gazebo_ros_control">
       <robotNamespace>/hithand</robotNamespace>
@@ -65,112 +217,112 @@
     <turnGravityOff>True</turnGravityOff>
   </gazebo>
   <gazebo reference="base_link">
-    <selfCollide>True</selfCollide>
+    <selfCollide>False</selfCollide>
     <static>False</static>
     <turnGravityOff>True</turnGravityOff>
   </gazebo>
   <gazebo reference="Right_Thumb_Basecover">
-    <selfCollide>True</selfCollide>
+    <selfCollide>False</selfCollide>
     <static>False</static>
     <turnGravityOff>True</turnGravityOff>
     <mu1>0.2</mu1>
     <mu2>0.2</mu2>
   </gazebo>
   <gazebo reference="Right_Thumb_Phoaprox">
-    <selfCollide>True</selfCollide>
+    <selfCollide>False</selfCollide>
     <static>False</static>
     <turnGravityOff>True</turnGravityOff>
   </gazebo>
   <gazebo reference="Right_Thumb_Phamed">
-    <selfCollide>True</selfCollide>
+    <selfCollide>False</selfCollide>
     <static>False</static>
     <turnGravityOff>True</turnGravityOff>
   </gazebo>
   <gazebo reference="Right_Thumb_Phadist">
-    <selfCollide>True</selfCollide>
+    <selfCollide>False</selfCollide>
     <static>False</static>
     <turnGravityOff>True</turnGravityOff>
   </gazebo>
-  <!--    <gazebo reference="Right_Index_Basecover">-->
-  <!--        <selfCollide>${selfCollideValue}</selfCollide>-->
-  <!--        <static>${staticValue}</static>-->
-  <!--        <turnGravityOff>${turnGravityOffValue}</turnGravityOff>-->
-  <!--    </gazebo>-->
-  <!--    <gazebo reference="Right_Index_Phoaprox">-->
-  <!--        <selfCollide>${selfCollideValue}</selfCollide>-->
-  <!--        <static>${staticValue}</static>-->
-  <!--        <turnGravityOff>${turnGravityOffValue}</turnGravityOff>-->
-  <!--    </gazebo>-->
-  <!--    <gazebo reference="Right_Index_Phamed">-->
-  <!--        <selfCollide>${selfCollideValue}</selfCollide>-->
-  <!--        <static>${staticValue}</static>-->
-  <!--        <turnGravityOff>${turnGravityOffValue}</turnGravityOff>-->
-  <!--    </gazebo>-->
-  <!--    <gazebo reference="Right_Index_Phadist">-->
-  <!--        <selfCollide>${selfCollideValue}</selfCollide>-->
-  <!--        <static>${staticValue}</static>-->
-  <!--        <turnGravityOff>${turnGravityOffValue}</turnGravityOff>-->
-  <!--    </gazebo>-->
-  <!--    <gazebo reference="Right_Middle_Basecover">-->
-  <!--        <selfCollide>${selfCollideValue}</selfCollide>-->
-  <!--        <static>${staticValue}</static>-->
-  <!--        <turnGravityOff>${turnGravityOffValue}</turnGravityOff>-->
-  <!--    </gazebo>-->
-  <!--    <gazebo reference="Right_Middle_Phoaprox">-->
-  <!--        <selfCollide>${selfCollideValue}</selfCollide>-->
-  <!--        <static>${staticValue}</static>-->
-  <!--        <turnGravityOff>${turnGravityOffValue}</turnGravityOff>-->
-  <!--    </gazebo>-->
-  <!--    <gazebo reference="Right_Middle_Phamed">-->
-  <!--        <selfCollide>${selfCollideValue}</selfCollide>-->
-  <!--        <static>${staticValue}</static>-->
-  <!--        <turnGravityOff>${turnGravityOffValue}</turnGravityOff>-->
-  <!--    </gazebo>-->
-  <!--    <gazebo reference="Right_Middle_Phadist">-->
-  <!--        <selfCollide>${selfCollideValue}</selfCollide>-->
-  <!--        <static>${staticValue}</static>-->
-  <!--        <turnGravityOff>${turnGravityOffValue}</turnGravityOff>-->
-  <!--    </gazebo>-->
-  <!--    <gazebo reference="Right_Ring_Basecover">-->
-  <!--        <selfCollide>${selfCollideValue}</selfCollide>-->
-  <!--        <static>${staticValue}</static>-->
-  <!--        <turnGravityOff>${turnGravityOffValue}</turnGravityOff>-->
-  <!--    </gazebo>-->
-  <!--    <gazebo reference="Right_Ring_Phoaprox">-->
-  <!--        <selfCollide>${selfCollideValue}</selfCollide>-->
-  <!--        <static>${staticValue}</static>-->
-  <!--        <turnGravityOff>${turnGravityOffValue}</turnGravityOff>-->
-  <!--    </gazebo>-->
-  <!--    <gazebo reference="Right_Ring_Phamed">-->
-  <!--        <selfCollide>${selfCollideValue}</selfCollide>-->
-  <!--        <static>${staticValue}</static>-->
-  <!--        <turnGravityOff>${turnGravityOffValue}</turnGravityOff>-->
-  <!--    </gazebo>-->
-  <!--    <gazebo reference="Right_Ring_Phadist">-->
-  <!--        <selfCollide>${selfCollideValue}</selfCollide>-->
-  <!--        <static>${staticValue}</static>-->
-  <!--        <turnGravityOff>${turnGravityOffValue}</turnGravityOff>-->
-  <!--    </gazebo>-->
-  <!--    <gazebo reference="Right_Little_Basecover">-->
-  <!--        <selfCollide>${selfCollideValue}</selfCollide>-->
-  <!--        <static>${staticValue}</static>-->
-  <!--        <turnGravityOff>${turnGravityOffValue}</turnGravityOff>-->
-  <!--    </gazebo>-->
-  <!--    <gazebo reference="Right_Little_Phoaprox">-->
-  <!--        <selfCollide>${selfCollideValue}</selfCollide>-->
-  <!--        <static>${staticValue}</static>-->
-  <!--        <turnGravityOff>${turnGravityOffValue}</turnGravityOff>-->
-  <!--    </gazebo>-->
-  <!--    <gazebo reference="Right_Little_Phamed">-->
-  <!--        <selfCollide>${selfCollideValue}</selfCollide>-->
-  <!--        <static>${staticValue}</static>-->
-  <!--        <turnGravityOff>${turnGravityOffValue}</turnGravityOff>-->
-  <!--    </gazebo>-->
-  <!--    <gazebo reference="Right_Little_Phadist">-->
-  <!--        <selfCollide>${selfCollideValue}</selfCollide>-->
-  <!--        <static>${staticValue}</static>-->
-  <!--        <turnGravityOff>${turnGravityOffValue}</turnGravityOff>-->
-  <!--    </gazebo>-->
+  <gazebo reference="Right_Index_Basecover">
+    <selfCollide>False</selfCollide>
+    <static>False</static>
+    <turnGravityOff>True</turnGravityOff>
+  </gazebo>
+  <gazebo reference="Right_Index_Phoaprox">
+    <selfCollide>False</selfCollide>
+    <static>False</static>
+    <turnGravityOff>True</turnGravityOff>
+  </gazebo>
+  <gazebo reference="Right_Index_Phamed">
+    <selfCollide>False</selfCollide>
+    <static>False</static>
+    <turnGravityOff>True</turnGravityOff>
+  </gazebo>
+  <gazebo reference="Right_Index_Phadist">
+    <selfCollide>False</selfCollide>
+    <static>False</static>
+    <turnGravityOff>True</turnGravityOff>
+  </gazebo>
+  <gazebo reference="Right_Middle_Basecover">
+    <selfCollide>False</selfCollide>
+    <static>False</static>
+    <turnGravityOff>True</turnGravityOff>
+  </gazebo>
+  <gazebo reference="Right_Middle_Phoaprox">
+    <selfCollide>False</selfCollide>
+    <static>False</static>
+    <turnGravityOff>True</turnGravityOff>
+  </gazebo>
+  <gazebo reference="Right_Middle_Phamed">
+    <selfCollide>False</selfCollide>
+    <static>False</static>
+    <turnGravityOff>True</turnGravityOff>
+  </gazebo>
+  <gazebo reference="Right_Middle_Phadist">
+    <selfCollide>False</selfCollide>
+    <static>False</static>
+    <turnGravityOff>True</turnGravityOff>
+  </gazebo>
+  <gazebo reference="Right_Ring_Basecover">
+    <selfCollide>False</selfCollide>
+    <static>False</static>
+    <turnGravityOff>True</turnGravityOff>
+  </gazebo>
+  <gazebo reference="Right_Ring_Phoaprox">
+    <selfCollide>False</selfCollide>
+    <static>False</static>
+    <turnGravityOff>True</turnGravityOff>
+  </gazebo>
+  <gazebo reference="Right_Ring_Phamed">
+    <selfCollide>False</selfCollide>
+    <static>False</static>
+    <turnGravityOff>True</turnGravityOff>
+  </gazebo>
+  <gazebo reference="Right_Ring_Phadist">
+    <selfCollide>False</selfCollide>
+    <static>False</static>
+    <turnGravityOff>True</turnGravityOff>
+  </gazebo>
+  <gazebo reference="Right_Little_Basecover">
+    <selfCollide>False</selfCollide>
+    <static>False</static>
+    <turnGravityOff>True</turnGravityOff>
+  </gazebo>
+  <gazebo reference="Right_Little_Phoaprox">
+    <selfCollide>False</selfCollide>
+    <static>False</static>
+    <turnGravityOff>True</turnGravityOff>
+  </gazebo>
+  <gazebo reference="Right_Little_Phamed">
+    <selfCollide>False</selfCollide>
+    <static>False</static>
+    <turnGravityOff>True</turnGravityOff>
+  </gazebo>
+  <gazebo reference="Right_Little_Phadist">
+    <selfCollide>False</selfCollide>
+    <static>False</static>
+    <turnGravityOff>True</turnGravityOff>
+  </gazebo>
   <link name="world"/>
   <joint name="fixed" type="fixed">
     <parent link="world"/>
@@ -347,21 +499,593 @@
     <limit effort="1000" lower="-0.50" upper="1.4" velocity="3.14"/>
     <dynamics damping="0.7" friction="0.5"/>
   </joint>
-  <!--    <xacro:finger prefix="Index"  >-->
-  <!--        <origin xyz="-0.002529881 0.03680013 0.107783545"-->
-  <!--      		rpy="3.054326 -1.570796 0.000000" />-->
-  <!--    </xacro:finger>-->
-  <!--    <xacro:finger prefix="Middle"  >-->
-  <!--            <origin xyz="-0.0037 0.01  0.117783545"-->
-  <!--      		rpy="-3.141593 -1.570796 0.000000" />-->
-  <!--    </xacro:finger>-->
-  <!--    <xacro:finger prefix="Ring"   >-->
-  <!--            <origin xyz="0 -0.01680013 0.11258354"-->
-  <!--            rpy="-3.054326 -1.570796 0.000000" />-->
-  <!--    </xacro:finger>-->
-  <!--    <xacro:finger prefix="Little"  >-->
-  <!--            <origin xyz="0.000971571 -0.0433963 0.093583545"-->
-  <!--            rpy="-2.967060 -1.570796 0.000000" />-->
-  <!--    </xacro:finger>-->
+  <!-- #########################fINGER######################## -->
+  <link name="Right_Index_Basecover">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="1.0"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <!-- <mesh filename="file://$(arg meshDirectory)visual/hit-hand-2-finger-basecover.dae" /> -->
+        <mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-basecover.dae"/>
+      </geometry>
+      <material name="white"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry name="hithand_Index_base_cover">
+        <cylinder length="0.001" radius="0.001"/>
+      </geometry>
+      <surface>
+        <friction>
+          <ode>
+            <mu>0.6</mu>
+            <mu2>0.6</mu2>
+          </ode>
+        </friction>
+      </surface>
+    </collision>
+  </link>
+  <joint name="Right_Index_1" type="revolute">
+    <!-- joint origin in parent link frame -->
+    <origin rpy="3.054326 -1.570796 0.000000" xyz="-0.002529881 0.03680013 0.107783545"/>
+    <parent link="base_link"/>
+    <child link="Right_Index_Basecover"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="1000" lower="-0.50" upper="1.4" velocity="3.14"/>
+    <dynamics damping="0.7" friction="0.5"/>
+  </joint>
+  <link name="Right_Index_Phoaprox">
+    <inertial>
+      <origin rpy="0.225810 -1.083656 0.411355" xyz="0.06217593 0.044372912 0.078734808"/>
+      <mass value="1.0"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-phaprox.dae"/>
+      </geometry>
+      <material name="lightblue"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0.03 0 0"/>
+      <geometry name="hithand_Index_phoarpox">
+        <box size="0.03 0.03 0.02"/>
+      </geometry>
+      <surface>
+        <friction>
+          <ode>
+            <mu>0.6</mu>
+            <mu2>0.6</mu2>
+          </ode>
+        </friction>
+      </surface>
+    </collision>
+  </link>
+  <joint name="Right_Index_2" type="revolute">
+    <origin rpy="1.5708 0 0" xyz="0 0 0 "/>
+    <parent link="Right_Index_Basecover"/>
+    <child link="Right_Index_Phoaprox"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="1000" lower="-0.50" upper="1.4" velocity="3.14"/>
+    <dynamics damping="0.7" friction="0.5"/>
+  </joint>
+  <link name="Right_Index_Phamed">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="1.0"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-phamed.dae"/>
+      </geometry>
+      <material name="white"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0.01 0 0"/>
+      <geometry name="hithand_Index_phamed">
+        <box size="0.01 0.02 0.02"/>
+      </geometry>
+      <surface>
+        <friction>
+          <ode>
+            <mu>0.6</mu>
+            <mu2>0.6</mu2>
+          </ode>
+        </friction>
+      </surface>
+    </collision>
+  </link>
+  <joint name="Right_Index_3" type="revolute">
+    <origin rpy="0 0 0" xyz="0.055 0 0"/>
+    <parent link="Right_Index_Phoaprox"/>
+    <child link="Right_Index_Phamed"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="1000" lower="-0.50" upper="1.4" velocity="3.14"/>
+    <dynamics damping="0.7" friction="0.5"/>
+  </joint>
+  <link name="Right_Index_Phadist">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="1.0"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-phadist.dae"/>
+      </geometry>
+      <material name="lightblue"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry name="hithand_Index_phadist">
+        <mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-phadist.dae"/>
+      </geometry>
+      <surface>
+        <friction>
+          <ode>
+            <mu>0.6</mu>
+            <mu2>0.6</mu2>
+          </ode>
+        </friction>
+      </surface>
+    </collision>
+  </link>
+  <joint name="Right_Index_4" type="revolute">
+    <origin rpy="0 0 -1.57" xyz="0.025 0 0"/>
+    <parent link="Right_Index_Phamed"/>
+    <child link="Right_Index_Phadist"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="1000" lower="-0.50" upper="1.4" velocity="3.14"/>
+    <dynamics damping="0.7" friction="0.5"/>
+  </joint>
+  <!-- #########################fINGER######################## -->
+  <link name="Right_Middle_Basecover">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="1.0"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <!-- <mesh filename="file://$(arg meshDirectory)visual/hit-hand-2-finger-basecover.dae" /> -->
+        <mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-basecover.dae"/>
+      </geometry>
+      <material name="white"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry name="hithand_Middle_base_cover">
+        <cylinder length="0.001" radius="0.001"/>
+      </geometry>
+      <surface>
+        <friction>
+          <ode>
+            <mu>0.6</mu>
+            <mu2>0.6</mu2>
+          </ode>
+        </friction>
+      </surface>
+    </collision>
+  </link>
+  <joint name="Right_Middle_1" type="revolute">
+    <!-- joint origin in parent link frame -->
+    <origin rpy="-3.141593 -1.570796 0.000000" xyz="-0.0037 0.01  0.117783545"/>
+    <parent link="base_link"/>
+    <child link="Right_Middle_Basecover"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="1000" lower="-0.50" upper="1.4" velocity="3.14"/>
+    <dynamics damping="0.7" friction="0.5"/>
+  </joint>
+  <link name="Right_Middle_Phoaprox">
+    <inertial>
+      <origin rpy="0.225810 -1.083656 0.411355" xyz="0.06217593 0.044372912 0.078734808"/>
+      <mass value="1.0"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-phaprox.dae"/>
+      </geometry>
+      <material name="lightblue"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0.03 0 0"/>
+      <geometry name="hithand_Middle_phoarpox">
+        <box size="0.03 0.03 0.02"/>
+      </geometry>
+      <surface>
+        <friction>
+          <ode>
+            <mu>0.6</mu>
+            <mu2>0.6</mu2>
+          </ode>
+        </friction>
+      </surface>
+    </collision>
+  </link>
+  <joint name="Right_Middle_2" type="revolute">
+    <origin rpy="1.5708 0 0" xyz="0 0 0 "/>
+    <parent link="Right_Middle_Basecover"/>
+    <child link="Right_Middle_Phoaprox"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="1000" lower="-0.50" upper="1.4" velocity="3.14"/>
+    <dynamics damping="0.7" friction="0.5"/>
+  </joint>
+  <link name="Right_Middle_Phamed">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="1.0"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-phamed.dae"/>
+      </geometry>
+      <material name="white"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0.01 0 0"/>
+      <geometry name="hithand_Middle_phamed">
+        <box size="0.01 0.02 0.02"/>
+      </geometry>
+      <surface>
+        <friction>
+          <ode>
+            <mu>0.6</mu>
+            <mu2>0.6</mu2>
+          </ode>
+        </friction>
+      </surface>
+    </collision>
+  </link>
+  <joint name="Right_Middle_3" type="revolute">
+    <origin rpy="0 0 0" xyz="0.055 0 0"/>
+    <parent link="Right_Middle_Phoaprox"/>
+    <child link="Right_Middle_Phamed"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="1000" lower="-0.50" upper="1.4" velocity="3.14"/>
+    <dynamics damping="0.7" friction="0.5"/>
+  </joint>
+  <link name="Right_Middle_Phadist">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="1.0"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-phadist.dae"/>
+      </geometry>
+      <material name="lightblue"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry name="hithand_Middle_phadist">
+        <mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-phadist.dae"/>
+      </geometry>
+      <surface>
+        <friction>
+          <ode>
+            <mu>0.6</mu>
+            <mu2>0.6</mu2>
+          </ode>
+        </friction>
+      </surface>
+    </collision>
+  </link>
+  <joint name="Right_Middle_4" type="revolute">
+    <origin rpy="0 0 -1.57" xyz="0.025 0 0"/>
+    <parent link="Right_Middle_Phamed"/>
+    <child link="Right_Middle_Phadist"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="1000" lower="-0.50" upper="1.4" velocity="3.14"/>
+    <dynamics damping="0.7" friction="0.5"/>
+  </joint>
+  <!-- #########################fINGER######################## -->
+  <link name="Right_Ring_Basecover">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="1.0"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <!-- <mesh filename="file://$(arg meshDirectory)visual/hit-hand-2-finger-basecover.dae" /> -->
+        <mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-basecover.dae"/>
+      </geometry>
+      <material name="white"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry name="hithand_Ring_base_cover">
+        <cylinder length="0.001" radius="0.001"/>
+      </geometry>
+      <surface>
+        <friction>
+          <ode>
+            <mu>0.6</mu>
+            <mu2>0.6</mu2>
+          </ode>
+        </friction>
+      </surface>
+    </collision>
+  </link>
+  <joint name="Right_Ring_1" type="revolute">
+    <!-- joint origin in parent link frame -->
+    <origin rpy="-3.054326 -1.570796 0.000000" xyz="0 -0.01680013 0.11258354"/>
+    <parent link="base_link"/>
+    <child link="Right_Ring_Basecover"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="1000" lower="-0.50" upper="1.4" velocity="3.14"/>
+    <dynamics damping="0.7" friction="0.5"/>
+  </joint>
+  <link name="Right_Ring_Phoaprox">
+    <inertial>
+      <origin rpy="0.225810 -1.083656 0.411355" xyz="0.06217593 0.044372912 0.078734808"/>
+      <mass value="1.0"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-phaprox.dae"/>
+      </geometry>
+      <material name="lightblue"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0.03 0 0"/>
+      <geometry name="hithand_Ring_phoarpox">
+        <box size="0.03 0.03 0.02"/>
+      </geometry>
+      <surface>
+        <friction>
+          <ode>
+            <mu>0.6</mu>
+            <mu2>0.6</mu2>
+          </ode>
+        </friction>
+      </surface>
+    </collision>
+  </link>
+  <joint name="Right_Ring_2" type="revolute">
+    <origin rpy="1.5708 0 0" xyz="0 0 0 "/>
+    <parent link="Right_Ring_Basecover"/>
+    <child link="Right_Ring_Phoaprox"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="1000" lower="-0.50" upper="1.4" velocity="3.14"/>
+    <dynamics damping="0.7" friction="0.5"/>
+  </joint>
+  <link name="Right_Ring_Phamed">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="1.0"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-phamed.dae"/>
+      </geometry>
+      <material name="white"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0.01 0 0"/>
+      <geometry name="hithand_Ring_phamed">
+        <box size="0.01 0.02 0.02"/>
+      </geometry>
+      <surface>
+        <friction>
+          <ode>
+            <mu>0.6</mu>
+            <mu2>0.6</mu2>
+          </ode>
+        </friction>
+      </surface>
+    </collision>
+  </link>
+  <joint name="Right_Ring_3" type="revolute">
+    <origin rpy="0 0 0" xyz="0.055 0 0"/>
+    <parent link="Right_Ring_Phoaprox"/>
+    <child link="Right_Ring_Phamed"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="1000" lower="-0.50" upper="1.4" velocity="3.14"/>
+    <dynamics damping="0.7" friction="0.5"/>
+  </joint>
+  <link name="Right_Ring_Phadist">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="1.0"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-phadist.dae"/>
+      </geometry>
+      <material name="lightblue"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry name="hithand_Ring_phadist">
+        <mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-phadist.dae"/>
+      </geometry>
+      <surface>
+        <friction>
+          <ode>
+            <mu>0.6</mu>
+            <mu2>0.6</mu2>
+          </ode>
+        </friction>
+      </surface>
+    </collision>
+  </link>
+  <joint name="Right_Ring_4" type="revolute">
+    <origin rpy="0 0 -1.57" xyz="0.025 0 0"/>
+    <parent link="Right_Ring_Phamed"/>
+    <child link="Right_Ring_Phadist"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="1000" lower="-0.50" upper="1.4" velocity="3.14"/>
+    <dynamics damping="0.7" friction="0.5"/>
+  </joint>
+  <!-- #########################fINGER######################## -->
+  <link name="Right_Little_Basecover">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="1.0"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <!-- <mesh filename="file://$(arg meshDirectory)visual/hit-hand-2-finger-basecover.dae" /> -->
+        <mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-basecover.dae"/>
+      </geometry>
+      <material name="white"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry name="hithand_Little_base_cover">
+        <cylinder length="0.001" radius="0.001"/>
+      </geometry>
+      <surface>
+        <friction>
+          <ode>
+            <mu>0.6</mu>
+            <mu2>0.6</mu2>
+          </ode>
+        </friction>
+      </surface>
+    </collision>
+  </link>
+  <joint name="Right_Little_1" type="revolute">
+    <!-- joint origin in parent link frame -->
+    <origin rpy="-2.967060 -1.570796 0.000000" xyz="0.000971571 -0.0433963 0.093583545"/>
+    <parent link="base_link"/>
+    <child link="Right_Little_Basecover"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="1000" lower="-0.50" upper="1.4" velocity="3.14"/>
+    <dynamics damping="0.7" friction="0.5"/>
+  </joint>
+  <link name="Right_Little_Phoaprox">
+    <inertial>
+      <origin rpy="0.225810 -1.083656 0.411355" xyz="0.06217593 0.044372912 0.078734808"/>
+      <mass value="1.0"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-phaprox.dae"/>
+      </geometry>
+      <material name="lightblue"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0.03 0 0"/>
+      <geometry name="hithand_Little_phoarpox">
+        <box size="0.03 0.03 0.02"/>
+      </geometry>
+      <surface>
+        <friction>
+          <ode>
+            <mu>0.6</mu>
+            <mu2>0.6</mu2>
+          </ode>
+        </friction>
+      </surface>
+    </collision>
+  </link>
+  <joint name="Right_Little_2" type="revolute">
+    <origin rpy="1.5708 0 0" xyz="0 0 0 "/>
+    <parent link="Right_Little_Basecover"/>
+    <child link="Right_Little_Phoaprox"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="1000" lower="-0.50" upper="1.4" velocity="3.14"/>
+    <dynamics damping="0.7" friction="0.5"/>
+  </joint>
+  <link name="Right_Little_Phamed">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="1.0"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-phamed.dae"/>
+      </geometry>
+      <material name="white"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0.01 0 0"/>
+      <geometry name="hithand_Little_phamed">
+        <box size="0.01 0.02 0.02"/>
+      </geometry>
+      <surface>
+        <friction>
+          <ode>
+            <mu>0.6</mu>
+            <mu2>0.6</mu2>
+          </ode>
+        </friction>
+      </surface>
+    </collision>
+  </link>
+  <joint name="Right_Little_3" type="revolute">
+    <origin rpy="0 0 0" xyz="0.055 0 0"/>
+    <parent link="Right_Little_Phoaprox"/>
+    <child link="Right_Little_Phamed"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="1000" lower="-0.50" upper="1.4" velocity="3.14"/>
+    <dynamics damping="0.7" friction="0.5"/>
+  </joint>
+  <link name="Right_Little_Phadist">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="1.0"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-phadist.dae"/>
+      </geometry>
+      <material name="lightblue"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry name="hithand_Little_phadist">
+        <mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-phadist.dae"/>
+      </geometry>
+      <surface>
+        <friction>
+          <ode>
+            <mu>0.6</mu>
+            <mu2>0.6</mu2>
+          </ode>
+        </friction>
+      </surface>
+    </collision>
+  </link>
+  <joint name="Right_Little_4" type="revolute">
+    <origin rpy="0 0 -1.57" xyz="0.025 0 0"/>
+    <parent link="Right_Little_Phamed"/>
+    <child link="Right_Little_Phadist"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="1000" lower="-0.50" upper="1.4" velocity="3.14"/>
+    <dynamics damping="0.7" friction="0.5"/>
+  </joint>
 </robot>
 
