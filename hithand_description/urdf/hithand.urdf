@@ -8,200 +8,200 @@
   <transmission name="tran_Thumb_1">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="Right_Thumb_1">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
     </joint>
     <actuator name="motor_Thumb_1">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
   <transmission name="tran_Thumb_2">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="Right_Thumb_2">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
     </joint>
     <actuator name="motor_Thumb_2">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
   <transmission name="tran_Thumb_3">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="Right_Thumb_3">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
     </joint>
     <actuator name="motor_Thumb_3">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
   <transmission name="tran_Thumb_4">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="Right_Thumb_4">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
     </joint>
     <actuator name="motor_Thumb_4">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
   <transmission name="tran_Index_1">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="Right_Index_1">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
     </joint>
     <actuator name="motor_Index_1">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
   <transmission name="tran_Index_2">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="Right_Index_2">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
     </joint>
     <actuator name="motor_Index_2">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
   <transmission name="tran_Index_3">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="Right_Index_3">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
     </joint>
     <actuator name="motor_Index_3">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
   <transmission name="tran_Index_4">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="Right_Index_4">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
     </joint>
     <actuator name="motor_Index_4">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
   <transmission name="tran_Middle_1">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="Right_Middle_1">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
     </joint>
     <actuator name="motor_Middle_1">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
   <transmission name="tran_Middle_2">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="Right_Middle_2">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
     </joint>
     <actuator name="motor_Middle_2">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
   <transmission name="tran_Middle_3">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="Right_Middle_3">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
     </joint>
     <actuator name="motor_Middle_3">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
   <transmission name="tran_Middle_4">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="Right_Middle_4">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
     </joint>
     <actuator name="motor_Middle_4">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
   <transmission name="tran_Ring_1">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="Right_Ring_1">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
     </joint>
     <actuator name="motor_Ring_1">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
   <transmission name="tran_Ring_2">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="Right_Ring_2">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
     </joint>
     <actuator name="motor_Ring_2">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
   <transmission name="tran_Ring_3">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="Right_Ring_3">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
     </joint>
     <actuator name="motor_Ring_3">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
   <transmission name="tran_Ring_4">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="Right_Ring_4">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
     </joint>
     <actuator name="motor_Ring_4">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
   <transmission name="tran_Little_1">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="Right_Little_1">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
     </joint>
     <actuator name="motor_Little_1">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
   <transmission name="tran_Little_2">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="Right_Little_2">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
     </joint>
     <actuator name="motor_Little_2">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
   <transmission name="tran_Little_3">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="Right_Little_3">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
     </joint>
     <actuator name="motor_Little_3">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
   <transmission name="tran_Little_4">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="Right_Little_4">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
     </joint>
     <actuator name="motor_Little_4">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
