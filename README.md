@@ -1,4 +1,6 @@
-# hithand_gazebo
+# Hithand_ros
+This repo aims to provide hithand catkin packages for running it in the gazebo simulation.
+
 ## Introduction
 This repo runs the gazebo simulation with robot model of Hithand.  
 
@@ -17,7 +19,7 @@ This repo runs the gazebo simulation with robot model of Hithand.
     ├── ├── launch 
     ├── ├── config
     ├── Models                    # robot model file for inserting in gazebo
-    ├── Experiments               #  folder for running experiment in Neurorobotic latform
+    ├── Experiments               #  folder for running experiment in Neurorobotic platform
     └── README.md
     
 
