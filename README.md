@@ -1,8 +1,8 @@
 # Hithand_ros
-This repo aims to provide hithand catkin packages for running it in the gazebo simulation.
+
 
 ## Introduction
-This repo runs the gazebo simulation with robot model of Hithand.  
+TThis repo aims to provide hithand catkin packages for running it in the gazebo simulation. 
 
 ![Alt text](docs/HIT_Hand_II_444x600.jpg?raw=true "Title")
 ## Directory layout
@@ -24,7 +24,7 @@ This repo runs the gazebo simulation with robot model of Hithand.
     
 
 Contact:
-qian.feng@tum.de
+qian.feng@agile-robots.com
 
 ## To Run
 ```
