@@ -2,7 +2,7 @@
 
 
 ## Introduction
-TThis repo aims to provide hithand catkin packages for running it in the gazebo simulation. 
+This repo aims to provide hithand ros packages for running it in the gazebo simulation. 
 
 ![Alt text](docs/HIT_Hand_II_444x600.jpg?raw=true "Title")
 ## Directory layout
