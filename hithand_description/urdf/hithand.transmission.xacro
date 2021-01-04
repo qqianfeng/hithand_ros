@@ -13,7 +13,7 @@
       </actuator>
     </transmission>
 
-    <!-- <transmission name="tran_${finger_name}_1">
+    <transmission name="tran_${finger_name}_1">
       <type>transmission_interface/SimpleTransmission</type>
       <joint name="Right_${finger_name}_1">
         <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
@@ -22,8 +22,8 @@
         <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
         <mechanicalReduction>1</mechanicalReduction>
       </actuator>
-    </transmission> -->
-    <!-- 
+    </transmission>
+    
     <transmission name="tran_${finger_name}_2">
         <type>transmission_interface/SimpleTransmission</type>
         <joint name="Right_${finger_name}_2">
@@ -44,7 +44,7 @@
           <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
           <mechanicalReduction>1</mechanicalReduction>
         </actuator>
-      </transmission> -->
+      </transmission>
   </xacro:macro>
 
     <xacro:hithand_transmission finger_name="Thumb">

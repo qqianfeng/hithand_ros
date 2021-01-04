@@ -7,20 +7,19 @@ hithand:
   thumb0_position_controller:
     type: effort_controllers/JointPositionController
     joint: Right_Thumb_0
-    pid: { p: 1000.0, i: 0, d: 0 }
+    pid: { p: 100.0, i: 0, d: 0 }
   thumb1_position_controller:
     type: effort_controllers/JointPositionController
     joint: Right_Thumb_1
-    pid: { p: 1.0, i: 0, d: 0 }
-# thumb2_position_controller:
-#   type: effort_controllers/JointPositionController
-#   joint: Right_Thumb_2
-#   pid: { p: 100.0, i: 0.01, d: 10.0 }
-# thumb3_position_controller:
-#   type: effort_controllers/JointPositionController
-#   joint: Right_Thumb_3
-#   pid: { p: 100.0, i: 0.01, d: 10.0 }
-
+    pid: { p: 100.0, i: 0, d: 0 }
+  thumb2_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Right_Thumb_2
+    pid: { p: 100.0, i: 0, d: 0 }
+  thumb3_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Right_Thumb_3
+    pid: { p: 100.0, i: 0, d: 0 }
 # # -------------------- Index
 # index0_position_controller:
 #   type: effort_controllers/JointPositionController

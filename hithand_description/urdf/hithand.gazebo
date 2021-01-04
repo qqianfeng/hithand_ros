@@ -13,12 +13,6 @@
     <xacro:property name="staticValue" value="false" />
     <xacro:property name="turnGravityOffValue" value="true" />
 
-    <!--set static works only if no reference is specified -->
-    <gazebo>
-        <static>${staticValue}</static>
-        <turnGravityOff>${turnGravityOffValue}</turnGravityOff>
-    </gazebo>
-
     <!-- Base link hithand -->
     <gazebo reference="base_link_hithand">
         <selfCollide>${selfCollideValue}</selfCollide>
@@ -36,11 +30,26 @@
         <mu1>1</mu1>
         <mu2>1</mu2>
     </gazebo>
-    <!-- <gazebo reference="Right_Thumb_Phaprox">
+    <gazebo reference="Right_Thumb_Phaprox">
         <selfCollide>${selfCollideValue}</selfCollide>
         <static>${staticValue}</static>
         <turnGravityOff>${turnGravityOffValue}</turnGravityOff>
         <mu1>1</mu1>
         <mu2>1</mu2>
-    </gazebo> -->
+    </gazebo>
+    <gazebo reference="Right_Thumb_Phamed">
+        <selfCollide>${selfCollideValue}</selfCollide>
+        <static>${staticValue}</static>
+        <turnGravityOff>${turnGravityOffValue}</turnGravityOff>
+        <mu1>1</mu1>
+        <mu2>1</mu2>
+    </gazebo>
+    <gazebo reference="Right_Thumb_Phadist">
+        <selfCollide>${selfCollideValue}</selfCollide>
+        <static>${staticValue}</static>
+        <turnGravityOff>${turnGravityOffValue}</turnGravityOff>
+        <mu1>1</mu1>
+        <mu2>1</mu2>
+    </gazebo>
+    
 </robot>
