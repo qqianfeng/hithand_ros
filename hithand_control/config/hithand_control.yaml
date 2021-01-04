@@ -1,94 +1,91 @@
-#hithand:
-# Publish all joint states -----------------------------------
-#  joint_state_controller:
-#   type: joint_state_controller/JointStateController
-#   publish_rate: 50
+hithand:
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 100
 
-# Position Controllers ---------------------------------------
-# position_controllers
-# effort_controllers
-thumb1_position_controller:
-  type: position_controllers/JointPositionController
-  joint: Right_Thumb_1
-  pid: { p: 100.0, i: 0.01, d: 10.0 }
-thumb2_position_controller:
-  type: position_controllers/JointPositionController
-  joint: Right_Thumb_2
-  pid: { p: 100.0, i: 0.01, d: 10.0 }
-thumb3_position_controller:
-  type: position_controllers/JointPositionController
-  joint: Right_Thumb_3
-  pid: { p: 100.0, i: 0.01, d: 10.0 }
-thumb4_position_controller:
-  type: position_controllers/JointPositionController
-  joint: Right_Thumb_4
-  pid: { p: 100.0, i: 0.01, d: 10.0 }
+  # Position Controllers ---------------------------------------
+  thumb0_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Right_Thumb_0
+    pid: { p: 1000.0, i: 0, d: 0 }
+  thumb1_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Right_Thumb_1
+    pid: { p: 1.0, i: 0, d: 0 }
+# thumb2_position_controller:
+#   type: effort_controllers/JointPositionController
+#   joint: Right_Thumb_2
+#   pid: { p: 100.0, i: 0.01, d: 10.0 }
+# thumb3_position_controller:
+#   type: effort_controllers/JointPositionController
+#   joint: Right_Thumb_3
+#   pid: { p: 100.0, i: 0.01, d: 10.0 }
 
-# -------------------- Index
-index1_position_controller:
-  type: position_controllers/JointPositionController
-  joint: Right_Index_1
-  pid: { p: 100.0, i: 0.01, d: 10.0 }
-index2_position_controller:
-  type: position_controllers/JointPositionController
-  joint: Right_Index_2
-  pid: { p: 100.0, i: 0.01, d: 10.0 }
-index3_position_controller:
-  type: position_controllers/JointPositionController
-  joint: Right_Index_3
-  pid: { p: 100.0, i: 0.01, d: 10.0 }
-index4_position_controller:
-  type: position_controllers/JointPositionController
-  joint: Right_Index_4
-  pid: { p: 100.0, i: 0.01, d: 10.0 }
+# # -------------------- Index
+# index0_position_controller:
+#   type: effort_controllers/JointPositionController
+#   joint: Right_Index_0
+#   pid: { p: 100.0, i: 0.01, d: 10.0 }
+# index1_position_controller:
+#   type: effort_controllers/JointPositionController
+#   joint: Right_Index_1
+#   pid: { p: 100.0, i: 0.01, d: 10.0 }
+# index2_position_controller:
+#   type: effort_controllers/JointPositionController
+#   joint: Right_Index_2
+#   pid: { p: 100.0, i: 0.01, d: 10.0 }
+# index3_position_controller:
+#   type: effort_controllers/JointPositionController
+#   joint: Right_Index_3
+#   pid: { p: 100.0, i: 0.01, d: 10.0 }
 
-middle1_position_controller:
-  type: position_controllers/JointPositionController
-  joint: Right_Middle_1
-  pid: { p: 100.0, i: 0.01, d: 10.0 }
-middle2_position_controller:
-  type: position_controllers/JointPositionController
-  joint: Right_Middle_2
-  pid: { p: 100.0, i: 0.01, d: 10.0 }
-middle3_position_controller:
-  type: position_controllers/JointPositionController
-  joint: Right_Middle_3
-  pid: { p: 100.0, i: 0.01, d: 10.0 }
-middle4_position_controller:
-  type: position_controllers/JointPositionController
-  joint: Right_Middle_4
-  pid: { p: 100.0, i: 0.01, d: 10.0 }
+# middle0_position_controller:
+#   type: effort_controllers/JointPositionController
+#   joint: Right_Middle_0
+#   pid: { p: 100.0, i: 0.01, d: 10.0 }
+# middle1_position_controller:
+#   type: effort_controllers/JointPositionController
+#   joint: Right_Middle_1
+#   pid: { p: 100.0, i: 0.01, d: 10.0 }
+# middle2_position_controller:
+#   type: effort_controllers/JointPositionController
+#   joint: Right_Middle_2
+#   pid: { p: 100.0, i: 0.01, d: 10.0 }
+# middle3_position_controller:
+#   type: effort_controllers/JointPositionController
+#   joint: Right_Middle_3
+#   pid: { p: 100.0, i: 0.01, d: 10.0 }
 
-ring1_position_controller:
-  type: position_controllers/JointPositionController
-  joint: Right_Ring_1
-  pid: { p: 100.0, i: 0.01, d: 10.0 }
-ring2_position_controller:
-  type: position_controllers/JointPositionController
-  joint: Right_Ring_2
-  pid: { p: 100.0, i: 0.01, d: 10.0 }
-ring3_position_controller:
-  type: position_controllers/JointPositionController
-  joint: Right_Ring_3
-  pid: { p: 100.0, i: 0.01, d: 10.0 }
-ring4_position_controller:
-  type: position_controllers/JointPositionController
-  joint: Right_Ring_4
-  pid: { p: 100.0, i: 0.01, d: 10.0 }
+# ring0_position_controller:
+#   type: effort_controllers/JointPositionController
+#   joint: Right_Ring_0
+#   pid: { p: 100.0, i: 0.01, d: 10.0 }
+# ring1_position_controller:
+#   type: effort_controllers/JointPositionController
+#   joint: Right_Ring_1
+#   pid: { p: 100.0, i: 0.01, d: 10.0 }
+# ring2_position_controller:
+#   type: effort_controllers/JointPositionController
+#   joint: Right_Ring_2
+#   pid: { p: 100.0, i: 0.01, d: 10.0 }
+# ring3_position_controller:
+#   type: effort_controllers/JointPositionController
+#   joint: Right_Ring_3
+#   pid: { p: 100.0, i: 0.01, d: 10.0 }
 
-little1_position_controller:
-  type: position_controllers/JointPositionController
-  joint: Right_Little_1
-  pid: { p: 100.0, i: 0.01, d: 10.0 }
-little2_position_controller:
-  type: position_controllers/JointPositionController
-  joint: Right_Little_2
-  pid: { p: 100.0, i: 0.01, d: 10.0 }
-little3_position_controller:
-  type: position_controllers/JointPositionController
-  joint: Right_Little_3
-  pid: { p: 100.0, i: 0.01, d: 10.0 }
-little4_position_controller:
-  type: position_controllers/JointPositionController
-  joint: Right_Little_4
-  pid: { p: 100.0, i: 0.01, d: 10.0 }
+# little0_position_controller:
+#   type: effort_controllers/JointPositionController
+#   joint: Right_Little_0
+#   pid: { p: 100.0, i: 0.01, d: 10.0 }
+# little1_position_controller:
+#   type: effort_controllers/JointPositionController
+#   joint: Right_Little_1
+#   pid: { p: 100.0, i: 0.01, d: 10.0 }
+# little2_position_controller:
+#   type: effort_controllers/JointPositionController
+#   joint: Right_Little_2
+#   pid: { p: 100.0, i: 0.01, d: 10.0 }
+# little3_position_controller:
+#   type: effort_controllers/JointPositionController
+#   joint: Right_Little_3
+#   pid: { p: 100.0, i: 0.01, d: 10.0 }

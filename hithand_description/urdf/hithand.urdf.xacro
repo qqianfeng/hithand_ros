@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="hithand">
+    <xacro:arg name="attached"    default="false"/>
+    <xacro:arg name="parent"      default=""     />
+    <xacro:include filename="$(find hithand_description)/urdf/hithand.xacro"/>
+    <xacro:hithand attached="$(arg attached)" parent="$(arg parent)" xyz="0 0 0" rpy="0 0 0"/>
+</robot>
