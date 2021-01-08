@@ -4,10 +4,10 @@
 
         <xacro:property name="mu1" value="0.6"/>
         <xacro:property name="mu2" value="0.6"/>
-        <xacro:property name="inertia_mag_0" value="3"/> <!-- should be 5 -->
-        <xacro:property name="inertia_mag_1" value="3"/> <!-- should be 5 -->
-        <xacro:property name="inertia_mag_2" value="3"/> <!-- should be 6 -->
-        <xacro:property name="inertia_mag_3" value="3"/> <!-- should be 6 -->
+        <xacro:property name="inertia_mag_0" value="6"/> <!-- should be 5 -->
+        <xacro:property name="inertia_mag_1" value="6"/> <!-- should be 5 -->
+        <xacro:property name="inertia_mag_2" value="6"/> <!-- should be 6 -->
+        <xacro:property name="inertia_mag_3" value="6"/> <!-- should be 6 -->
 
         <!-- Either attach the Hithand to ths specified world link or that a robot link -->
         <xacro:if value="${not attached}">
@@ -188,12 +188,12 @@
                     </geometry>
                     <material name="lightblue"/>
                 </visual>
-                <collision>
+                <!-- <collision>
                     <origin xyz="0 0 0" rpy="0 0 0" />
                     <geometry name='hithand_${prefix}_phadist'>
                         <mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-phadist.dae" />
                     </geometry>
-                </collision>
+                </collision> -->
             </link>
 
         </xacro:macro>
