@@ -49,13 +49,13 @@
 
     <xacro:hithand_transmission finger_name="Thumb">
     </xacro:hithand_transmission>
-    <!-- <xacro:hithand_transmission finger_name="Index">
+    <xacro:hithand_transmission finger_name="Index">
     </xacro:hithand_transmission>
     <xacro:hithand_transmission finger_name="Middle">
     </xacro:hithand_transmission>
     <xacro:hithand_transmission finger_name="Ring">
     </xacro:hithand_transmission>
     <xacro:hithand_transmission finger_name="Little">
-    </xacro:hithand_transmission> -->
+    </xacro:hithand_transmission>
 
 </robot>
