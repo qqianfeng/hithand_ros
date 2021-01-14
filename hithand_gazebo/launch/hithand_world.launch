@@ -1,12 +1,25 @@
 <?xml version="1.0"?>
 <launch>
+  <arg name="use_dart_physics"         default="true"/>
+  <arg name="gui"                      default="true"/>
+
+
   <!-- We resume the logic in empty_world.launch, changing only the name of the world to be launched -->
-  <include file="$(find gazebo_ros)/launch/empty_world.launch">
-    <arg name="world_name" value="$(find hithand_gazebo)/worlds/hithand.world"/>
-    <arg name="paused"     value="true"/>
-    <arg name="gui_required" value="true"/>
-    <!-- more default parameters can be changed here -->
-  </include>
+  <group unless="$(arg use_dart_physics)">
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+      <arg name="world_name" value="$(find hithand_gazebo)/worlds/hithand.world"/>
+      <arg name="paused"     value="true"/>
+      <arg name="gui_required" value="true"/>
+      <!-- more default parameters can be changed here -->
+    </include>
+  </group>
+
+  <group if="$(arg use_dart_physics)">
+    <!-- Launch an empty world with DART physics engine  -->
+    <include file="$(find hithand_gazebo)/launch/empty_world_dart.launch">
+      <arg name="gui" value="$(arg gui)"/>
+    </include>
+  </group>
 
 
 
