@@ -32,9 +32,9 @@
         <!-- Starting from the base -->
         <link name="base_link_hithand">
   	        <inertial>
-      		    <origin xyz="0.0 0.0 0.05" rpy="0 0 0" />
-      		    <mass value="1"/>
-      		    <inertia ixx="1e-3" ixy="0.0" ixz="0.0" iyy="1e-3" iyz="0.0" izz="1e-3" />
+      		    <origin xyz="0.0112 0.0 0.0566" rpy="0 0 0" />
+      		    <mass value="1.1485"/>
+      		    <inertia ixx="2.2458e-3" ixy="2.7421e-4" ixz="1.6e-5" iyy="2.2203e-3" iyz="6.37e-5" izz="1.9003e-3" />
     	    </inertial>
    	        <visual>
       		    <origin rpy="0 0 0" xyz="0 0 0" />
@@ -85,7 +85,7 @@
                     <origin xyz="0.02749 0 0" rpy="0 0 0" />
                     <!-- <mass value="0.0176" /> -->
                     <mass value="0.0176"/>
-                    <inertia ixx="2e-${inertia_mag_0}" ixy="0.0" ixz="0.0" iyy="2e-${inertia_mag_0}" iyz="0.0" izz="2e-${inertia_mag_0}" />
+                    <inertia ixx="1.3450e-6" ixy="0.0" ixz="1.8183e-7" iyy="1.9874e-6" iyz="0.0" izz="1.0419e-6" />
                 </inertial>
                 <visual>
                     <origin xyz="0 0 0" rpy="0 0 0" />
@@ -115,10 +115,10 @@
 
             <link name="Right_${prefix}_Phaprox">
                 <inertial>
-                    <origin xyz="0.02749 0 0" 
+                    <origin xyz="0.03076 0.00297 0" 
                             rpy="0 0 0" />
                     <mass value="0.0232" />
-                    <inertia ixx="2e-${inertia_mag_1}" ixy="0.0" ixz="0.0" iyy="2e-${inertia_mag_1}" iyz="0.0" izz="2e-${inertia_mag_1}" />
+                    <inertia ixx="2.5326e-6" ixy="9.2551e-7" ixz="4.0954e-8" iyy="6.9625e-6" iyz="0.0" izz="7.9108e-6" />
                 </inertial>
                 <visual>
                     <origin xyz="0 0 0" rpy="0 0 0" />
@@ -153,9 +153,9 @@
 
             <link name="Right_${prefix}_Phamed">
                 <inertial>
-                    <origin xyz="0.0025 0 0" rpy="0 0 0" />
+                    <origin xyz="0.0097 -0.00036 0" rpy="0 0 0" />
                     <mass value="0.0158" />
-                    <inertia ixx="1e-${inertia_mag_2}" ixy="0.0" ixz="0.0" iyy="1e-${inertia_mag_2}" iyz="0.0" izz="1e-${inertia_mag_2}" />
+                    <inertia ixx="1.1852e-6" ixy="2.8845e-8" ixz="6.1323e-9" iyy="2.4460e-6" iyz="2.4541e-9" izz="2.6537e-6" />
                 </inertial>
                 <visual>
                     <origin xyz="0 0 0" rpy="0 0 0" />
@@ -189,9 +189,9 @@
             </joint>
             <link name="Right_${prefix}_Phadist">
                 <inertial>
-                    <origin xyz="0.003 0 0" rpy="0 0 0" />
+                    <origin xyz="0.00072 0.00717 0.0" rpy="0 0 0" />
                     <mass value="0.0137" />
-                    <inertia ixx="1e-${inertia_mag_3}" ixy="0.0" ixz="0.0" iyy="1e-${inertia_mag_3}" iyz="0.0" izz="1e-${inertia_mag_3}" />
+                    <inertia ixx="1.5519e-6" ixy="0.0" ixz="0.0" iyy="8.2972e-7" iyz="0.0" izz="1.5788e-6" />
                 </inertial>
                 <visual>
                     <origin xyz="0 0 0" rpy="0 0 0" />
