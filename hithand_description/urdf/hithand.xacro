@@ -39,7 +39,7 @@
    	        <visual>
       		    <origin rpy="0 0 0" xyz="0 0 0" />
       		    <geometry>
-        		    <mesh filename="package://hithand_description/meshes/visual/handhit-hand-2-palm-right.dae"/>
+        		    <mesh filename="package://hithand_description/meshes/visual/hit-hand-2-palm-right.dae"/>
       		    </geometry>
       		    <material name="grey" />
     	    </visual>
@@ -52,6 +52,14 @@
       		    <geometry>
         		    <mesh filename="package://hithand_description/meshes/collision/hit-hand-2-palm-right.dae"/>
       		    </geometry>
+                <surface>
+                    <friction>
+                        <ode>
+                            <mu>0.8</mu>
+                            <mu2>0.8</mu2>
+                        </ode>
+                    </friction>
+                </surface>
     	    </collision>
         </link>
 
@@ -90,7 +98,7 @@
                 <visual>
                     <origin xyz="0 0 0" rpy="0 0 0" />
                     <geometry>
-                        <mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-basecover.dae"/>
+                        <mesh filename="package://hithand_description/meshes/visual/finger/hit-hand-2-finger-basecover.dae"/>
                     </geometry>
                     <material name="white"/>
                 </visual>
@@ -123,7 +131,7 @@
                 <visual>
                     <origin xyz="0 0 0" rpy="0 0 0" />
                         <geometry>
-                                <mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-phaprox.dae" />
+                                <mesh filename="package://hithand_description/meshes/visual/finger/hit-hand-2-finger-phaprox.dae" />
                         </geometry>
                     <material name="lightblue"/>
                 </visual>
@@ -137,6 +145,14 @@
                         <geometry>
                                 <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phaprox.dae" />
                         </geometry>
+                    <surface>
+                        <friction>
+                            <ode>
+                                <mu>0.8</mu>
+                                <mu2>0.8</mu2>
+                            </ode>
+                        </friction>
+                    </surface>
                 </collision>
             </link>
 
@@ -160,7 +176,7 @@
                 <visual>
                     <origin xyz="0 0 0" rpy="0 0 0" />
                     <geometry>
-                        <mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-phamed.dae" />
+                        <mesh filename="package://hithand_description/meshes/visual/finger/hit-hand-2-finger-phamed.dae" />
                     </geometry>
                     <material name="white"/>
                 </visual>
@@ -173,13 +189,21 @@
                         <geometry>
                                 <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phamed.dae" />
                         </geometry>
+                    <surface>
+                        <friction>
+                            <ode>
+                                <mu>0.6</mu>
+                                <mu2>0.6</mu2>
+                            </ode>
+                        </friction>
+                    </surface>
                 </collision>
             </link>
 
 
             <!-- +++++ Finger joint 3 Phalanx distalis ++++++ -->
             <joint name="Right_${prefix}_3" type="revolute">
-                <origin xyz="0.025 0 0" rpy="0 0 -1.57" />
+                <origin xyz="0.025 0 0" rpy="0 0 -1.570796" />
                 <parent link="Right_${prefix}_Phamed" />
                 <child link="Right_${prefix}_Phadist" />
                 <axis xyz="0 0 1" />
@@ -196,7 +220,7 @@
                 <visual>
                     <origin xyz="0 0 0" rpy="0 0 0" />
                     <geometry>
-                        <mesh filename="package://hithand_description/meshes/visual/hit-hand-2-finger-phadist.dae" />
+                        <mesh filename="package://hithand_description/meshes/visual/finger/hit-hand-2-finger-phadist.dae" />
                     </geometry>
                     <material name="lightblue"/>
                 </visual>
@@ -209,6 +233,14 @@
                         <geometry>
                                 <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phadist.dae" />
                         </geometry>
+                    <surface>
+                        <friction>
+                            <ode>
+                                <mu>0.8</mu>
+                                <mu2>0.8</mu2>
+                            </ode>
+                        </friction>
+                    </surface>
                 </collision>
             </link>
 
