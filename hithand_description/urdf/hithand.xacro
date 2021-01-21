@@ -34,7 +34,8 @@
   	        <inertial>
       		    <origin xyz="0.0112 0.0 0.0566" rpy="0 0 0" />
       		    <mass value="1.1485"/>
-      		    <inertia ixx="2.2458e-3" ixy="2.7421e-4" ixz="1.6e-5" iyy="2.2203e-3" iyz="6.37e-5" izz="1.9003e-3" />
+      		    <inertia ixx="2.2458e-3" ixy="-2.7421e-4" ixz="1.6e-5" iyy="2.2203e-3" iyz="-6.37e-5" izz="1.9003e-3" />
+                <!-- <inertia ixx="2.2458e-4" ixy="0" ixz="0" iyy="2.2203e-4" iyz="0" izz="1.9003e-4" /> -->
     	    </inertial>
    	        <visual>
       		    <origin rpy="0 0 0" xyz="0 0 0" />
@@ -59,13 +60,13 @@
                             <mu2>0.8</mu2>
                         </ode>
                     </friction>
-                </surface>
+                </surface> 
     	    </collision>
         </link>
 
         <!-- Add a virtual palm link to get the transform of this point via TF for grasping (we align this frame with
         a normal of an object point cloud.) -->
-        <joint name="$hithand_palm_joint" type="fixed">
+        <joint name="hithand_palm_joint" type="fixed">
             <parent link="base_link_hithand"/>
             <child link="palm_link_hithand"/>
             <origin xyz="0.02 0 0.06" rpy="-0.15 -1.15 0"/>
@@ -76,6 +77,7 @@
 
         <!-- #########################FINGER######################## -->
         <!-- Define the fingers in a macro (all fingers are equal) -->
+        <!-- Joint limits set according to this: https://github.com/Qianboy/hithand_ros/blob/master/hithand_description/parameter.pdf -->
         <xacro:macro name="finger" params="prefix *transform_palm2finger">
             <!-- +++++ Finger base joint 0 ++++++ -->
             <joint name="Right_${prefix}_0" type="revolute">
@@ -85,7 +87,8 @@
                 <child link="Right_${prefix}_Basecover" />
                 <axis xyz="0 0 1" />
                 <limit effort="15" lower="-0.261799" upper="0.261799" velocity="3.14"/>
-                <dynamics damping="0.7" friction="0.5" />
+                <!-- <dynamics damping="0.7" friction="0.5" /> -->
+                <dynamics damping="10" friction="0" />
             </joint>
 
             <link name="Right_${prefix}_Basecover">
@@ -93,7 +96,8 @@
                     <origin xyz="0.02749 0 0" rpy="0 0 0" />
                     <!-- <mass value="0.0176" /> -->
                     <mass value="0.0176"/>
-                    <inertia ixx="1.3450e-6" ixy="0.0" ixz="1.8183e-7" iyy="1.9874e-6" iyz="0.0" izz="1.0419e-6" />
+                    <inertia ixx="1.3450e-6" ixy="0.0" ixz="-1.8183e-7" iyy="1.9874e-6" iyz="0.0" izz="1.0419e-6" />
+                    <!-- <inertia ixx="1.3450e-6" ixy="0.0" ixz="0" iyy="1.9874e-6" iyz="0.0" izz="1.0419e-6" /> -->
                 </inertial>
                 <visual>
                     <origin xyz="0 0 0" rpy="0 0 0" />
@@ -117,8 +121,10 @@
                 <parent link="Right_${prefix}_Basecover" />
                 <child link="Right_${prefix}_Phaprox" />
                 <axis xyz="0 0 1" />
-                <limit effort="15" lower="0" upper="1.48353" velocity="3.14"/>
-                <dynamics damping="0.7" friction="0.5" />
+                <limit effort="15" lower="0.0872665" upper="1.48353" velocity="3.14"/>
+                <!-- <limit effort="15" lower="-1" upper="1.48353" velocity="3.14"/> -->
+                <!-- <dynamics damping="0.7" friction="0.5" /> -->
+                <dynamics damping="10" friction="0" />
             </joint>
 
             <link name="Right_${prefix}_Phaprox">
@@ -126,7 +132,8 @@
                     <origin xyz="0.03076 0.00297 0" 
                             rpy="0 0 0" />
                     <mass value="0.0232" />
-                    <inertia ixx="2.5326e-6" ixy="9.2551e-7" ixz="4.0954e-8" iyy="6.9625e-6" iyz="0.0" izz="7.9108e-6" />
+                    <inertia ixx="2.5326e-6" ixy="-9.2551e-7" ixz="-4.0954e-8" iyy="6.9625e-6" iyz="-9.38e-9" izz="7.9108e-6" />
+                    <!-- <inertia ixx="2.5326e-6" ixy="0" ixz="0" iyy="2.9625e-6" iyz="0" izz="2.9108e-6" /> -->
                 </inertial>
                 <visual>
                     <origin xyz="0 0 0" rpy="0 0 0" />
@@ -152,7 +159,7 @@
                                 <mu2>0.8</mu2>
                             </ode>
                         </friction>
-                    </surface>
+                    </surface> 
                 </collision>
             </link>
 
@@ -163,15 +170,18 @@
                 <parent link="Right_${prefix}_Phaprox" />
                 <child link="Right_${prefix}_Phamed" />
                 <axis xyz="0 0 1" />
-                <limit effort="15" lower="0" upper="1.13446" velocity="3.14"/>
-                <dynamics damping="0.7" friction="0.5" />
+                <limit effort="15" lower="0.0872665" upper="1.13446" velocity="3.14"/>
+                <!-- <limit effort="15" lower="-1" upper="1.13446" velocity="3.14"/> -->
+                <!-- <dynamics damping="0.7" friction="0.5" /> -->
+                <dynamics damping="10" friction="0" />
             </joint>
 
             <link name="Right_${prefix}_Phamed">
                 <inertial>
                     <origin xyz="0.0097 -0.00036 0" rpy="0 0 0" />
                     <mass value="0.0158" />
-                    <inertia ixx="1.1852e-6" ixy="2.8845e-8" ixz="6.1323e-9" iyy="2.4460e-6" iyz="2.4541e-9" izz="2.6537e-6" />
+                    <inertia ixx="1.1852e-6" ixy="-2.8845e-8" ixz="-6.1323e-9" iyy="2.4460e-6" iyz="2.4541e-9" izz="2.6537e-6" />
+                    <!-- <inertia ixx="1.1852e-6" ixy="0" ixz="0" iyy="2.4460e-6" iyz="0" izz="2.6537e-6" /> -->
                 </inertial>
                 <visual>
                     <origin xyz="0 0 0" rpy="0 0 0" />
@@ -196,7 +206,7 @@
                                 <mu2>0.6</mu2>
                             </ode>
                         </friction>
-                    </surface>
+                    </surface> 
                 </collision>
             </link>
 
@@ -208,14 +218,16 @@
                 <child link="Right_${prefix}_Phadist" />
                 <axis xyz="0 0 1" />
                 <!-- <limit effort="15" lower="-1" upper="1" velocity="3.14"/> -->
-                <limit effort="15" lower="-0.50" upper="1.4" velocity="3.14"/>
-                <dynamics damping="0.7" friction="0.5" />
+                <limit effort="15" lower="0.0872665" upper="1.13446" velocity="3.14"/>
+                <!-- <dynamics damping="0.7" friction="0.5" /> -->
+                <dynamics damping="10" friction="0" />
             </joint>
             <link name="Right_${prefix}_Phadist">
                 <inertial>
                     <origin xyz="0.00072 0.00717 0.0" rpy="0 0 0" />
                     <mass value="0.0137" />
-                    <inertia ixx="1.5519e-6" ixy="0.0" ixz="0.0" iyy="8.2972e-7" iyz="0.0" izz="1.5788e-6" />
+                    <inertia ixx="1.5519e-6" ixy="-2.037e-9" ixz="0.0" iyy="8.2972e-7" iyz="3.77e-9" izz="1.5788e-6" />
+                    <!-- <inertia ixx="1.5519e-6" ixy="0" ixz="0" iyy="1.2972e-6" iyz="0" izz="1.5788e-6" /> -->
                 </inertial>
                 <visual>
                     <origin xyz="0 0 0" rpy="0 0 0" />
@@ -240,7 +252,7 @@
                                 <mu2>0.8</mu2>
                             </ode>
                         </friction>
-                    </surface>
+                    </surface> 
                 </collision>
             </link>
 
