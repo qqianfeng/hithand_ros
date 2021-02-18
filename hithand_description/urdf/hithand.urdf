@@ -384,7 +384,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hithand_description/meshes/visual/hit-hand-2-palm-right.dae"/>
+        <mesh filename="package://hithand_description/meshes/visual/palm/hit-hand-2-palm-right.dae"/>
       </geometry>
       <material name="grey"/>
     </visual>
@@ -395,7 +395,7 @@
       		    </geometry> -->
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hithand_description/meshes/collision/hit-hand-2-palm-right.dae"/>
+        <mesh filename="package://hithand_description/meshes/collision/palm/hit-hand-2-palm-right.dae"/>
       </geometry>
     </collision>
   </link>

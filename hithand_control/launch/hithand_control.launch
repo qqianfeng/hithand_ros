@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <launch>
-  <arg name="attached"       default="true"/>
+  <arg name="attached"       default="false"/>
   <!-- ================================================================================= -->
   <arg name="hand_name"             default="hithand"/>
   <arg name="control_rate"          default="100"/>
@@ -21,7 +21,7 @@
   <!-- Load joint controller configurations from YAML file to parameter server -->
   <group if="$(arg attached)"> 
     <rosparam file="$(find hithand_control)/config/hithand_control_attached.yaml" command="load"
-        ns="$(arg robot_name)"/> <!-- was hand_name before-->
+        ns="$(arg robot_name)"/>
 
     <node name="hithand_controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
       output="screen" ns="$(arg robot_name)" args="thumb0_position_controller thumb1_position_controller thumb2_position_controller thumb3_position_controller
@@ -32,7 +32,7 @@
   </group>
 
   <group unless="$(arg attached)"> 
-    <rosparam file="$(find hithand_control)/config/hithand_control.yaml" command="load"/> <!-- was hand_name before-->
+    <rosparam file="$(find hithand_control)/config/hithand_control.yaml" command="load"/>
 
     <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
       output="screen" ns="/hithand" args="joint_state_controller 
@@ -50,7 +50,7 @@
     <node name="hithand_joint_wrapper" pkg="panda_gazebo" type="robot_joint_wrapper.py"
     respawn="false" output="screen">
       <param name="listen_prefix"       type="str" value="$(arg hand_name)"/>
-      <param name="publish_prefix"      type="str" value="$(arg robot_name)"/> <!-- was hand_name before-->
+      <param name="publish_prefix"      type="str" value="$(arg robot_name)"/>
       <param name="control_method"      type="str" value="p"/>
       <param name="joint_command_topic" type="str" value="$(arg joint_command_topic)"/>
       <param name="control_rate"        type="int" value="$(arg control_rate)"/>
