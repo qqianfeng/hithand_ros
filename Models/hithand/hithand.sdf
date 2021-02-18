@@ -1,42 +1,45 @@
 <sdf version='1.6'>
   <model name='hithand'>
-    <link name='base_link'>
-      <pose frame=''>0 0 0 0 -0 0</pose>
+    <link name='base_link_hithand'>
+      <pose frame=''>0 0 0.1 0 -0 0</pose>
       <inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
-        <mass>1</mass>
+        <pose frame=''>0.0112 0 0.0566 0 -0 0</pose>
+        <mass>1.1485</mass>
         <inertia>
-          <ixx>1</ixx>
-          <ixy>0</ixy>
-          <ixz>0</ixz>
-          <iyy>1</iyy>
-          <iyz>0</iyz>
-          <izz>1</izz>
+          <ixx>0.0022458</ixx>
+          <ixy>-0.00027421</ixy>
+          <ixz>1.6e-05</ixz>
+          <iyy>0.0022203</iyy>
+          <iyz>-6.37e-05</iyz>
+          <izz>0.0019003</izz>
         </inertia>
       </inertial>
-      <collision name='base_link_collision'>
+      <collision name='base_link_hithand_collision'>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
-          <cylinder>
-            <length>0.001</length>
-            <radius>0.001</radius>
-          </cylinder>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://hithand_description/meshes/collision/palm/hit-hand-2-palm-right-merged.dae</uri>
+          </mesh>
         </geometry>
         <surface>
           <contact>
             <ode/>
           </contact>
           <friction>
-            <ode/>
+            <ode>
+              <mu>0.8</mu>
+              <mu2>0.8</mu2>
+            </ode>
           </friction>
         </surface>
       </collision>
-      <visual name='base_link_visual'>
+      <visual name='base_link_hithand_visual'>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hithand_description/meshes/visual/hit-hand-2-palm-right.dae</uri>
+            <uri>model://hithand_description/meshes/visual/palm/hit-hand-2-palm-right.dae</uri>
           </mesh>
         </geometry>
         <material>
@@ -51,21 +54,21 @@
       <self_collide>0</self_collide>
     </link>
     <joint name='fixed' type='fixed'>
-      <child>base_link</child>
+      <child>base_link_hithand</child>
       <parent>world</parent>
     </joint>
     <link name='Right_Index_Basecover'>
-      <pose frame=''>-0.00253 0.0368 0.107784 -0.087263 -1.57079 3.14159</pose>
+      <pose frame=''>-0.00253 0.0368 0.207784 -0.087263 -1.57079 3.14159</pose>
       <inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
-        <mass>1</mass>
+        <pose frame=''>0.02749 0 0 0 -0 0</pose>
+        <mass>0.0176</mass>
         <inertia>
-          <ixx>1</ixx>
+          <ixx>1.345e-06</ixx>
           <ixy>0</ixy>
-          <ixz>0</ixz>
-          <iyy>1</iyy>
+          <ixz>-1.8183e-07</ixz>
+          <iyy>1.9874e-06</iyy>
           <iyz>0</iyz>
-          <izz>1</izz>
+          <izz>1.0419e-06</izz>
         </inertia>
       </inertial>
       <collision name='Right_Index_Basecover_collision'>
@@ -81,7 +84,10 @@
             <ode/>
           </contact>
           <friction>
-            <ode/>
+            <ode>
+              <mu>0.8</mu>
+              <mu2>0.8</mu2>
+            </ode>
           </friction>
         </surface>
       </collision>
@@ -90,7 +96,80 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-basecover.dae</uri>
+            <uri>model://hithand_description/meshes/visual/finger/hit-hand-2-finger-basecover.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>__default__</uri>
+            <name>__default__</name>
+          </script>
+        </material>
+      </visual>
+      <gravity>0</gravity>
+      <velocity_decay/>
+      <self_collide>0</self_collide>
+    </link>
+    <joint name='Right_Index_0' type='revolute'>
+      <child>Right_Index_Basecover</child>
+      <parent>base_link_hithand</parent>
+      <axis>
+        <xyz>0.996195 -0.087156 -0</xyz>
+        <limit>
+          <lower>-0.261799</lower>
+          <upper>0.261799</upper>
+          <effort>15</effort>
+          <velocity>3.14</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.5</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='Right_Index_Phaprox'>
+      <pose frame=''>-0.00253 0.0368 0.207784 1.48353 -1.57079 3.14159</pose>
+      <inertial>
+        <pose frame=''>0.03076 0.00297 0 0 -0 0</pose>
+        <mass>0.0232</mass>
+        <inertia>
+          <ixx>2.5326e-06</ixx>
+          <ixy>-9.2551e-07</ixy>
+          <ixz>-4.0954e-08</ixz>
+          <iyy>6.9625e-06</iyy>
+          <iyz>-9.38e-09</iyz>
+          <izz>7.9108e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='Right_Index_Phaprox_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://hithand_description/meshes/collision/finger/hit-hand-2-finger-phaprox.dae</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.8</mu>
+              <mu2>0.8</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='Right_Index_Phaprox_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://hithand_description/meshes/visual/finger/hit-hand-2-finger-phaprox.dae</uri>
           </mesh>
         </geometry>
         <material>
@@ -105,61 +184,65 @@
       <self_collide>0</self_collide>
     </link>
     <joint name='Right_Index_1' type='revolute'>
-      <child>Right_Index_Basecover</child>
-      <parent>base_link</parent>
+      <child>Right_Index_Phaprox</child>
+      <parent>Right_Index_Basecover</parent>
       <axis>
-        <xyz>0.996195 -0.087156 -0</xyz>
+        <xyz>0.087152 0.996195 -0</xyz>
         <limit>
-          <lower>-0.5</lower>
-          <upper>1.4</upper>
-          <effort>1000</effort>
+          <lower>0.0872665</lower>
+          <upper>1.48353</upper>
+          <effort>1.15</effort>
           <velocity>3.14</velocity>
         </limit>
         <dynamics>
-          <damping>0.7</damping>
-          <friction>0.5</friction>
+          <damping>0.5</damping>
+          <friction>0</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
         <use_parent_model_frame>1</use_parent_model_frame>
       </axis>
     </joint>
-    <link name='Right_Index_Phoaprox'>
-      <pose frame=''>-0.00253 0.0368 0.107784 1.48353 -1.57079 3.14159</pose>
+    <link name='Right_Index_Phamed'>
+      <pose frame=''>-0.00253 0.0368 0.262784 1.48353 -1.57079 3.14159</pose>
       <inertial>
-        <pose frame=''>0.062176 0.044373 0.078735 0.22581 -1.08366 0.411355</pose>
-        <mass>1</mass>
+        <pose frame=''>0.0097 -0.00036 0 0 -0 0</pose>
+        <mass>0.0158</mass>
         <inertia>
-          <ixx>1</ixx>
-          <ixy>0</ixy>
-          <ixz>0</ixz>
-          <iyy>1</iyy>
-          <iyz>0</iyz>
-          <izz>1</izz>
+          <ixx>1.1852e-06</ixx>
+          <ixy>-2.8845e-08</ixy>
+          <ixz>-6.1323e-09</ixz>
+          <iyy>2.446e-06</iyy>
+          <iyz>2.4541e-09</iyz>
+          <izz>2.6537e-06</izz>
         </inertia>
       </inertial>
-      <collision name='Right_Index_Phoaprox_collision'>
-        <pose frame=''>0.03 0 0 0 -0 0</pose>
+      <collision name='Right_Index_Phamed_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
-          <box>
-            <size>0.03 0.03 0.02</size>
-          </box>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://hithand_description/meshes/collision/finger/hit-hand-2-finger-phamed.dae</uri>
+          </mesh>
         </geometry>
         <surface>
           <contact>
             <ode/>
           </contact>
           <friction>
-            <ode/>
+            <ode>
+              <mu>0.6</mu>
+              <mu2>0.6</mu2>
+            </ode>
           </friction>
         </surface>
       </collision>
-      <visual name='Right_Index_Phoaprox_visual'>
+      <visual name='Right_Index_Phamed_visual'>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phaprox.dae</uri>
+            <uri>model://hithand_description/meshes/visual/finger/hit-hand-2-finger-phamed.dae</uri>
           </mesh>
         </geometry>
         <material>
@@ -174,61 +257,65 @@
       <self_collide>0</self_collide>
     </link>
     <joint name='Right_Index_2' type='revolute'>
-      <child>Right_Index_Phoaprox</child>
-      <parent>Right_Index_Basecover</parent>
+      <child>Right_Index_Phamed</child>
+      <parent>Right_Index_Phaprox</parent>
       <axis>
         <xyz>0.087152 0.996195 -0</xyz>
         <limit>
-          <lower>-0.5</lower>
-          <upper>1.4</upper>
-          <effort>1000</effort>
+          <lower>0.0872665</lower>
+          <upper>1.13446</upper>
+          <effort>0.6</effort>
           <velocity>3.14</velocity>
         </limit>
         <dynamics>
-          <damping>0.7</damping>
-          <friction>0.5</friction>
+          <damping>0.5</damping>
+          <friction>0</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
         <use_parent_model_frame>1</use_parent_model_frame>
       </axis>
     </joint>
-    <link name='Right_Index_Phamed'>
-      <pose frame=''>-0.00253 0.0368 0.162784 1.48353 -1.57079 3.14159</pose>
+    <link name='Right_Index_Phadist'>
+      <pose frame=''>-0.00253 0.0368 0.287784 1.5708 -1e-06 3.05433</pose>
       <inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
-        <mass>1</mass>
+        <pose frame=''>0.00072 0.00717 0 0 -0 0</pose>
+        <mass>0.0137</mass>
         <inertia>
-          <ixx>1</ixx>
-          <ixy>0</ixy>
+          <ixx>1.5519e-06</ixx>
+          <ixy>-2.037e-09</ixy>
           <ixz>0</ixz>
-          <iyy>1</iyy>
-          <iyz>0</iyz>
-          <izz>1</izz>
+          <iyy>8.2972e-07</iyy>
+          <iyz>3.77e-09</iyz>
+          <izz>1.5788e-06</izz>
         </inertia>
       </inertial>
-      <collision name='Right_Index_Phamed_collision'>
-        <pose frame=''>0.01 0 0 0 -0 0</pose>
+      <collision name='Right_Index_Phadist_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
-          <box>
-            <size>0.01 0.02 0.02</size>
-          </box>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://hithand_description/meshes/collision/finger/hit-hand-2-finger-phadist.dae</uri>
+          </mesh>
         </geometry>
         <surface>
           <contact>
             <ode/>
           </contact>
           <friction>
-            <ode/>
+            <ode>
+              <mu>0.8</mu>
+              <mu2>0.8</mu2>
+            </ode>
           </friction>
         </surface>
       </collision>
-      <visual name='Right_Index_Phamed_visual'>
+      <visual name='Right_Index_Phadist_visual'>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phamed.dae</uri>
+            <uri>model://hithand_description/meshes/visual/finger/hit-hand-2-finger-phadist.dae</uri>
           </mesh>
         </geometry>
         <material>
@@ -243,89 +330,19 @@
       <self_collide>0</self_collide>
     </link>
     <joint name='Right_Index_3' type='revolute'>
-      <child>Right_Index_Phamed</child>
-      <parent>Right_Index_Phoaprox</parent>
-      <axis>
-        <xyz>0.087152 0.996195 -0</xyz>
-        <limit>
-          <lower>-0.5</lower>
-          <upper>1.4</upper>
-          <effort>1000</effort>
-          <velocity>3.14</velocity>
-        </limit>
-        <dynamics>
-          <damping>0.7</damping>
-          <friction>0.5</friction>
-          <spring_reference>0</spring_reference>
-          <spring_stiffness>0</spring_stiffness>
-        </dynamics>
-        <use_parent_model_frame>1</use_parent_model_frame>
-      </axis>
-    </joint>
-    <link name='Right_Index_Phadist'>
-      <pose frame=''>-0.00253 0.0368 0.187784 1.5708 -0.000797 3.05433</pose>
-      <inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
-        <mass>1</mass>
-        <inertia>
-          <ixx>1</ixx>
-          <ixy>0</ixy>
-          <ixz>0</ixz>
-          <iyy>1</iyy>
-          <iyz>0</iyz>
-          <izz>1</izz>
-        </inertia>
-      </inertial>
-      <collision name='Right_Index_Phadist_collision'>
-        <pose frame=''>0 0 0 0 -0 0</pose>
-        <geometry>
-          <mesh>
-            <scale>1 1 1</scale>
-            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phadist.dae</uri>
-          </mesh>
-        </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-      </collision>
-      <visual name='Right_Index_Phadist_visual'>
-        <pose frame=''>0 0 0 0 -0 0</pose>
-        <geometry>
-          <mesh>
-            <scale>1 1 1</scale>
-            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phadist.dae</uri>
-          </mesh>
-        </geometry>
-        <material>
-          <script>
-            <uri>__default__</uri>
-            <name>__default__</name>
-          </script>
-        </material>
-      </visual>
-      <gravity>0</gravity>
-      <velocity_decay/>
-      <self_collide>0</self_collide>
-    </link>
-    <joint name='Right_Index_4' type='revolute'>
       <child>Right_Index_Phadist</child>
       <parent>Right_Index_Phamed</parent>
       <axis>
         <xyz>0.087152 0.996195 -0</xyz>
         <limit>
-          <lower>-0.5</lower>
-          <upper>1.4</upper>
-          <effort>1000</effort>
+          <lower>0.0872665</lower>
+          <upper>1.13446</upper>
+          <effort>0.35</effort>
           <velocity>3.14</velocity>
         </limit>
         <dynamics>
-          <damping>0.7</damping>
-          <friction>0.5</friction>
+          <damping>0.5</damping>
+          <friction>0</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -333,17 +350,17 @@
       </axis>
     </joint>
     <link name='Right_Little_Basecover'>
-      <pose frame=''>0.000972 -0.043396 0.093584 0.174533 -1.57079 3.14159</pose>
+      <pose frame=''>0.000972 -0.043396 0.193584 0.174533 -1.57079 3.14159</pose>
       <inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
-        <mass>1</mass>
+        <pose frame=''>0.02749 0 0 0 -0 0</pose>
+        <mass>0.0176</mass>
         <inertia>
-          <ixx>1</ixx>
+          <ixx>1.345e-06</ixx>
           <ixy>0</ixy>
-          <ixz>0</ixz>
-          <iyy>1</iyy>
+          <ixz>-1.8183e-07</ixz>
+          <iyy>1.9874e-06</iyy>
           <iyz>0</iyz>
-          <izz>1</izz>
+          <izz>1.0419e-06</izz>
         </inertia>
       </inertial>
       <collision name='Right_Little_Basecover_collision'>
@@ -359,7 +376,10 @@
             <ode/>
           </contact>
           <friction>
-            <ode/>
+            <ode>
+              <mu>0.8</mu>
+              <mu2>0.8</mu2>
+            </ode>
           </friction>
         </surface>
       </collision>
@@ -368,7 +388,80 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-basecover.dae</uri>
+            <uri>model://hithand_description/meshes/visual/finger/hit-hand-2-finger-basecover.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>__default__</uri>
+            <name>__default__</name>
+          </script>
+        </material>
+      </visual>
+      <gravity>0</gravity>
+      <velocity_decay/>
+      <self_collide>0</self_collide>
+    </link>
+    <joint name='Right_Little_0' type='revolute'>
+      <child>Right_Little_Basecover</child>
+      <parent>base_link_hithand</parent>
+      <axis>
+        <xyz>0.984808 0.173648 -0</xyz>
+        <limit>
+          <lower>-0.261799</lower>
+          <upper>0.261799</upper>
+          <effort>15</effort>
+          <velocity>3.14</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.5</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='Right_Little_Phaprox'>
+      <pose frame=''>0.000972 -0.043396 0.193584 1.74533 -1.57079 3.14159</pose>
+      <inertial>
+        <pose frame=''>0.03076 0.00297 0 0 -0 0</pose>
+        <mass>0.0232</mass>
+        <inertia>
+          <ixx>2.5326e-06</ixx>
+          <ixy>-9.2551e-07</ixy>
+          <ixz>-4.0954e-08</ixz>
+          <iyy>6.9625e-06</iyy>
+          <iyz>-9.38e-09</iyz>
+          <izz>7.9108e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='Right_Little_Phaprox_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://hithand_description/meshes/collision/finger/hit-hand-2-finger-phaprox.dae</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.8</mu>
+              <mu2>0.8</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='Right_Little_Phaprox_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://hithand_description/meshes/visual/finger/hit-hand-2-finger-phaprox.dae</uri>
           </mesh>
         </geometry>
         <material>
@@ -383,61 +476,65 @@
       <self_collide>0</self_collide>
     </link>
     <joint name='Right_Little_1' type='revolute'>
-      <child>Right_Little_Basecover</child>
-      <parent>base_link</parent>
+      <child>Right_Little_Phaprox</child>
+      <parent>Right_Little_Basecover</parent>
       <axis>
-        <xyz>0.984808 0.173648 -0</xyz>
+        <xyz>-0.173652 0.984807 0</xyz>
         <limit>
-          <lower>-0.5</lower>
-          <upper>1.4</upper>
-          <effort>1000</effort>
+          <lower>0.0872665</lower>
+          <upper>1.48353</upper>
+          <effort>1.15</effort>
           <velocity>3.14</velocity>
         </limit>
         <dynamics>
-          <damping>0.7</damping>
-          <friction>0.5</friction>
+          <damping>0.5</damping>
+          <friction>0</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
         <use_parent_model_frame>1</use_parent_model_frame>
       </axis>
     </joint>
-    <link name='Right_Little_Phoaprox'>
-      <pose frame=''>0.000972 -0.043396 0.093584 1.74533 -1.57079 3.14159</pose>
+    <link name='Right_Little_Phamed'>
+      <pose frame=''>0.000972 -0.043396 0.248584 1.74533 -1.57079 3.14159</pose>
       <inertial>
-        <pose frame=''>0.062176 0.044373 0.078735 0.22581 -1.08366 0.411355</pose>
-        <mass>1</mass>
+        <pose frame=''>0.0097 -0.00036 0 0 -0 0</pose>
+        <mass>0.0158</mass>
         <inertia>
-          <ixx>1</ixx>
-          <ixy>0</ixy>
-          <ixz>0</ixz>
-          <iyy>1</iyy>
-          <iyz>0</iyz>
-          <izz>1</izz>
+          <ixx>1.1852e-06</ixx>
+          <ixy>-2.8845e-08</ixy>
+          <ixz>-6.1323e-09</ixz>
+          <iyy>2.446e-06</iyy>
+          <iyz>2.4541e-09</iyz>
+          <izz>2.6537e-06</izz>
         </inertia>
       </inertial>
-      <collision name='Right_Little_Phoaprox_collision'>
-        <pose frame=''>0.03 0 0 0 -0 0</pose>
+      <collision name='Right_Little_Phamed_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
-          <box>
-            <size>0.03 0.03 0.02</size>
-          </box>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://hithand_description/meshes/collision/finger/hit-hand-2-finger-phamed.dae</uri>
+          </mesh>
         </geometry>
         <surface>
           <contact>
             <ode/>
           </contact>
           <friction>
-            <ode/>
+            <ode>
+              <mu>0.6</mu>
+              <mu2>0.6</mu2>
+            </ode>
           </friction>
         </surface>
       </collision>
-      <visual name='Right_Little_Phoaprox_visual'>
+      <visual name='Right_Little_Phamed_visual'>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phaprox.dae</uri>
+            <uri>model://hithand_description/meshes/visual/finger/hit-hand-2-finger-phamed.dae</uri>
           </mesh>
         </geometry>
         <material>
@@ -452,61 +549,65 @@
       <self_collide>0</self_collide>
     </link>
     <joint name='Right_Little_2' type='revolute'>
-      <child>Right_Little_Phoaprox</child>
-      <parent>Right_Little_Basecover</parent>
+      <child>Right_Little_Phamed</child>
+      <parent>Right_Little_Phaprox</parent>
       <axis>
         <xyz>-0.173652 0.984807 0</xyz>
         <limit>
-          <lower>-0.5</lower>
-          <upper>1.4</upper>
-          <effort>1000</effort>
+          <lower>0.0872665</lower>
+          <upper>1.13446</upper>
+          <effort>0.6</effort>
           <velocity>3.14</velocity>
         </limit>
         <dynamics>
-          <damping>0.7</damping>
-          <friction>0.5</friction>
+          <damping>0.5</damping>
+          <friction>0</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
         <use_parent_model_frame>1</use_parent_model_frame>
       </axis>
     </joint>
-    <link name='Right_Little_Phamed'>
-      <pose frame=''>0.000972 -0.043396 0.148584 1.74533 -1.57079 3.14159</pose>
+    <link name='Right_Little_Phadist'>
+      <pose frame=''>0.000972 -0.043396 0.273584 1.5708 -1e-06 -2.96706</pose>
       <inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
-        <mass>1</mass>
+        <pose frame=''>0.00072 0.00717 0 0 -0 0</pose>
+        <mass>0.0137</mass>
         <inertia>
-          <ixx>1</ixx>
-          <ixy>0</ixy>
+          <ixx>1.5519e-06</ixx>
+          <ixy>-2.037e-09</ixy>
           <ixz>0</ixz>
-          <iyy>1</iyy>
-          <iyz>0</iyz>
-          <izz>1</izz>
+          <iyy>8.2972e-07</iyy>
+          <iyz>3.77e-09</iyz>
+          <izz>1.5788e-06</izz>
         </inertia>
       </inertial>
-      <collision name='Right_Little_Phamed_collision'>
-        <pose frame=''>0.01 0 0 0 -0 0</pose>
+      <collision name='Right_Little_Phadist_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
-          <box>
-            <size>0.01 0.02 0.02</size>
-          </box>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://hithand_description/meshes/collision/finger/hit-hand-2-finger-phadist.dae</uri>
+          </mesh>
         </geometry>
         <surface>
           <contact>
             <ode/>
           </contact>
           <friction>
-            <ode/>
+            <ode>
+              <mu>0.8</mu>
+              <mu2>0.8</mu2>
+            </ode>
           </friction>
         </surface>
       </collision>
-      <visual name='Right_Little_Phamed_visual'>
+      <visual name='Right_Little_Phadist_visual'>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phamed.dae</uri>
+            <uri>model://hithand_description/meshes/visual/finger/hit-hand-2-finger-phadist.dae</uri>
           </mesh>
         </geometry>
         <material>
@@ -521,89 +622,19 @@
       <self_collide>0</self_collide>
     </link>
     <joint name='Right_Little_3' type='revolute'>
-      <child>Right_Little_Phamed</child>
-      <parent>Right_Little_Phoaprox</parent>
-      <axis>
-        <xyz>-0.173652 0.984807 0</xyz>
-        <limit>
-          <lower>-0.5</lower>
-          <upper>1.4</upper>
-          <effort>1000</effort>
-          <velocity>3.14</velocity>
-        </limit>
-        <dynamics>
-          <damping>0.7</damping>
-          <friction>0.5</friction>
-          <spring_reference>0</spring_reference>
-          <spring_stiffness>0</spring_stiffness>
-        </dynamics>
-        <use_parent_model_frame>1</use_parent_model_frame>
-      </axis>
-    </joint>
-    <link name='Right_Little_Phadist'>
-      <pose frame=''>0.000972 -0.043396 0.173584 1.5708 -0.000797 -2.96706</pose>
-      <inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
-        <mass>1</mass>
-        <inertia>
-          <ixx>1</ixx>
-          <ixy>0</ixy>
-          <ixz>0</ixz>
-          <iyy>1</iyy>
-          <iyz>0</iyz>
-          <izz>1</izz>
-        </inertia>
-      </inertial>
-      <collision name='Right_Little_Phadist_collision'>
-        <pose frame=''>0 0 0 0 -0 0</pose>
-        <geometry>
-          <mesh>
-            <scale>1 1 1</scale>
-            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phadist.dae</uri>
-          </mesh>
-        </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-      </collision>
-      <visual name='Right_Little_Phadist_visual'>
-        <pose frame=''>0 0 0 0 -0 0</pose>
-        <geometry>
-          <mesh>
-            <scale>1 1 1</scale>
-            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phadist.dae</uri>
-          </mesh>
-        </geometry>
-        <material>
-          <script>
-            <uri>__default__</uri>
-            <name>__default__</name>
-          </script>
-        </material>
-      </visual>
-      <gravity>0</gravity>
-      <velocity_decay/>
-      <self_collide>0</self_collide>
-    </link>
-    <joint name='Right_Little_4' type='revolute'>
       <child>Right_Little_Phadist</child>
       <parent>Right_Little_Phamed</parent>
       <axis>
         <xyz>-0.173652 0.984807 0</xyz>
         <limit>
-          <lower>-0.5</lower>
-          <upper>1.4</upper>
-          <effort>1000</effort>
+          <lower>0.0872665</lower>
+          <upper>1.13446</upper>
+          <effort>0.35</effort>
           <velocity>3.14</velocity>
         </limit>
         <dynamics>
-          <damping>0.7</damping>
-          <friction>0.5</friction>
+          <damping>0.5</damping>
+          <friction>0</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -611,17 +642,17 @@
       </axis>
     </joint>
     <link name='Right_Middle_Basecover'>
-      <pose frame=''>-0.0037 0.01 0.117784 -3e-06 -1.57079 3.14159</pose>
+      <pose frame=''>-0.0037 0.01 0.217784 -3e-06 -1.57079 3.14159</pose>
       <inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
-        <mass>1</mass>
+        <pose frame=''>0.02749 0 0 0 -0 0</pose>
+        <mass>0.0176</mass>
         <inertia>
-          <ixx>1</ixx>
+          <ixx>1.345e-06</ixx>
           <ixy>0</ixy>
-          <ixz>0</ixz>
-          <iyy>1</iyy>
+          <ixz>-1.8183e-07</ixz>
+          <iyy>1.9874e-06</iyy>
           <iyz>0</iyz>
-          <izz>1</izz>
+          <izz>1.0419e-06</izz>
         </inertia>
       </inertial>
       <collision name='Right_Middle_Basecover_collision'>
@@ -637,7 +668,10 @@
             <ode/>
           </contact>
           <friction>
-            <ode/>
+            <ode>
+              <mu>0.8</mu>
+              <mu2>0.8</mu2>
+            </ode>
           </friction>
         </surface>
       </collision>
@@ -646,7 +680,80 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-basecover.dae</uri>
+            <uri>model://hithand_description/meshes/visual/finger/hit-hand-2-finger-basecover.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>__default__</uri>
+            <name>__default__</name>
+          </script>
+        </material>
+      </visual>
+      <gravity>0</gravity>
+      <velocity_decay/>
+      <self_collide>0</self_collide>
+    </link>
+    <joint name='Right_Middle_0' type='revolute'>
+      <child>Right_Middle_Basecover</child>
+      <parent>base_link_hithand</parent>
+      <axis>
+        <xyz>1 -0 -0</xyz>
+        <limit>
+          <lower>-0.261799</lower>
+          <upper>0.261799</upper>
+          <effort>15</effort>
+          <velocity>3.14</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.5</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='Right_Middle_Phaprox'>
+      <pose frame=''>-0.0037 0.01 0.217784 1.5708 -1.57079 3.14159</pose>
+      <inertial>
+        <pose frame=''>0.03076 0.00297 0 0 -0 0</pose>
+        <mass>0.0232</mass>
+        <inertia>
+          <ixx>2.5326e-06</ixx>
+          <ixy>-9.2551e-07</ixy>
+          <ixz>-4.0954e-08</ixz>
+          <iyy>6.9625e-06</iyy>
+          <iyz>-9.38e-09</iyz>
+          <izz>7.9108e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='Right_Middle_Phaprox_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://hithand_description/meshes/collision/finger/hit-hand-2-finger-phaprox.dae</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.8</mu>
+              <mu2>0.8</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='Right_Middle_Phaprox_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://hithand_description/meshes/visual/finger/hit-hand-2-finger-phaprox.dae</uri>
           </mesh>
         </geometry>
         <material>
@@ -661,61 +768,65 @@
       <self_collide>0</self_collide>
     </link>
     <joint name='Right_Middle_1' type='revolute'>
-      <child>Right_Middle_Basecover</child>
-      <parent>base_link</parent>
+      <child>Right_Middle_Phaprox</child>
+      <parent>Right_Middle_Basecover</parent>
       <axis>
-        <xyz>1 -0 -0</xyz>
+        <xyz>-3e-06 1 0</xyz>
         <limit>
-          <lower>-0.5</lower>
-          <upper>1.4</upper>
-          <effort>1000</effort>
+          <lower>0.0872665</lower>
+          <upper>1.48353</upper>
+          <effort>1.15</effort>
           <velocity>3.14</velocity>
         </limit>
         <dynamics>
-          <damping>0.7</damping>
-          <friction>0.5</friction>
+          <damping>0.5</damping>
+          <friction>0</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
         <use_parent_model_frame>1</use_parent_model_frame>
       </axis>
     </joint>
-    <link name='Right_Middle_Phoaprox'>
-      <pose frame=''>-0.0037 0.01 0.117784 1.5708 -1.57079 3.14159</pose>
+    <link name='Right_Middle_Phamed'>
+      <pose frame=''>-0.0037 0.01 0.272784 1.5708 -1.57079 3.14159</pose>
       <inertial>
-        <pose frame=''>0.062176 0.044373 0.078735 0.22581 -1.08366 0.411355</pose>
-        <mass>1</mass>
+        <pose frame=''>0.0097 -0.00036 0 0 -0 0</pose>
+        <mass>0.0158</mass>
         <inertia>
-          <ixx>1</ixx>
-          <ixy>0</ixy>
-          <ixz>0</ixz>
-          <iyy>1</iyy>
-          <iyz>0</iyz>
-          <izz>1</izz>
+          <ixx>1.1852e-06</ixx>
+          <ixy>-2.8845e-08</ixy>
+          <ixz>-6.1323e-09</ixz>
+          <iyy>2.446e-06</iyy>
+          <iyz>2.4541e-09</iyz>
+          <izz>2.6537e-06</izz>
         </inertia>
       </inertial>
-      <collision name='Right_Middle_Phoaprox_collision'>
-        <pose frame=''>0.03 0 0 0 -0 0</pose>
+      <collision name='Right_Middle_Phamed_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
-          <box>
-            <size>0.03 0.03 0.02</size>
-          </box>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://hithand_description/meshes/collision/finger/hit-hand-2-finger-phamed.dae</uri>
+          </mesh>
         </geometry>
         <surface>
           <contact>
             <ode/>
           </contact>
           <friction>
-            <ode/>
+            <ode>
+              <mu>0.6</mu>
+              <mu2>0.6</mu2>
+            </ode>
           </friction>
         </surface>
       </collision>
-      <visual name='Right_Middle_Phoaprox_visual'>
+      <visual name='Right_Middle_Phamed_visual'>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phaprox.dae</uri>
+            <uri>model://hithand_description/meshes/visual/finger/hit-hand-2-finger-phamed.dae</uri>
           </mesh>
         </geometry>
         <material>
@@ -730,61 +841,65 @@
       <self_collide>0</self_collide>
     </link>
     <joint name='Right_Middle_2' type='revolute'>
-      <child>Right_Middle_Phoaprox</child>
-      <parent>Right_Middle_Basecover</parent>
+      <child>Right_Middle_Phamed</child>
+      <parent>Right_Middle_Phaprox</parent>
       <axis>
         <xyz>-3e-06 1 0</xyz>
         <limit>
-          <lower>-0.5</lower>
-          <upper>1.4</upper>
-          <effort>1000</effort>
+          <lower>0.0872665</lower>
+          <upper>1.13446</upper>
+          <effort>0.6</effort>
           <velocity>3.14</velocity>
         </limit>
         <dynamics>
-          <damping>0.7</damping>
-          <friction>0.5</friction>
+          <damping>0.5</damping>
+          <friction>0</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
         <use_parent_model_frame>1</use_parent_model_frame>
       </axis>
     </joint>
-    <link name='Right_Middle_Phamed'>
-      <pose frame=''>-0.0037 0.01 0.172784 1.5708 -1.57079 3.14159</pose>
+    <link name='Right_Middle_Phadist'>
+      <pose frame=''>-0.0037 0.01 0.297784 1.5708 -1e-06 -3.14159</pose>
       <inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
-        <mass>1</mass>
+        <pose frame=''>0.00072 0.00717 0 0 -0 0</pose>
+        <mass>0.0137</mass>
         <inertia>
-          <ixx>1</ixx>
-          <ixy>0</ixy>
+          <ixx>1.5519e-06</ixx>
+          <ixy>-2.037e-09</ixy>
           <ixz>0</ixz>
-          <iyy>1</iyy>
-          <iyz>0</iyz>
-          <izz>1</izz>
+          <iyy>8.2972e-07</iyy>
+          <iyz>3.77e-09</iyz>
+          <izz>1.5788e-06</izz>
         </inertia>
       </inertial>
-      <collision name='Right_Middle_Phamed_collision'>
-        <pose frame=''>0.01 0 0 0 -0 0</pose>
+      <collision name='Right_Middle_Phadist_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
-          <box>
-            <size>0.01 0.02 0.02</size>
-          </box>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://hithand_description/meshes/collision/finger/hit-hand-2-finger-phadist.dae</uri>
+          </mesh>
         </geometry>
         <surface>
           <contact>
             <ode/>
           </contact>
           <friction>
-            <ode/>
+            <ode>
+              <mu>0.8</mu>
+              <mu2>0.8</mu2>
+            </ode>
           </friction>
         </surface>
       </collision>
-      <visual name='Right_Middle_Phamed_visual'>
+      <visual name='Right_Middle_Phadist_visual'>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phamed.dae</uri>
+            <uri>model://hithand_description/meshes/visual/finger/hit-hand-2-finger-phadist.dae</uri>
           </mesh>
         </geometry>
         <material>
@@ -799,89 +914,19 @@
       <self_collide>0</self_collide>
     </link>
     <joint name='Right_Middle_3' type='revolute'>
-      <child>Right_Middle_Phamed</child>
-      <parent>Right_Middle_Phoaprox</parent>
-      <axis>
-        <xyz>-3e-06 1 0</xyz>
-        <limit>
-          <lower>-0.5</lower>
-          <upper>1.4</upper>
-          <effort>1000</effort>
-          <velocity>3.14</velocity>
-        </limit>
-        <dynamics>
-          <damping>0.7</damping>
-          <friction>0.5</friction>
-          <spring_reference>0</spring_reference>
-          <spring_stiffness>0</spring_stiffness>
-        </dynamics>
-        <use_parent_model_frame>1</use_parent_model_frame>
-      </axis>
-    </joint>
-    <link name='Right_Middle_Phadist'>
-      <pose frame=''>-0.0037 0.01 0.197784 1.5708 -0.000797 -3.14159</pose>
-      <inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
-        <mass>1</mass>
-        <inertia>
-          <ixx>1</ixx>
-          <ixy>0</ixy>
-          <ixz>0</ixz>
-          <iyy>1</iyy>
-          <iyz>0</iyz>
-          <izz>1</izz>
-        </inertia>
-      </inertial>
-      <collision name='Right_Middle_Phadist_collision'>
-        <pose frame=''>0 0 0 0 -0 0</pose>
-        <geometry>
-          <mesh>
-            <scale>1 1 1</scale>
-            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phadist.dae</uri>
-          </mesh>
-        </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-      </collision>
-      <visual name='Right_Middle_Phadist_visual'>
-        <pose frame=''>0 0 0 0 -0 0</pose>
-        <geometry>
-          <mesh>
-            <scale>1 1 1</scale>
-            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phadist.dae</uri>
-          </mesh>
-        </geometry>
-        <material>
-          <script>
-            <uri>__default__</uri>
-            <name>__default__</name>
-          </script>
-        </material>
-      </visual>
-      <gravity>0</gravity>
-      <velocity_decay/>
-      <self_collide>0</self_collide>
-    </link>
-    <joint name='Right_Middle_4' type='revolute'>
       <child>Right_Middle_Phadist</child>
       <parent>Right_Middle_Phamed</parent>
       <axis>
         <xyz>-3e-06 1 0</xyz>
         <limit>
-          <lower>-0.5</lower>
-          <upper>1.4</upper>
-          <effort>1000</effort>
+          <lower>0.0872665</lower>
+          <upper>1.13446</upper>
+          <effort>0.35</effort>
           <velocity>3.14</velocity>
         </limit>
         <dynamics>
-          <damping>0.7</damping>
-          <friction>0.5</friction>
+          <damping>0.5</damping>
+          <friction>0</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -889,17 +934,17 @@
       </axis>
     </joint>
     <link name='Right_Ring_Basecover'>
-      <pose frame=''>0 -0.0168 0.112584 0.087263 -1.57079 -3.14159</pose>
+      <pose frame=''>0 -0.0168 0.212584 0.087263 -1.57079 -3.14159</pose>
       <inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
-        <mass>1</mass>
+        <pose frame=''>0.02749 0 0 0 -0 0</pose>
+        <mass>0.0176</mass>
         <inertia>
-          <ixx>1</ixx>
+          <ixx>1.345e-06</ixx>
           <ixy>0</ixy>
-          <ixz>0</ixz>
-          <iyy>1</iyy>
+          <ixz>-1.8183e-07</ixz>
+          <iyy>1.9874e-06</iyy>
           <iyz>0</iyz>
-          <izz>1</izz>
+          <izz>1.0419e-06</izz>
         </inertia>
       </inertial>
       <collision name='Right_Ring_Basecover_collision'>
@@ -915,7 +960,10 @@
             <ode/>
           </contact>
           <friction>
-            <ode/>
+            <ode>
+              <mu>0.8</mu>
+              <mu2>0.8</mu2>
+            </ode>
           </friction>
         </surface>
       </collision>
@@ -924,7 +972,80 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-basecover.dae</uri>
+            <uri>model://hithand_description/meshes/visual/finger/hit-hand-2-finger-basecover.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>__default__</uri>
+            <name>__default__</name>
+          </script>
+        </material>
+      </visual>
+      <gravity>0</gravity>
+      <velocity_decay/>
+      <self_collide>0</self_collide>
+    </link>
+    <joint name='Right_Ring_0' type='revolute'>
+      <child>Right_Ring_Basecover</child>
+      <parent>base_link_hithand</parent>
+      <axis>
+        <xyz>0.996195 0.087156 -0</xyz>
+        <limit>
+          <lower>-0.261799</lower>
+          <upper>0.261799</upper>
+          <effort>15</effort>
+          <velocity>3.14</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.5</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='Right_Ring_Phaprox'>
+      <pose frame=''>0 -0.0168 0.212584 1.65806 -1.57079 -3.14159</pose>
+      <inertial>
+        <pose frame=''>0.03076 0.00297 0 0 -0 0</pose>
+        <mass>0.0232</mass>
+        <inertia>
+          <ixx>2.5326e-06</ixx>
+          <ixy>-9.2551e-07</ixy>
+          <ixz>-4.0954e-08</ixz>
+          <iyy>6.9625e-06</iyy>
+          <iyz>-9.38e-09</iyz>
+          <izz>7.9108e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='Right_Ring_Phaprox_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://hithand_description/meshes/collision/finger/hit-hand-2-finger-phaprox.dae</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.8</mu>
+              <mu2>0.8</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='Right_Ring_Phaprox_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://hithand_description/meshes/visual/finger/hit-hand-2-finger-phaprox.dae</uri>
           </mesh>
         </geometry>
         <material>
@@ -939,61 +1060,65 @@
       <self_collide>0</self_collide>
     </link>
     <joint name='Right_Ring_1' type='revolute'>
-      <child>Right_Ring_Basecover</child>
-      <parent>base_link</parent>
+      <child>Right_Ring_Phaprox</child>
+      <parent>Right_Ring_Basecover</parent>
       <axis>
-        <xyz>0.996195 0.087156 -0</xyz>
+        <xyz>-0.08716 0.996194 0</xyz>
         <limit>
-          <lower>-0.5</lower>
-          <upper>1.4</upper>
-          <effort>1000</effort>
+          <lower>0.0872665</lower>
+          <upper>1.48353</upper>
+          <effort>1.15</effort>
           <velocity>3.14</velocity>
         </limit>
         <dynamics>
-          <damping>0.7</damping>
-          <friction>0.5</friction>
+          <damping>0.5</damping>
+          <friction>0</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
         <use_parent_model_frame>1</use_parent_model_frame>
       </axis>
     </joint>
-    <link name='Right_Ring_Phoaprox'>
-      <pose frame=''>0 -0.0168 0.112584 1.65806 -1.57079 -3.14159</pose>
+    <link name='Right_Ring_Phamed'>
+      <pose frame=''>0 -0.0168 0.267584 1.65806 -1.57079 -3.14159</pose>
       <inertial>
-        <pose frame=''>0.062176 0.044373 0.078735 0.22581 -1.08366 0.411355</pose>
-        <mass>1</mass>
+        <pose frame=''>0.0097 -0.00036 0 0 -0 0</pose>
+        <mass>0.0158</mass>
         <inertia>
-          <ixx>1</ixx>
-          <ixy>0</ixy>
-          <ixz>0</ixz>
-          <iyy>1</iyy>
-          <iyz>0</iyz>
-          <izz>1</izz>
+          <ixx>1.1852e-06</ixx>
+          <ixy>-2.8845e-08</ixy>
+          <ixz>-6.1323e-09</ixz>
+          <iyy>2.446e-06</iyy>
+          <iyz>2.4541e-09</iyz>
+          <izz>2.6537e-06</izz>
         </inertia>
       </inertial>
-      <collision name='Right_Ring_Phoaprox_collision'>
-        <pose frame=''>0.03 0 0 0 -0 0</pose>
+      <collision name='Right_Ring_Phamed_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
-          <box>
-            <size>0.03 0.03 0.02</size>
-          </box>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://hithand_description/meshes/collision/finger/hit-hand-2-finger-phamed.dae</uri>
+          </mesh>
         </geometry>
         <surface>
           <contact>
             <ode/>
           </contact>
           <friction>
-            <ode/>
+            <ode>
+              <mu>0.6</mu>
+              <mu2>0.6</mu2>
+            </ode>
           </friction>
         </surface>
       </collision>
-      <visual name='Right_Ring_Phoaprox_visual'>
+      <visual name='Right_Ring_Phamed_visual'>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phaprox.dae</uri>
+            <uri>model://hithand_description/meshes/visual/finger/hit-hand-2-finger-phamed.dae</uri>
           </mesh>
         </geometry>
         <material>
@@ -1008,61 +1133,65 @@
       <self_collide>0</self_collide>
     </link>
     <joint name='Right_Ring_2' type='revolute'>
-      <child>Right_Ring_Phoaprox</child>
-      <parent>Right_Ring_Basecover</parent>
+      <child>Right_Ring_Phamed</child>
+      <parent>Right_Ring_Phaprox</parent>
       <axis>
         <xyz>-0.08716 0.996194 0</xyz>
         <limit>
-          <lower>-0.5</lower>
-          <upper>1.4</upper>
-          <effort>1000</effort>
+          <lower>0.0872665</lower>
+          <upper>1.13446</upper>
+          <effort>0.6</effort>
           <velocity>3.14</velocity>
         </limit>
         <dynamics>
-          <damping>0.7</damping>
-          <friction>0.5</friction>
+          <damping>0.5</damping>
+          <friction>0</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
         <use_parent_model_frame>1</use_parent_model_frame>
       </axis>
     </joint>
-    <link name='Right_Ring_Phamed'>
-      <pose frame=''>0 -0.0168 0.167584 1.65806 -1.57079 -3.14159</pose>
+    <link name='Right_Ring_Phadist'>
+      <pose frame=''>0 -0.0168 0.292584 1.5708 -1e-06 -3.05432</pose>
       <inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
-        <mass>1</mass>
+        <pose frame=''>0.00072 0.00717 0 0 -0 0</pose>
+        <mass>0.0137</mass>
         <inertia>
-          <ixx>1</ixx>
-          <ixy>0</ixy>
+          <ixx>1.5519e-06</ixx>
+          <ixy>-2.037e-09</ixy>
           <ixz>0</ixz>
-          <iyy>1</iyy>
-          <iyz>0</iyz>
-          <izz>1</izz>
+          <iyy>8.2972e-07</iyy>
+          <iyz>3.77e-09</iyz>
+          <izz>1.5788e-06</izz>
         </inertia>
       </inertial>
-      <collision name='Right_Ring_Phamed_collision'>
-        <pose frame=''>0.01 0 0 0 -0 0</pose>
+      <collision name='Right_Ring_Phadist_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
-          <box>
-            <size>0.01 0.02 0.02</size>
-          </box>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://hithand_description/meshes/collision/finger/hit-hand-2-finger-phadist.dae</uri>
+          </mesh>
         </geometry>
         <surface>
           <contact>
             <ode/>
           </contact>
           <friction>
-            <ode/>
+            <ode>
+              <mu>0.8</mu>
+              <mu2>0.8</mu2>
+            </ode>
           </friction>
         </surface>
       </collision>
-      <visual name='Right_Ring_Phamed_visual'>
+      <visual name='Right_Ring_Phadist_visual'>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phamed.dae</uri>
+            <uri>model://hithand_description/meshes/visual/finger/hit-hand-2-finger-phadist.dae</uri>
           </mesh>
         </geometry>
         <material>
@@ -1077,89 +1206,19 @@
       <self_collide>0</self_collide>
     </link>
     <joint name='Right_Ring_3' type='revolute'>
-      <child>Right_Ring_Phamed</child>
-      <parent>Right_Ring_Phoaprox</parent>
-      <axis>
-        <xyz>-0.08716 0.996194 0</xyz>
-        <limit>
-          <lower>-0.5</lower>
-          <upper>1.4</upper>
-          <effort>1000</effort>
-          <velocity>3.14</velocity>
-        </limit>
-        <dynamics>
-          <damping>0.7</damping>
-          <friction>0.5</friction>
-          <spring_reference>0</spring_reference>
-          <spring_stiffness>0</spring_stiffness>
-        </dynamics>
-        <use_parent_model_frame>1</use_parent_model_frame>
-      </axis>
-    </joint>
-    <link name='Right_Ring_Phadist'>
-      <pose frame=''>0 -0.0168 0.192584 1.5708 -0.000797 -3.05432</pose>
-      <inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
-        <mass>1</mass>
-        <inertia>
-          <ixx>1</ixx>
-          <ixy>0</ixy>
-          <ixz>0</ixz>
-          <iyy>1</iyy>
-          <iyz>0</iyz>
-          <izz>1</izz>
-        </inertia>
-      </inertial>
-      <collision name='Right_Ring_Phadist_collision'>
-        <pose frame=''>0 0 0 0 -0 0</pose>
-        <geometry>
-          <mesh>
-            <scale>1 1 1</scale>
-            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phadist.dae</uri>
-          </mesh>
-        </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-      </collision>
-      <visual name='Right_Ring_Phadist_visual'>
-        <pose frame=''>0 0 0 0 -0 0</pose>
-        <geometry>
-          <mesh>
-            <scale>1 1 1</scale>
-            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phadist.dae</uri>
-          </mesh>
-        </geometry>
-        <material>
-          <script>
-            <uri>__default__</uri>
-            <name>__default__</name>
-          </script>
-        </material>
-      </visual>
-      <gravity>0</gravity>
-      <velocity_decay/>
-      <self_collide>0</self_collide>
-    </link>
-    <joint name='Right_Ring_4' type='revolute'>
       <child>Right_Ring_Phadist</child>
       <parent>Right_Ring_Phamed</parent>
       <axis>
         <xyz>-0.08716 0.996194 0</xyz>
         <limit>
-          <lower>-0.5</lower>
-          <upper>1.4</upper>
-          <effort>1000</effort>
+          <lower>0.0872665</lower>
+          <upper>1.13446</upper>
+          <effort>0.35</effort>
           <velocity>3.14</velocity>
         </limit>
         <dynamics>
-          <damping>0.7</damping>
-          <friction>0.5</friction>
+          <damping>0.5</damping>
+          <friction>0</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -1167,17 +1226,17 @@
       </axis>
     </joint>
     <link name='Right_Thumb_Basecover'>
-      <pose frame=''>0.062176 0.044373 0.078735 0.22581 -1.08366 0.411355</pose>
+      <pose frame=''>0.062176 0.044373 0.178735 0.22581 -1.08366 0.411355</pose>
       <inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
-        <mass>1</mass>
+        <pose frame=''>0.02749 0 0 0 -0 0</pose>
+        <mass>0.0176</mass>
         <inertia>
-          <ixx>1</ixx>
+          <ixx>1.345e-06</ixx>
           <ixy>0</ixy>
-          <ixz>0</ixz>
-          <iyy>1</iyy>
+          <ixz>-1.8183e-07</ixz>
+          <iyy>1.9874e-06</iyy>
           <iyz>0</iyz>
-          <izz>1</izz>
+          <izz>1.0419e-06</izz>
         </inertia>
       </inertial>
       <collision name='Right_Thumb_Basecover_collision'>
@@ -1193,10 +1252,7 @@
             <ode/>
           </contact>
           <friction>
-            <ode>
-              <mu>0.2</mu>
-              <mu2>0.2</mu2>
-            </ode>
+            <ode/>
           </friction>
         </surface>
       </collision>
@@ -1205,7 +1261,80 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-basecover.dae</uri>
+            <uri>model://hithand_description/meshes/visual/finger/hit-hand-2-finger-basecover.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>__default__</uri>
+            <name>__default__</name>
+          </script>
+        </material>
+      </visual>
+      <gravity>0</gravity>
+      <velocity_decay/>
+      <self_collide>0</self_collide>
+    </link>
+    <joint name='Right_Thumb_0' type='revolute'>
+      <child>Right_Thumb_Basecover</child>
+      <parent>base_link_hithand</parent>
+      <axis>
+        <xyz>-0.699871 -0.549587 0.456217</xyz>
+        <limit>
+          <lower>-0.261799</lower>
+          <upper>0.261799</upper>
+          <effort>15</effort>
+          <velocity>3.14</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.5</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='Right_Thumb_Phaprox'>
+      <pose frame=''>0.062176 0.044373 0.178735 1.79661 -1.08366 0.411355</pose>
+      <inertial>
+        <pose frame=''>0.03076 0.00297 0 0 -0 0</pose>
+        <mass>0.0232</mass>
+        <inertia>
+          <ixx>2.5326e-06</ixx>
+          <ixy>-9.2551e-07</ixy>
+          <ixz>-4.0954e-08</ixz>
+          <iyy>6.9625e-06</iyy>
+          <iyz>-9.38e-09</iyz>
+          <izz>7.9108e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='Right_Thumb_Phaprox_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://hithand_description/meshes/collision/finger/hit-hand-2-finger-phaprox.dae</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.8</mu>
+              <mu2>0.8</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='Right_Thumb_Phaprox_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://hithand_description/meshes/visual/finger/hit-hand-2-finger-phaprox.dae</uri>
           </mesh>
         </geometry>
         <material>
@@ -1220,61 +1349,65 @@
       <self_collide>0</self_collide>
     </link>
     <joint name='Right_Thumb_1' type='revolute'>
-      <child>Right_Thumb_Basecover</child>
-      <parent>base_link</parent>
+      <child>Right_Thumb_Phaprox</child>
+      <parent>Right_Thumb_Basecover</parent>
       <axis>
-        <xyz>-0.699871 -0.549587 0.456217</xyz>
+        <xyz>0.57105 -0.814198 -0.104808</xyz>
         <limit>
-          <lower>-0.5</lower>
-          <upper>1.4</upper>
-          <effort>1000</effort>
+          <lower>0.0872665</lower>
+          <upper>1.48353</upper>
+          <effort>1.15</effort>
           <velocity>3.14</velocity>
         </limit>
         <dynamics>
-          <damping>0.7</damping>
-          <friction>0.5</friction>
+          <damping>0.5</damping>
+          <friction>0</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
         <use_parent_model_frame>1</use_parent_model_frame>
       </axis>
     </joint>
-    <link name='Right_Thumb_Phoaprox'>
-      <pose frame=''>0.062176 0.044373 0.078735 1.79661 -1.08366 0.411355</pose>
+    <link name='Right_Thumb_Phamed'>
+      <pose frame=''>0.085774 0.054667 0.227337 1.79661 -1.08366 0.411355</pose>
       <inertial>
-        <pose frame=''>0.062176 0.044373 0.078735 0.22581 -1.08366 0.411355</pose>
-        <mass>1</mass>
+        <pose frame=''>0.0097 -0.00036 0 0 -0 0</pose>
+        <mass>0.0158</mass>
         <inertia>
-          <ixx>1</ixx>
-          <ixy>0</ixy>
-          <ixz>0</ixz>
-          <iyy>1</iyy>
-          <iyz>0</iyz>
-          <izz>1</izz>
+          <ixx>1.1852e-06</ixx>
+          <ixy>-2.8845e-08</ixy>
+          <ixz>-6.1323e-09</ixz>
+          <iyy>2.446e-06</iyy>
+          <iyz>2.4541e-09</iyz>
+          <izz>2.6537e-06</izz>
         </inertia>
       </inertial>
-      <collision name='Right_Thumb_Phoaprox_collision'>
-        <pose frame=''>0.03 0 0 0 -0 0</pose>
+      <collision name='Right_Thumb_Phamed_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
-          <box>
-            <size>0.03 0.03 0.02</size>
-          </box>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://hithand_description/meshes/collision/finger/hit-hand-2-finger-phamed.dae</uri>
+          </mesh>
         </geometry>
         <surface>
           <contact>
             <ode/>
           </contact>
           <friction>
-            <ode/>
+            <ode>
+              <mu>0.6</mu>
+              <mu2>0.6</mu2>
+            </ode>
           </friction>
         </surface>
       </collision>
-      <visual name='Right_Thumb_Phoaprox_visual'>
+      <visual name='Right_Thumb_Phamed_visual'>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phaprox.dae</uri>
+            <uri>model://hithand_description/meshes/visual/finger/hit-hand-2-finger-phamed.dae</uri>
           </mesh>
         </geometry>
         <material>
@@ -1289,61 +1422,65 @@
       <self_collide>0</self_collide>
     </link>
     <joint name='Right_Thumb_2' type='revolute'>
-      <child>Right_Thumb_Phoaprox</child>
-      <parent>Right_Thumb_Basecover</parent>
+      <child>Right_Thumb_Phamed</child>
+      <parent>Right_Thumb_Phaprox</parent>
       <axis>
         <xyz>0.57105 -0.814198 -0.104808</xyz>
         <limit>
-          <lower>-0.5</lower>
-          <upper>1.4</upper>
-          <effort>1000</effort>
+          <lower>0.0872665</lower>
+          <upper>1.13446</upper>
+          <effort>0.6</effort>
           <velocity>3.14</velocity>
         </limit>
         <dynamics>
-          <damping>0.7</damping>
-          <friction>0.5</friction>
+          <damping>0.5</damping>
+          <friction>0</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
         <use_parent_model_frame>1</use_parent_model_frame>
       </axis>
     </joint>
-    <link name='Right_Thumb_Phamed'>
-      <pose frame=''>0.085774 0.054667 0.127337 1.79661 -1.08366 0.411355</pose>
+    <link name='Right_Thumb_Phadist'>
+      <pose frame=''>0.0965 0.059347 0.249429 1.68885 0.473739 0.665698</pose>
       <inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
-        <mass>1</mass>
+        <pose frame=''>0.00072 0.00717 0 0 -0 0</pose>
+        <mass>0.0137</mass>
         <inertia>
-          <ixx>1</ixx>
-          <ixy>0</ixy>
+          <ixx>1.5519e-06</ixx>
+          <ixy>-2.037e-09</ixy>
           <ixz>0</ixz>
-          <iyy>1</iyy>
-          <iyz>0</iyz>
-          <izz>1</izz>
+          <iyy>8.2972e-07</iyy>
+          <iyz>3.77e-09</iyz>
+          <izz>1.5788e-06</izz>
         </inertia>
       </inertial>
-      <collision name='Right_Thumb_Phamed_collision'>
-        <pose frame=''>0.01 0 0 0 -0 0</pose>
+      <collision name='Right_Thumb_Phadist_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
-          <box>
-            <size>0.01 0.02 0.02</size>
-          </box>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://hithand_description/meshes/collision/finger/hit-hand-2-finger-phadist.dae</uri>
+          </mesh>
         </geometry>
         <surface>
           <contact>
             <ode/>
           </contact>
           <friction>
-            <ode/>
+            <ode>
+              <mu>0.8</mu>
+              <mu2>0.8</mu2>
+            </ode>
           </friction>
         </surface>
       </collision>
-      <visual name='Right_Thumb_Phamed_visual'>
+      <visual name='Right_Thumb_Phadist_visual'>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phamed.dae</uri>
+            <uri>model://hithand_description/meshes/visual/finger/hit-hand-2-finger-phadist.dae</uri>
           </mesh>
         </geometry>
         <material>
@@ -1358,99 +1495,29 @@
       <self_collide>0</self_collide>
     </link>
     <joint name='Right_Thumb_3' type='revolute'>
-      <child>Right_Thumb_Phamed</child>
-      <parent>Right_Thumb_Phoaprox</parent>
-      <axis>
-        <xyz>0.57105 -0.814198 -0.104808</xyz>
-        <limit>
-          <lower>-0.5</lower>
-          <upper>1.4</upper>
-          <effort>1000</effort>
-          <velocity>3.14</velocity>
-        </limit>
-        <dynamics>
-          <damping>0.7</damping>
-          <friction>0.5</friction>
-          <spring_reference>0</spring_reference>
-          <spring_stiffness>0</spring_stiffness>
-        </dynamics>
-        <use_parent_model_frame>1</use_parent_model_frame>
-      </axis>
-    </joint>
-    <link name='Right_Thumb_Phadist'>
-      <pose frame=''>0.0965 0.059347 0.149429 1.6888 0.472948 0.665593</pose>
-      <inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
-        <mass>1</mass>
-        <inertia>
-          <ixx>1</ixx>
-          <ixy>0</ixy>
-          <ixz>0</ixz>
-          <iyy>1</iyy>
-          <iyz>0</iyz>
-          <izz>1</izz>
-        </inertia>
-      </inertial>
-      <collision name='Right_Thumb_Phadist_collision'>
-        <pose frame=''>0 0 0 0 -0 0</pose>
-        <geometry>
-          <mesh>
-            <scale>1 1 1</scale>
-            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phadist.dae</uri>
-          </mesh>
-        </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-      </collision>
-      <visual name='Right_Thumb_Phadist_visual'>
-        <pose frame=''>0 0 0 0 -0 0</pose>
-        <geometry>
-          <mesh>
-            <scale>1 1 1</scale>
-            <uri>model://hithand_description/meshes/visual/hit-hand-2-finger-phadist.dae</uri>
-          </mesh>
-        </geometry>
-        <material>
-          <script>
-            <uri>__default__</uri>
-            <name>__default__</name>
-          </script>
-        </material>
-      </visual>
-      <gravity>0</gravity>
-      <velocity_decay/>
-      <self_collide>0</self_collide>
-    </link>
-    <joint name='Right_Thumb_4' type='revolute'>
       <child>Right_Thumb_Phadist</child>
       <parent>Right_Thumb_Phamed</parent>
       <axis>
         <xyz>0.57105 -0.814198 -0.104808</xyz>
         <limit>
-          <lower>-0.5</lower>
-          <upper>1.4</upper>
-          <effort>1000</effort>
+          <lower>0.0872665</lower>
+          <upper>1.13446</upper>
+          <effort>0.35</effort>
           <velocity>3.14</velocity>
         </limit>
         <dynamics>
-          <damping>0.7</damping>
-          <friction>0.5</friction>
+          <damping>0.5</damping>
+          <friction>0</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
         <use_parent_model_frame>1</use_parent_model_frame>
       </axis>
     </joint>
+    <static>0</static>
     <plugin name='gazebo_ros_control' filename='libgazebo_ros_control.so'>
       <robotNamespace>/hithand</robotNamespace>
       <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
     </plugin>
-    <static>0</static>
   </model>
 </sdf>
