@@ -2,12 +2,12 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
    <!-- If the Hithand is attached to a robot, which also loads this ros_control shared library, the plugin should be deactived (commented out) here.
         If you spawn the Hithand standalone you need to uncomment this for the hithand_control to work.   -->
-   <gazebo>
+   <!-- <gazebo>
       <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
         <robotNamespace>/hithand</robotNamespace>
         <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
       </plugin>
-    </gazebo>
+    </gazebo> -->
 
     <xacro:property name="selfCollideValue" value="false"/>
     <xacro:property name="staticValue" value="false" />
