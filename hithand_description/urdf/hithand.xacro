@@ -4,10 +4,6 @@
 
         <xacro:property name="mu1" value="0.6"/>
         <xacro:property name="mu2" value="0.6"/>
-        <xacro:property name="inertia_mag_0" value="6"/> <!-- should be 5 -->
-        <xacro:property name="inertia_mag_1" value="6"/> <!-- should be 5 -->
-        <xacro:property name="inertia_mag_2" value="6"/> <!-- should be 6 -->
-        <xacro:property name="inertia_mag_3" value="6"/> <!-- should be 6 -->
 
         <!-- Either attach the Hithand to the then here defined world link or attach to given robot link which itself defines the world frame -->
         <xacro:if value="${not attached}">
@@ -69,7 +65,8 @@
 
         <!-- #########################FINGER######################## -->
         <!-- Define the fingers in a macro (all fingers are equal) -->
-        <!-- Joint limits set according to this: https://github.com/Qianboy/hithand_ros/blob/master/hithand_description/parameter.pdf -->
+        <!-- Joint limits set according to this: https://github.com/Qianboy/hithand_ros/blob/master/hithand_description/parameter.pdf 
+        Note: Following a discussion with Qian Feng, joint limits will be set from 0.0872665 rad to 0.0 rad-->
         <xacro:macro name="finger" params="prefix *transform_palm2finger">
             <!-- +++++ Finger base joint 0 ++++++ -->
             <joint name="Right_${prefix}_0" type="revolute">
@@ -112,7 +109,7 @@
                 <parent link="Right_${prefix}_Basecover" />
                 <child link="Right_${prefix}_Phaprox" />
                 <axis xyz="0 0 1" />
-                <limit effort="1.15" lower="0.0872665" upper="1.48353" velocity="3.14"/> <!-- Effort limit based on max fingertip force of 10N. Finger tip is approx 11.5cm away from this joint.-->
+                <limit effort="1.15" lower="0.0" upper="1.48353" velocity="3.14"/> <!-- Effort limit based on max fingertip force of 10N. Finger tip is approx 11.5cm away from this joint.-->
                 <dynamics damping="0.5" friction="0" />
             </joint>
 
@@ -151,7 +148,7 @@
                 <parent link="Right_${prefix}_Phaprox" />
                 <child link="Right_${prefix}_Phamed" />
                 <axis xyz="0 0 1" />
-                <limit effort="0.6" lower="0.0872665" upper="1.13446" velocity="3.14"/> <!-- Effort limit based on max fingertip force of 10N. Finger tip is approx 6cm away from this joint.-->
+                <limit effort="0.6" lower="0.0" upper="1.13446" velocity="3.14"/> <!-- Effort limit based on max fingertip force of 10N. Finger tip is approx 6cm away from this joint.-->
                 <dynamics damping="0.5" friction="0" />
             </joint>
 
@@ -188,7 +185,7 @@
                 <parent link="Right_${prefix}_Phamed" />
                 <child link="Right_${prefix}_Phadist" />
                 <axis xyz="0 0 1" />
-                <limit effort="0.35" lower="0.0872665" upper="1.13446" velocity="3.14"/> <!-- Effort limit based on max fingertip force of 10N. Finger tip is approx 3.5cm away from this joint.-->
+                <limit effort="0.35" lower="0.0" upper="1.13446" velocity="3.14"/> <!-- Effort limit based on max fingertip force of 10N. Finger tip is approx 3.5cm away from this joint.-->
                 <dynamics damping="0.5" friction="0" />
             </joint>
             <link name="Right_${prefix}_Phadist">
