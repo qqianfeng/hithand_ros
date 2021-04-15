@@ -381,14 +381,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hithand_description/meshes/visual/palm/hit-hand-2-palm-right.dae"/>
+        <mesh filename="meshes/visual/palm/hit-hand-2-palm-right.dae"/>
       </geometry>
       <material name="grey"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hithand_description/meshes/collision/palm/hit-hand-2-palm-right-merged.dae"/>
+        <mesh filename="meshes/collision/palm/hit-hand-2-palm-right-merged.dae"/>
       </geometry>
     </collision>
   </link>
@@ -421,7 +421,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hithand_description/meshes/visual/finger/hit-hand-2-finger-basecover.dae"/>
+        <mesh filename="meshes/visual/finger/hit-hand-2-finger-basecover.dae"/>
       </geometry>
       <material name="white"/>
     </visual>
@@ -451,14 +451,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hithand_description/meshes/visual/finger/hit-hand-2-finger-phaprox.dae"/>
+        <mesh filename="meshes/visual/finger/hit-hand-2-finger-phaprox.dae"/>
       </geometry>
       <material name="lightblue"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phaprox.dae"/>
+        <mesh filename="meshes/collision/finger/hit-hand-2-finger-phaprox.dae"/>
       </geometry>
     </collision>
   </link>
@@ -481,14 +481,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hithand_description/meshes/visual/finger/hit-hand-2-finger-phamed.dae"/>
+        <mesh filename="meshes/visual/finger/hit-hand-2-finger-phamed.dae"/>
       </geometry>
       <material name="white"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phamed.dae"/>
+        <mesh filename="meshes/collision/finger/hit-hand-2-finger-phamed.dae"/>
       </geometry>
     </collision>
   </link>
@@ -511,14 +511,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hithand_description/meshes/visual/finger/hit-hand-2-finger-phadist.dae"/>
+        <mesh filename="meshes/visual/finger/hit-hand-2-finger-phadist.dae"/>
       </geometry>
       <material name="lightblue"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phadist.dae"/>
+        <mesh filename="meshes/collision/finger/hit-hand-2-finger-phadist.dae"/>
       </geometry>
     </collision>
   </link>
@@ -541,7 +541,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hithand_description/meshes/visual/finger/hit-hand-2-finger-basecover.dae"/>
+        <mesh filename="meshes/visual/finger/hit-hand-2-finger-basecover.dae"/>
       </geometry>
       <material name="white"/>
     </visual>
@@ -571,14 +571,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hithand_description/meshes/visual/finger/hit-hand-2-finger-phaprox.dae"/>
+        <mesh filename="meshes/visual/finger/hit-hand-2-finger-phaprox.dae"/>
       </geometry>
       <material name="lightblue"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phaprox.dae"/>
+        <mesh filename="meshes/collision/finger/hit-hand-2-finger-phaprox.dae"/>
       </geometry>
     </collision>
   </link>
@@ -601,14 +601,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hithand_description/meshes/visual/finger/hit-hand-2-finger-phamed.dae"/>
+        <mesh filename="meshes/visual/finger/hit-hand-2-finger-phamed.dae"/>
       </geometry>
       <material name="white"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phamed.dae"/>
+        <mesh filename="meshes/collision/finger/hit-hand-2-finger-phamed.dae"/>
       </geometry>
     </collision>
   </link>
@@ -631,14 +631,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hithand_description/meshes/visual/finger/hit-hand-2-finger-phadist.dae"/>
+        <mesh filename="meshes/visual/finger/hit-hand-2-finger-phadist.dae"/>
       </geometry>
       <material name="lightblue"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phadist.dae"/>
+        <mesh filename="meshes/collision/finger/hit-hand-2-finger-phadist.dae"/>
       </geometry>
     </collision>
   </link>
@@ -661,7 +661,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hithand_description/meshes/visual/finger/hit-hand-2-finger-basecover.dae"/>
+        <mesh filename="meshes/visual/finger/hit-hand-2-finger-basecover.dae"/>
       </geometry>
       <material name="white"/>
     </visual>
@@ -691,14 +691,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hithand_description/meshes/visual/finger/hit-hand-2-finger-phaprox.dae"/>
+        <mesh filename="meshes/visual/finger/hit-hand-2-finger-phaprox.dae"/>
       </geometry>
       <material name="lightblue"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phaprox.dae"/>
+        <mesh filename="meshes/collision/finger/hit-hand-2-finger-phaprox.dae"/>
       </geometry>
     </collision>
   </link>
@@ -721,14 +721,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hithand_description/meshes/visual/finger/hit-hand-2-finger-phamed.dae"/>
+        <mesh filename="meshes/visual/finger/hit-hand-2-finger-phamed.dae"/>
       </geometry>
       <material name="white"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phamed.dae"/>
+        <mesh filename="meshes/collision/finger/hit-hand-2-finger-phamed.dae"/>
       </geometry>
     </collision>
   </link>
@@ -751,14 +751,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hithand_description/meshes/visual/finger/hit-hand-2-finger-phadist.dae"/>
+        <mesh filename="meshes/visual/finger/hit-hand-2-finger-phadist.dae"/>
       </geometry>
       <material name="lightblue"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phadist.dae"/>
+        <mesh filename="meshes/collision/finger/hit-hand-2-finger-phadist.dae"/>
       </geometry>
     </collision>
   </link>
@@ -781,7 +781,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hithand_description/meshes/visual/finger/hit-hand-2-finger-basecover.dae"/>
+        <mesh filename="meshes/visual/finger/hit-hand-2-finger-basecover.dae"/>
       </geometry>
       <material name="white"/>
     </visual>
@@ -811,14 +811,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hithand_description/meshes/visual/finger/hit-hand-2-finger-phaprox.dae"/>
+        <mesh filename="meshes/visual/finger/hit-hand-2-finger-phaprox.dae"/>
       </geometry>
       <material name="lightblue"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phaprox.dae"/>
+        <mesh filename="meshes/collision/finger/hit-hand-2-finger-phaprox.dae"/>
       </geometry>
     </collision>
   </link>
@@ -841,14 +841,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hithand_description/meshes/visual/finger/hit-hand-2-finger-phamed.dae"/>
+        <mesh filename="meshes/visual/finger/hit-hand-2-finger-phamed.dae"/>
       </geometry>
       <material name="white"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phamed.dae"/>
+        <mesh filename="meshes/collision/finger/hit-hand-2-finger-phamed.dae"/>
       </geometry>
     </collision>
   </link>
@@ -871,14 +871,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hithand_description/meshes/visual/finger/hit-hand-2-finger-phadist.dae"/>
+        <mesh filename="meshes/visual/finger/hit-hand-2-finger-phadist.dae"/>
       </geometry>
       <material name="lightblue"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phadist.dae"/>
+        <mesh filename="meshes/collision/finger/hit-hand-2-finger-phadist.dae"/>
       </geometry>
     </collision>
   </link>
@@ -901,7 +901,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hithand_description/meshes/visual/finger/hit-hand-2-finger-basecover.dae"/>
+        <mesh filename="meshes/visual/finger/hit-hand-2-finger-basecover.dae"/>
       </geometry>
       <material name="white"/>
     </visual>
@@ -931,14 +931,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hithand_description/meshes/visual/finger/hit-hand-2-finger-phaprox.dae"/>
+        <mesh filename="meshes/visual/finger/hit-hand-2-finger-phaprox.dae"/>
       </geometry>
       <material name="lightblue"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phaprox.dae"/>
+        <mesh filename="meshes/collision/finger/hit-hand-2-finger-phaprox.dae"/>
       </geometry>
     </collision>
   </link>
@@ -961,14 +961,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hithand_description/meshes/visual/finger/hit-hand-2-finger-phamed.dae"/>
+        <mesh filename="meshes/visual/finger/hit-hand-2-finger-phamed.dae"/>
       </geometry>
       <material name="white"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phamed.dae"/>
+        <mesh filename="meshes/collision/finger/hit-hand-2-finger-phamed.dae"/>
       </geometry>
     </collision>
   </link>
@@ -991,14 +991,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hithand_description/meshes/visual/finger/hit-hand-2-finger-phadist.dae"/>
+        <mesh filename="meshes/visual/finger/hit-hand-2-finger-phadist.dae"/>
       </geometry>
       <material name="lightblue"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phadist.dae"/>
+        <mesh filename="meshes/collision/finger/hit-hand-2-finger-phadist.dae"/>
       </geometry>
     </collision>
   </link>
