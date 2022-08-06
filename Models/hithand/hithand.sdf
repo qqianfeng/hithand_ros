@@ -189,7 +189,7 @@
       <axis>
         <xyz>0.087152 0.996195 -0</xyz>
         <limit>
-          <lower>0.0872665</lower>
+          <lower>0</lower>
           <upper>1.48353</upper>
           <effort>1.15</effort>
           <velocity>3.14</velocity>
@@ -262,7 +262,7 @@
       <axis>
         <xyz>0.087152 0.996195 -0</xyz>
         <limit>
-          <lower>0.0872665</lower>
+          <lower>0</lower>
           <upper>1.13446</upper>
           <effort>0.6</effort>
           <velocity>3.14</velocity>
@@ -335,7 +335,7 @@
       <axis>
         <xyz>0.087152 0.996195 -0</xyz>
         <limit>
-          <lower>0.0872665</lower>
+          <lower>0</lower>
           <upper>1.13446</upper>
           <effort>0.35</effort>
           <velocity>3.14</velocity>
@@ -481,7 +481,7 @@
       <axis>
         <xyz>-0.173652 0.984807 0</xyz>
         <limit>
-          <lower>0.0872665</lower>
+          <lower>0</lower>
           <upper>1.48353</upper>
           <effort>1.15</effort>
           <velocity>3.14</velocity>
@@ -554,7 +554,7 @@
       <axis>
         <xyz>-0.173652 0.984807 0</xyz>
         <limit>
-          <lower>0.0872665</lower>
+          <lower>0</lower>
           <upper>1.13446</upper>
           <effort>0.6</effort>
           <velocity>3.14</velocity>
@@ -627,7 +627,7 @@
       <axis>
         <xyz>-0.173652 0.984807 0</xyz>
         <limit>
-          <lower>0.0872665</lower>
+          <lower>0</lower>
           <upper>1.13446</upper>
           <effort>0.35</effort>
           <velocity>3.14</velocity>
@@ -773,7 +773,7 @@
       <axis>
         <xyz>-3e-06 1 0</xyz>
         <limit>
-          <lower>0.0872665</lower>
+          <lower>0</lower>
           <upper>1.48353</upper>
           <effort>1.15</effort>
           <velocity>3.14</velocity>
@@ -846,7 +846,7 @@
       <axis>
         <xyz>-3e-06 1 0</xyz>
         <limit>
-          <lower>0.0872665</lower>
+          <lower>0</lower>
           <upper>1.13446</upper>
           <effort>0.6</effort>
           <velocity>3.14</velocity>
@@ -919,7 +919,7 @@
       <axis>
         <xyz>-3e-06 1 0</xyz>
         <limit>
-          <lower>0.0872665</lower>
+          <lower>0</lower>
           <upper>1.13446</upper>
           <effort>0.35</effort>
           <velocity>3.14</velocity>
@@ -1065,7 +1065,7 @@
       <axis>
         <xyz>-0.08716 0.996194 0</xyz>
         <limit>
-          <lower>0.0872665</lower>
+          <lower>0</lower>
           <upper>1.48353</upper>
           <effort>1.15</effort>
           <velocity>3.14</velocity>
@@ -1138,7 +1138,7 @@
       <axis>
         <xyz>-0.08716 0.996194 0</xyz>
         <limit>
-          <lower>0.0872665</lower>
+          <lower>0</lower>
           <upper>1.13446</upper>
           <effort>0.6</effort>
           <velocity>3.14</velocity>
@@ -1211,7 +1211,7 @@
       <axis>
         <xyz>-0.08716 0.996194 0</xyz>
         <limit>
-          <lower>0.0872665</lower>
+          <lower>0</lower>
           <upper>1.13446</upper>
           <effort>0.35</effort>
           <velocity>3.14</velocity>
@@ -1354,7 +1354,7 @@
       <axis>
         <xyz>0.57105 -0.814198 -0.104808</xyz>
         <limit>
-          <lower>0.0872665</lower>
+          <lower>0</lower>
           <upper>1.48353</upper>
           <effort>1.15</effort>
           <velocity>3.14</velocity>
@@ -1427,7 +1427,7 @@
       <axis>
         <xyz>0.57105 -0.814198 -0.104808</xyz>
         <limit>
-          <lower>0.0872665</lower>
+          <lower>0</lower>
           <upper>1.13446</upper>
           <effort>0.6</effort>
           <velocity>3.14</velocity>
@@ -1500,7 +1500,7 @@
       <axis>
         <xyz>0.57105 -0.814198 -0.104808</xyz>
         <limit>
-          <lower>0.0872665</lower>
+          <lower>0</lower>
           <upper>1.13446</upper>
           <effort>0.35</effort>
           <velocity>3.14</velocity>
@@ -1514,10 +1514,5 @@
         <use_parent_model_frame>1</use_parent_model_frame>
       </axis>
     </joint>
-    <static>0</static>
-    <plugin name='gazebo_ros_control' filename='libgazebo_ros_control.so'>
-      <robotNamespace>/hithand</robotNamespace>
-      <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
-    </plugin>
   </model>
 </sdf>
