@@ -368,7 +368,8 @@
   <joint name="fixed" type="fixed">
     <parent link="world"/>
     <child link="base_link_hithand"/>
-    <origin rpy="0 0 0" xyz="0 0 0.1"/>
+    <!-- xyz = 0,0,0 was hardcoded in hithand.urdf for correct spawning the hand -->
+    <origin rpy="0 0 0" xyz="0 0 0"/>
   </joint>
   <!-- ++++ Define all the links and joints ++++ -->
   <!-- Starting from the base -->
@@ -1003,3 +1004,4 @@
     </collision>
   </link>
 </robot>
+
