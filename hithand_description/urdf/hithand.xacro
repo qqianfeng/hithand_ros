@@ -5,12 +5,12 @@
         <xacro:property name="mu1" value="0.6"/>
         <xacro:property name="mu2" value="0.6"/>
 
-        <!-- Either attach the Hithand to the then here defined world link or attach to given robot link which itself defines the world frame -->
+        <!-- Either attach the hithand to the then here defined world link or attach to given robot link which itself defines the world frame -->
         <xacro:if value="${not attached}">
         <link name="world"/>
             <joint name="fixed" type="fixed">
                 <parent link="world"/>
-                <child link="base_link_hithand"/> 
+                <child link="base_link_hithand"/>
                 <origin xyz="0 0 0.1" rpy="0 0 0"/>
             </joint>
         </xacro:if>
@@ -35,14 +35,14 @@
    	        <visual>
       		    <origin rpy="0 0 0" xyz="0 0 0" />
       		    <geometry>
-        		    <mesh filename="package://hithand_description/meshes/visual/palm/hit-hand-2-palm-right.obj"/>
+        		    <mesh filename="package://hithand_description/meshes/visual/palm/ar-hand-2-palm-right.dae"/>
       		    </geometry>
       		    <material name="grey" />
     	    </visual>
     	    <collision>
                 <origin rpy="0 0 0" xyz="0 0 0" />
       		    <geometry>
-        		    <mesh filename="package://hithand_description/meshes/collision/palm/hit-hand-2-palm-right-merged.dae"/>
+        		    <mesh filename="package://hithand_description/meshes/collision/palm/ar-hand-2-palm-right-merged.dae"/>
       		    </geometry>
     	    </collision>
         </link>
@@ -60,7 +60,7 @@
 
         <!-- #########################FINGER######################## -->
         <!-- Define the fingers in a macro (all fingers are equal) -->
-        <!-- Joint limits set according to this: https://github.com/Qianboy/hithand_ros/blob/master/hithand_description/parameter.pdf 
+        <!-- Joint limits set according to this: https://github.com/Qianboy/hithand_ros/blob/master/hithand_description/parameter.pdf
         Note: Following a discussion with Qian Feng, joint limits will be set from 0.0872665 (msoftware limit) rad to 0.0 (mechanical limit) rad-->
         <xacro:macro name="finger" params="prefix *transform_palm2finger">
             <!-- +++++ Finger base joint 0 ++++++ -->
@@ -83,7 +83,7 @@
                 <visual>
                     <origin xyz="0 0 0" rpy="0 0 0" />
                     <geometry>
-                        <mesh filename="package://hithand_description/meshes/visual/finger/hit-hand-2-finger-basecover.dae"/>
+                        <mesh filename="package://hithand_description/meshes/visual/finger/ar-hand-2-finger-basecover.dae"/>
                     </geometry>
                     <material name="white"/>
                 </visual>
@@ -108,7 +108,7 @@
 
             <link name="Right_${prefix}_Phaprox">
                 <inertial>
-                    <origin xyz="0.03076 0.00297 0" 
+                    <origin xyz="0.03076 0.00297 0"
                             rpy="0 0 0" />
                     <mass value="0.0232" />
                     <inertia ixx="2.5326e-6" ixy="-9.2551e-7" ixz="-4.0954e-8" iyy="6.9625e-6" iyz="-9.38e-9" izz="7.9108e-6" />
@@ -116,14 +116,14 @@
                 <visual>
                     <origin xyz="0 0 0" rpy="0 0 0" />
                         <geometry>
-                                <mesh filename="package://hithand_description/meshes/visual/finger/hit-hand-2-finger-phaprox.obj" />
+                                <mesh filename="package://hithand_description/meshes/visual/finger/ar-hand-2-finger-phaprox.dae" />
                         </geometry>
                     <material name="lightblue"/>
                 </visual>
                 <collision>
                     <origin xyz="0 0 0" rpy="0 0 0" />
                         <geometry>
-                                <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phaprox.dae" />
+                                <mesh filename="package://hithand_description/meshes/collision/finger/ar-hand-2-finger-phaprox.dae" />
                         </geometry>
                 </collision>
             </link>
@@ -148,14 +148,14 @@
                 <visual>
                     <origin xyz="0 0 0" rpy="0 0 0" />
                     <geometry>
-                        <mesh filename="package://hithand_description/meshes/visual/finger/hit-hand-2-finger-phamed.obj" />
+                        <mesh filename="package://hithand_description/meshes/visual/finger/ar-hand-2-finger-phamed.dae" />
                     </geometry>
                     <material name="white"/>
                 </visual>
                 <collision>
                     <origin xyz="0 0 0" rpy="0 0 0" />
                         <geometry>
-                                <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phamed.dae" />
+                                <mesh filename="package://hithand_description/meshes/collision/finger/ar-hand-2-finger-phamed.dae" />
                         </geometry>
                 </collision>
             </link>
@@ -179,14 +179,14 @@
                 <visual>
                     <origin xyz="0 0 0" rpy="0 0 0" />
                     <geometry>
-                        <mesh filename="package://hithand_description/meshes/visual/finger/hit-hand-2-finger-phadist.obj" />
+                        <mesh filename="package://hithand_description/meshes/visual/finger/ar-hand-2-finger-phadist.dae" />
                     </geometry>
                     <material name="lightblue"/>
                 </visual>
                 <collision>
                     <origin xyz="0 0 0" rpy="0 0 0" />
                         <geometry>
-                                <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phadist.dae" />
+                                <mesh filename="package://hithand_description/meshes/collision/finger/ar-hand-2-finger-phadist.dae" />
                         </geometry>
                 </collision>
             </link>

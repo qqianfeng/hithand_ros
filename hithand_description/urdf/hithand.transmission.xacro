@@ -23,7 +23,7 @@
         <mechanicalReduction>1</mechanicalReduction>
       </actuator>
     </transmission>
-    
+
     <transmission name="tran_${finger_name}_2">
         <type>transmission_interface/SimpleTransmission</type>
         <joint name="Right_${finger_name}_2">

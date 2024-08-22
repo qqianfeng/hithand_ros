@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
-   <!-- If the Hithand is attached to a robot, which also loads this ros_control shared library, the plugin should be deactived (commented out) here.
-        If you spawn the Hithand standalone you need to uncomment this for the hithand_control to work.   -->
+   <!-- If the hithand is attached to a robot, which also loads this ros_control shared library, the plugin should be deactived (commented out) here.
+        If you spawn the hithand standalone you need to uncomment this for the hithand_control to work.   -->
    <!-- <gazebo>
       <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
         <robotNamespace>/hithand</robotNamespace>
@@ -19,7 +19,7 @@
         <static>${staticValue}</static>
         <turnGravityOff>${turnGravityOffValue}</turnGravityOff>
         <mu1>0.8</mu1>
-        <mu2>0.8</mu2>        
+        <mu2>0.8</mu2>
     </gazebo>
 
     <!-- Thumb links -->
@@ -169,5 +169,5 @@
         <mu1>0.8</mu1>
         <mu2>0.8</mu2>
     </gazebo>
-    
+
 </robot>
