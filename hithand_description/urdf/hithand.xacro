@@ -10,7 +10,7 @@
         <link name="world"/>
             <joint name="fixed" type="fixed">
                 <parent link="world"/>
-                <child link="base_link_hithand"/> 
+                <child link="base_link_hithand"/>
                 <origin xyz="0 0 0.1" rpy="0 0 0"/>
             </joint>
         </xacro:if>
@@ -42,7 +42,7 @@
     	    <collision>
                 <origin rpy="0 0 0" xyz="0 0 0" />
       		    <geometry>
-        		    <mesh filename="package://hithand_description/meshes/collision/palm/hit-hand-2-palm-right-merged.dae"/>
+        		    <mesh filename="package://hithand_description/meshes/collision/palm/hit-hand-2-palm-right-merged.obj"/>
       		    </geometry>
     	    </collision>
         </link>
@@ -60,7 +60,7 @@
 
         <!-- #########################FINGER######################## -->
         <!-- Define the fingers in a macro (all fingers are equal) -->
-        <!-- Joint limits set according to this: https://github.com/Qianboy/hithand_ros/blob/master/hithand_description/parameter.pdf 
+        <!-- Joint limits set according to this: https://github.com/Qianboy/hithand_ros/blob/master/hithand_description/parameter.pdf
         Note: Following a discussion with Qian Feng, joint limits will be set from 0.0872665 (msoftware limit) rad to 0.0 (mechanical limit) rad-->
         <xacro:macro name="finger" params="prefix *transform_palm2finger">
             <!-- +++++ Finger base joint 0 ++++++ -->
@@ -108,7 +108,7 @@
 
             <link name="Right_${prefix}_Phaprox">
                 <inertial>
-                    <origin xyz="0.03076 0.00297 0" 
+                    <origin xyz="0.03076 0.00297 0"
                             rpy="0 0 0" />
                     <mass value="0.0232" />
                     <inertia ixx="2.5326e-6" ixy="-9.2551e-7" ixz="-4.0954e-8" iyy="6.9625e-6" iyz="-9.38e-9" izz="7.9108e-6" />
@@ -123,7 +123,7 @@
                 <collision>
                     <origin xyz="0 0 0" rpy="0 0 0" />
                         <geometry>
-                                <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phaprox.dae" />
+                                <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phaprox.obj" />
                         </geometry>
                 </collision>
             </link>
@@ -155,7 +155,7 @@
                 <collision>
                     <origin xyz="0 0 0" rpy="0 0 0" />
                         <geometry>
-                                <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phamed.dae" />
+                                <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phamed.obj" />
                         </geometry>
                 </collision>
             </link>
@@ -186,7 +186,7 @@
                 <collision>
                     <origin xyz="0 0 0" rpy="0 0 0" />
                         <geometry>
-                                <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phadist.dae" />
+                                <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phadist.obj" />
                         </geometry>
                 </collision>
             </link>
