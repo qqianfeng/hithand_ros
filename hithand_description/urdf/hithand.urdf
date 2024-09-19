@@ -368,7 +368,7 @@
   <joint name="fixed" type="fixed">
     <parent link="world"/>
     <child link="base_link_hithand"/>
-    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <origin rpy="0 0 0" xyz="0 0 0.1"/>
   </joint>
   <!-- ++++ Define all the links and joints ++++ -->
   <!-- Starting from the base -->
@@ -388,7 +388,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hithand_description/meshes/collision/palm/hit-hand-2-palm-right-merged.dae"/>
+        <mesh filename="package://hithand_description/meshes/collision/palm/hit-hand-2-palm-right-merged.obj"/>
       </geometry>
     </collision>
   </link>
@@ -458,7 +458,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phaprox.dae"/>
+        <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phaprox.obj"/>
       </geometry>
     </collision>
   </link>
@@ -488,7 +488,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phamed.dae"/>
+        <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phamed.obj"/>
       </geometry>
     </collision>
   </link>
@@ -518,10 +518,16 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phadist.dae"/>
+        <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phadist.obj"/>
       </geometry>
     </collision>
   </link>
+  <joint name="Right_Thumb_4" type="fixed">
+    <parent link="Right_Thumb_Phadist"/>
+    <child link="Right_Thumb_fingertip"/>
+    <origin rpy="0 0 -1.570796" xyz="0.025 0 0"/>
+  </joint>
+  <link name="Right_Thumb_fingertip"/>
   <!-- +++++ Finger base joint 0 ++++++ -->
   <joint name="Right_Index_0" type="revolute">
     <!-- joint origin in parent link frame -->
@@ -578,7 +584,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phaprox.dae"/>
+        <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phaprox.obj"/>
       </geometry>
     </collision>
   </link>
@@ -608,7 +614,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phamed.dae"/>
+        <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phamed.obj"/>
       </geometry>
     </collision>
   </link>
@@ -638,10 +644,16 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phadist.dae"/>
+        <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phadist.obj"/>
       </geometry>
     </collision>
   </link>
+  <joint name="Right_Index_4" type="fixed">
+    <parent link="Right_Index_Phadist"/>
+    <child link="Right_Index_fingertip"/>
+    <origin rpy="0 0 -1.570796" xyz="0.025 0 0"/>
+  </joint>
+  <link name="Right_Index_fingertip"/>
   <!-- +++++ Finger base joint 0 ++++++ -->
   <joint name="Right_Middle_0" type="revolute">
     <!-- joint origin in parent link frame -->
@@ -698,7 +710,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phaprox.dae"/>
+        <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phaprox.obj"/>
       </geometry>
     </collision>
   </link>
@@ -728,7 +740,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phamed.dae"/>
+        <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phamed.obj"/>
       </geometry>
     </collision>
   </link>
@@ -758,10 +770,16 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phadist.dae"/>
+        <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phadist.obj"/>
       </geometry>
     </collision>
   </link>
+  <joint name="Right_Middle_4" type="fixed">
+    <parent link="Right_Middle_Phadist"/>
+    <child link="Right_Middle_fingertip"/>
+    <origin rpy="0 0 -1.570796" xyz="0.025 0 0"/>
+  </joint>
+  <link name="Right_Middle_fingertip"/>
   <!-- +++++ Finger base joint 0 ++++++ -->
   <joint name="Right_Ring_0" type="revolute">
     <!-- joint origin in parent link frame -->
@@ -818,7 +836,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phaprox.dae"/>
+        <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phaprox.obj"/>
       </geometry>
     </collision>
   </link>
@@ -848,7 +866,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phamed.dae"/>
+        <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phamed.obj"/>
       </geometry>
     </collision>
   </link>
@@ -878,10 +896,16 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phadist.dae"/>
+        <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phadist.obj"/>
       </geometry>
     </collision>
   </link>
+  <joint name="Right_Ring_4" type="fixed">
+    <parent link="Right_Ring_Phadist"/>
+    <child link="Right_Ring_fingertip"/>
+    <origin rpy="0 0 -1.570796" xyz="0.025 0 0"/>
+  </joint>
+  <link name="Right_Ring_fingertip"/>
   <!-- +++++ Finger base joint 0 ++++++ -->
   <joint name="Right_Little_0" type="revolute">
     <!-- joint origin in parent link frame -->
@@ -938,7 +962,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phaprox.dae"/>
+        <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phaprox.obj"/>
       </geometry>
     </collision>
   </link>
@@ -968,7 +992,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phamed.dae"/>
+        <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phamed.obj"/>
       </geometry>
     </collision>
   </link>
@@ -998,8 +1022,14 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phadist.dae"/>
+        <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phadist.obj"/>
       </geometry>
     </collision>
   </link>
+  <joint name="Right_Little_4" type="fixed">
+    <parent link="Right_Little_Phadist"/>
+    <child link="Right_Little_fingertip"/>
+    <origin rpy="0 0 -1.570796" xyz="0.025 0 0"/>
+  </joint>
+  <link name="Right_Little_fingertip"/>
 </robot>

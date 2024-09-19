@@ -191,6 +191,13 @@
                 </collision>
             </link>
 
+            <joint name="Right_${prefix}_4" type="fixed">
+                <parent link="Right_${prefix}_Phadist"/>
+                <child link="Right_${prefix}_fingertip"/>
+                <origin xyz="0.025 0 0" rpy="0 0 -1.570796" />
+            </joint>
+            <link name="Right_${prefix}_fingertip"/>
+
         </xacro:macro>
         <!-- #########################FINGER######################## -->
         <!-- END of finger macro -->
