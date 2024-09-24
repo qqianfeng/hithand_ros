@@ -42,7 +42,7 @@
     	    <collision>
                 <origin rpy="0 0 0" xyz="0 0 0" />
       		    <geometry>
-        		    <mesh filename="package://hithand_description/meshes/collision/palm/hit-hand-2-palm-right-merged.dae"/>
+        		    <mesh filename="package://hithand_description/meshes/collision/palm/hit-hand-2-palm-right-merged_faces_300_crop.dae"/>
       		    </geometry>
     	    </collision>
         </link>
@@ -57,7 +57,136 @@
         <link name="palm_link_hithand"/>
 
 
+        <xacro:macro name="finger_short" params="prefix *transform_palm2finger">
+            <!-- +++++ Finger base joint 0 ++++++ -->
+            <joint name="Right_${prefix}_0" type="revolute">
+                <!-- joint origin in parent link frame -->
+                <xacro:insert_block name="transform_palm2finger" />
+                <parent link="base_link_hithand" />
+                <child link="Right_${prefix}_Basecover" />
+                <axis xyz="0 0 1" />
+                <limit effort="15" lower="-0.261799" upper="0.261799" velocity="3.14"/>
+                <dynamics damping="0.5" friction="0" />
+            </joint>
 
+            <link name="Right_${prefix}_Basecover">
+                <inertial>
+                    <origin xyz="0.02749 0 0" rpy="0 0 0" />
+                    <mass value="0.0176"/>
+                    <inertia ixx="1.3450e-6" ixy="0.0" ixz="-1.8183e-7" iyy="1.9874e-6" iyz="0.0" izz="1.0419e-6" />
+                </inertial>
+                <visual>
+                    <origin xyz="0 0 0" rpy="0 0 0" />
+                    <geometry>
+                        <mesh filename="package://hithand_description/meshes/visual/finger/hit-hand-2-finger-basecover.dae"/>
+                    </geometry>
+                    <material name="white"/>
+                </visual>
+                <collision>
+                    <origin xyz="0 0 0" rpy="0 0 0" />
+                    <geometry name='hithand_${prefix}_base_cover'>
+                        <cylinder length="0.001" radius="0.001" />
+                    </geometry>
+                </collision>
+            </link>
+
+
+            <!-- +++++ Finger joint 1, Link: Phalanx proximalis ++++++ -->
+            <joint name="Right_${prefix}_1" type="revolute">
+                <origin xyz="0 0 0 " rpy="1.5708 0 0" />
+                <parent link="Right_${prefix}_Basecover" />
+                <child link="Right_${prefix}_Phaprox" />
+                <axis xyz="0 0 1" />
+                <limit effort="1.15" lower="0.0" upper="1.48353" velocity="3.14"/> <!-- Effort limit based on max fingertip force of 10N. Finger tip is approx 11.5cm away from this joint.-->
+                <dynamics damping="0.5" friction="0" />
+            </joint>
+
+            <link name="Right_${prefix}_Phaprox">
+                <inertial>
+                    <origin xyz="0.03076 0.00297 0" 
+                            rpy="0 0 0" />
+                    <mass value="0.0232" />
+                    <inertia ixx="2.5326e-6" ixy="-9.2551e-7" ixz="-4.0954e-8" iyy="6.9625e-6" iyz="-9.38e-9" izz="7.9108e-6" />
+                </inertial>
+                <visual>
+                    <origin xyz="0 0 0" rpy="0 0 0" />
+                        <geometry>
+                                <mesh filename="package://hithand_description/meshes/visual/finger/hit-hand-2-finger-phaprox.obj" />
+                        </geometry>
+                    <material name="lightblue"/>
+                </visual>
+                <collision>
+                    <origin xyz="0 0 0" rpy="0 0 0" />
+                        <geometry>
+                                <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phaprox-cropped-diag.dae" />
+                        </geometry>
+                </collision>
+            </link>
+
+
+            <!-- +++++ Finger joint 2 Phalanx medialis ++++++ -->
+            <joint name="Right_${prefix}_2" type="revolute">
+                <origin xyz="0.055 0 0" rpy="0 0 0" />
+                <parent link="Right_${prefix}_Phaprox" />
+                <child link="Right_${prefix}_Phamed" />
+                <axis xyz="0 0 1" />
+                <limit effort="0.6" lower="0.0" upper="1.13446" velocity="3.14"/> <!-- Effort limit based on max fingertip force of 10N. Finger tip is approx 6cm away from this joint.-->
+                <dynamics damping="0.5" friction="0" />
+            </joint>
+
+            <link name="Right_${prefix}_Phamed">
+                <inertial>
+                    <origin xyz="0.0097 -0.00036 0" rpy="0 0 0" />
+                    <mass value="0.0158" />
+                    <inertia ixx="1.1852e-6" ixy="-2.8845e-8" ixz="-6.1323e-9" iyy="2.4460e-6" iyz="2.4541e-9" izz="2.6537e-6" />
+                </inertial>
+                <visual>
+                    <origin xyz="0 0 0" rpy="0 0 0" />
+                    <geometry>
+                        <mesh filename="package://hithand_description/meshes/visual/finger/hit-hand-2-finger-phamed.obj" />
+                    </geometry>
+                    <material name="white"/>
+                </visual>
+                <collision>
+                    <origin xyz="0 0 0" rpy="0 0 0" />
+                        <geometry>
+                                <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phamed.dae" />
+                        </geometry>
+                </collision>
+            </link>
+
+            <!-- +++++ Finger joint 3 Phalanx distalis ++++++ -->
+            <joint name="Right_${prefix}_3" type="revolute">
+                <origin xyz="0.025 0 0" rpy="0 0 -1.570796" />
+                <parent link="Right_${prefix}_Phamed" />
+                <child link="Right_${prefix}_Phadist" />
+                <axis xyz="0 0 1" />
+                <limit effort="0.35" lower="0.0" upper="1.13446" velocity="3.14"/> <!-- Effort limit based on max fingertip force of 10N. Finger tip is approx 3.5cm away from this joint.-->
+                <dynamics damping="0.5" friction="0" />
+            </joint>
+            <link name="Right_${prefix}_Phadist">
+                <inertial>
+                    <origin xyz="0.00072 0.00717 0.0" rpy="0 0 0" />
+                    <mass value="0.0137" />
+                    <inertia ixx="1.5519e-6" ixy="-2.037e-9" ixz="0.0" iyy="8.2972e-7" iyz="3.77e-9" izz="1.5788e-6" />
+                </inertial>
+                <visual>
+                    <origin xyz="0 0 0" rpy="0 0 0" />
+                    <geometry>
+                        <mesh filename="package://hithand_description/meshes/visual/finger/hit-hand-2-finger-phadist.obj" />
+                    </geometry>
+                    <material name="lightblue"/>
+                </visual>
+                <collision>
+                    <origin xyz="0 0 0" rpy="0 0 0" />
+                        <geometry>
+                                <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phadist.dae" />
+                        </geometry>
+                </collision>
+            </link>
+
+        </xacro:macro>
+        
         <!-- #########################FINGER######################## -->
         <!-- Define the fingers in a macro (all fingers are equal) -->
         <!-- Joint limits set according to this: https://github.com/Qianboy/hithand_ros/blob/master/hithand_description/parameter.pdf 
@@ -123,7 +252,7 @@
                 <collision>
                     <origin xyz="0 0 0" rpy="0 0 0" />
                         <geometry>
-                                <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phaprox.dae" />
+                                <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phaprox-cropped.dae" />
                         </geometry>
                 </collision>
             </link>
@@ -192,13 +321,14 @@
             </link>
 
         </xacro:macro>
+        
         <!-- #########################FINGER######################## -->
         <!-- END of finger macro -->
 
-        <xacro:finger prefix="Thumb"  >
+        <xacro:finger_short prefix="Thumb"  >
             <origin xyz="0.06217593 0.044372912 0.078734808"
                     rpy="0.225810 -1.083656 0.411355" />
-        </xacro:finger>
+        </xacro:finger_short>
         <xacro:finger prefix="Index"  >
             <origin xyz="-0.002529881 0.03680013 0.107783545"
                     rpy="3.054326 -1.570796 0.000000" />
@@ -211,10 +341,10 @@
             <origin xyz="0 -0.01680013 0.11258354"
                     rpy="-3.054326 -1.570796 0.000000" />
         </xacro:finger>
-        <xacro:finger prefix="Little"  >
+        <xacro:finger_short prefix="Little"  >
             <origin xyz="0.000971571 -0.0433963 0.093583545"
                     rpy="-2.967060 -1.570796 0.000000" />
-        </xacro:finger>
+        </xacro:finger_short>
 
 
     </xacro:macro>
