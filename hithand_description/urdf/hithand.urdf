@@ -388,7 +388,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hithand_description/meshes/collision/palm/hit-hand-2-palm-right-merged.obj"/>
+        <mesh filename="package://hithand_description/meshes/collision/palm/hit-hand-2-palm-right-merged_faces_300_crop.dae"/>
       </geometry>
     </collision>
   </link>
@@ -458,7 +458,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phaprox.obj"/>
+        <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phaprox-cropped-diag.dae"/>
       </geometry>
     </collision>
   </link>
@@ -584,7 +584,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phaprox.obj"/>
+        <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phaprox-cropped.dae"/>
       </geometry>
     </collision>
   </link>
@@ -962,7 +962,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phaprox.obj"/>
+        <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phaprox-cropped-diag.dae"/>
       </geometry>
     </collision>
   </link>
