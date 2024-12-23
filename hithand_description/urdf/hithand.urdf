@@ -368,8 +368,7 @@
   <joint name="fixed" type="fixed">
     <parent link="world"/>
     <child link="base_link_hithand"/>
-    <!-- xyz = 0,0,0 was hardcoded in hithand.urdf for correct spawning the hand -->
-    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <origin rpy="0 0 0" xyz="0 0 0.1"/>
   </joint>
   <!-- ++++ Define all the links and joints ++++ -->
   <!-- Starting from the base -->
@@ -389,7 +388,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hithand_description/meshes/collision/palm/hit-hand-2-palm-right-merged.dae"/>
+        <mesh filename="package://hithand_description/meshes/collision/palm/hit-hand-2-palm-right-merged_faces_300_crop.dae"/>
       </geometry>
     </collision>
   </link>
@@ -459,7 +458,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phaprox.dae"/>
+        <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phaprox-cropped-diag.dae"/>
       </geometry>
     </collision>
   </link>
@@ -579,7 +578,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phaprox.dae"/>
+        <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phaprox-cropped.dae"/>
       </geometry>
     </collision>
   </link>
@@ -939,7 +938,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phaprox.dae"/>
+        <mesh filename="package://hithand_description/meshes/collision/finger/hit-hand-2-finger-phaprox-cropped-diag.dae"/>
       </geometry>
     </collision>
   </link>
