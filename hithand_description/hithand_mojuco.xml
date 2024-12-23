@@ -1,0 +1,249 @@
+<mujoco model="hithand">
+  <option iterations="50" timestep="0.001" solver="PGS" gravity="0 0 -9.81" />
+
+  <compiler angle="radian" meshdir="meshes" eulerseq="zyx" autolimits="true" />
+
+  <default>
+    <joint limited="true" damping="0.01" armature="0.01" frictionloss="0.01" />
+    <geom condim="4" contype="1" conaffinity="15" friction="0.9 0.2 0.2" solref="0.001 2" />
+    <motor ctrllimited="true" />
+    <equality solref="0.001 2" />
+    <default class="visualgeom">
+      <geom material="visualgeom" condim="1" contype="0" conaffinity="0" />
+    </default>
+  </default>
+
+  <asset>
+    <mesh name="hit-hand-2-palm-right-merged_faces_300_crop" file="hit-hand-2-palm-right-merged_faces_300_crop.obj" />
+    <mesh name="hit-hand-2-finger-phaprox-cropped-diag" file="hit-hand-2-finger-phaprox-cropped-diag.obj" />
+    <mesh name="hit-hand-2-finger-phamed" file="hit-hand-2-finger-phamed.obj" />
+    <mesh name="hit-hand-2-finger-phadist" file="hit-hand-2-finger-phadist.obj" />
+    <mesh name="hit-hand-2-finger-phaprox-cropped" file="hit-hand-2-finger-phaprox-cropped.obj" />
+    <mesh name="hit-hand-2-finger-phaprox" file="hit-hand-2-finger-phaprox.obj" />
+    <texture name="texplane" type="2d" builtin="checker" rgb1=".0 .0 .0" rgb2=".8 .8 .8" width="100" height="100" />
+    <material name="matplane" reflectance="0." texture="texplane" texrepeat="1 1" texuniform="true" />
+    <material name="visualgeom" rgba="0.5 0.9 0.2 1" />
+  </asset>
+
+  <worldbody>
+    <light directional="true" diffuse="0.4 0.4 0.4" specular="0.1 0.1 0.1" pos="0 0 5.0" dir="0 0 -1" castshadow="false" />
+    <light directional="true" diffuse="0.6 0.6 0.6" specular="0.2 0.2 0.2" pos="0 0 4" dir="0 0 -1" />
+    <geom name="ground" type="plane" pos="0 0 0" size="100 100 0.001" quat="1 0 0 0" material="matplane" condim="3" conaffinity="15" />
+    <camera name="fixed" pos="0 -3.0 0.5" xyaxes="1 0 0 0 0 1" />
+    <camera name="track" mode="trackcom" pos="0 -3.0 0.5" xyaxes="1 0 0 0 0 1" />
+    <body name="root" pos="0 0 0.01" quat="1 0 0 0">
+      <freejoint name="root" />
+      <site name="imu" size="0.01" pos="0 0 0" />
+      <geom pos="0 0 0.1" quat="1 0 0 0" type="mesh" mesh="hit-hand-2-palm-right-merged_faces_300_crop" contype="1" conaffinity="0" density="0" group="1" class="visualgeom" />
+      <geom type="mesh" rgba="" mesh="hit-hand-2-palm-right-merged_faces_300_crop" pos="0 0 0.1" quat="1 0 0 0" />
+      <body name="Right_Thumb_Basecover" pos="0.0621759 0.0443729 0.178735" quat="0.821503 0.199145 -0.481905 0.230741">
+        <inertial pos="0.02749 0 0" quat="0.690219 0.153618 0.153618 0.690219" mass="0.0176" diaginertia="1.9874e-06 1.43016e-06 9.56744e-07" />
+        <joint name="Right_Thumb_0" pos="0 0 0" axis="0 0 1" range="-0.261799 0.261799" actuatorfrcrange="-15 15" damping="0.5" />
+        <geom size="0.001 0.0005" type="cylinder" contype="1" conaffinity="0" density="0" group="1" class="visualgeom" />
+        <geom type="cylinder" rgba="" />
+        <body name="Right_Thumb_Phaprox" quat="0.707105 0.707108 0 0">
+          <inertial pos="0.03076 0.00297 0" quat="-0.0706471 0.701039 0.069064 0.706246" mass="0.0232" diaginertia="7.91112e-06 7.14808e-06 2.3467e-06" />
+          <joint name="Right_Thumb_1" pos="0 0 0" axis="0 0 1" range="0 1.48353" actuatorfrcrange="-1.15 1.15" damping="0.5" />
+          <geom type="mesh" mesh="hit-hand-2-finger-phaprox-cropped-diag" contype="1" conaffinity="0" density="0" group="1" class="visualgeom" />
+          <geom type="mesh" rgba="" mesh="hit-hand-2-finger-phaprox-cropped-diag" />
+          <body name="Right_Thumb_Phamed" pos="0.055 0 0">
+            <inertial pos="0.0097 -0.00036 0" quat="-0.00366006 0.705533 0.0124811 0.708558" mass="0.0158" diaginertia="2.65376e-06 2.44663e-06 1.18452e-06" />
+            <joint name="Right_Thumb_2" pos="0 0 0" axis="0 0 1" range="0 1.13446" actuatorfrcrange="-0.6 0.6" damping="0.5" />
+            <geom type="mesh" mesh="hit-hand-2-finger-phamed" contype="1" conaffinity="0" density="0" group="1" class="visualgeom" />
+            <geom type="mesh" rgba="" mesh="hit-hand-2-finger-phamed" />
+            <body name="Right_Thumb_Phadist" pos="0.025 0 0" quat="0.707107 0 0 -0.707107">
+              <inertial pos="0.00072 0.00717 0" quat="0.501864 0.497938 -0.499541 0.500648" mass="0.0137" diaginertia="1.57882e-06 1.55191e-06 8.29695e-07" />
+              <joint name="Right_Thumb_3" pos="0 0 0" axis="0 0 1" range="0 1.13446" actuatorfrcrange="-0.35 0.35" damping="0.5" />
+              <geom type="mesh" mesh="hit-hand-2-finger-phadist" contype="1" conaffinity="0" density="0" group="1" class="visualgeom" />
+              <geom type="mesh" rgba="" mesh="hit-hand-2-finger-phadist" />
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="Right_Index_Basecover" pos="-0.00252988 0.0368001 0.207784" quat="0.0308436 0.706434 -0.0308436 0.706434">
+        <inertial pos="0.02749 0 0" quat="0.690219 0.153618 0.153618 0.690219" mass="0.0176" diaginertia="1.9874e-06 1.43016e-06 9.56744e-07" />
+        <joint name="Right_Index_0" pos="0 0 0" axis="0 0 1" range="-0.261799 0.261799" actuatorfrcrange="-15 15" damping="0.5" />
+        <geom size="0.001 0.0005" type="cylinder" contype="1" conaffinity="0" density="0" group="1" class="visualgeom" />
+        <geom type="cylinder" rgba="" />
+        <body name="Right_Index_Phaprox" quat="0.707105 0.707108 0 0">
+          <inertial pos="0.03076 0.00297 0" quat="-0.0706471 0.701039 0.069064 0.706246" mass="0.0232" diaginertia="7.91112e-06 7.14808e-06 2.3467e-06" />
+          <joint name="Right_Index_1" pos="0 0 0" axis="0 0 1" range="0 1.48353" actuatorfrcrange="-1.15 1.15" damping="0.5" />
+          <geom type="mesh" mesh="hit-hand-2-finger-phaprox-cropped" contype="1" conaffinity="0" density="0" group="1" class="visualgeom" />
+          <geom type="mesh" rgba="" mesh="hit-hand-2-finger-phaprox-cropped" />
+          <body name="Right_Index_Phamed" pos="0.055 0 0">
+            <inertial pos="0.0097 -0.00036 0" quat="-0.00366006 0.705533 0.0124811 0.708558" mass="0.0158" diaginertia="2.65376e-06 2.44663e-06 1.18452e-06" />
+            <joint name="Right_Index_2" pos="0 0 0" axis="0 0 1" range="0 1.13446" actuatorfrcrange="-0.6 0.6" damping="0.5" />
+            <geom type="mesh" mesh="hit-hand-2-finger-phamed" contype="1" conaffinity="0" density="0" group="1" class="visualgeom" />
+            <geom type="mesh" rgba="" mesh="hit-hand-2-finger-phamed" />
+            <body name="Right_Index_Phadist" pos="0.025 0 0" quat="0.707107 0 0 -0.707107">
+              <inertial pos="0.00072 0.00717 0" quat="0.501864 0.497938 -0.499541 0.500648" mass="0.0137" diaginertia="1.57882e-06 1.55191e-06 8.29695e-07" />
+              <joint name="Right_Index_3" pos="0 0 0" axis="0 0 1" range="0 1.13446" actuatorfrcrange="-0.35 0.35" damping="0.5" />
+              <geom type="mesh" mesh="hit-hand-2-finger-phadist" contype="1" conaffinity="0" density="0" group="1" class="visualgeom" />
+              <geom type="mesh" rgba="" mesh="hit-hand-2-finger-phadist" />
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="Right_Middle_Basecover" pos="-0.0037 0.01 0.217784" quat="-1.22475e-07 -0.707107 1.22474e-07 -0.707107">
+        <inertial pos="0.02749 0 0" quat="0.690219 0.153618 0.153618 0.690219" mass="0.0176" diaginertia="1.9874e-06 1.43016e-06 9.56744e-07" />
+        <joint name="Right_Middle_0" pos="0 0 0" axis="0 0 1" range="-0.261799 0.261799" actuatorfrcrange="-15 15" damping="0.5" />
+        <geom size="0.001 0.0005" type="cylinder" contype="1" conaffinity="0" density="0" group="1" class="visualgeom" />
+        <geom type="cylinder" rgba="" />
+        <body name="Right_Middle_Phaprox" quat="0.707105 0.707108 0 0">
+          <inertial pos="0.03076 0.00297 0" quat="-0.0706471 0.701039 0.069064 0.706246" mass="0.0232" diaginertia="7.91112e-06 7.14808e-06 2.3467e-06" />
+          <joint name="Right_Middle_1" pos="0 0 0" axis="0 0 1" range="0 1.48353" actuatorfrcrange="-1.15 1.15" damping="0.5" />
+          <geom type="mesh" mesh="hit-hand-2-finger-phaprox" contype="1" conaffinity="0" density="0" group="1" class="visualgeom" />
+          <geom type="mesh" rgba="" mesh="hit-hand-2-finger-phaprox" />
+          <body name="Right_Middle_Phamed" pos="0.055 0 0">
+            <inertial pos="0.0097 -0.00036 0" quat="-0.00366006 0.705533 0.0124811 0.708558" mass="0.0158" diaginertia="2.65376e-06 2.44663e-06 1.18452e-06" />
+            <joint name="Right_Middle_2" pos="0 0 0" axis="0 0 1" range="0 1.13446" actuatorfrcrange="-0.6 0.6" damping="0.5" />
+            <geom type="mesh" mesh="hit-hand-2-finger-phamed" contype="1" conaffinity="0" density="0" group="1" class="visualgeom" />
+            <geom type="mesh" rgba="" mesh="hit-hand-2-finger-phamed" />
+            <body name="Right_Middle_Phadist" pos="0.025 0 0" quat="0.707107 0 0 -0.707107">
+              <inertial pos="0.00072 0.00717 0" quat="0.501864 0.497938 -0.499541 0.500648" mass="0.0137" diaginertia="1.57882e-06 1.55191e-06 8.29695e-07" />
+              <joint name="Right_Middle_3" pos="0 0 0" axis="0 0 1" range="0 1.13446" actuatorfrcrange="-0.35 0.35" damping="0.5" />
+              <geom type="mesh" mesh="hit-hand-2-finger-phadist" contype="1" conaffinity="0" density="0" group="1" class="visualgeom" />
+              <geom type="mesh" rgba="" mesh="hit-hand-2-finger-phadist" />
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="Right_Ring_Basecover" pos="0 -0.0168001 0.212584" quat="0.0308436 -0.706434 -0.0308436 -0.706434">
+        <inertial pos="0.02749 0 0" quat="0.690219 0.153618 0.153618 0.690219" mass="0.0176" diaginertia="1.9874e-06 1.43016e-06 9.56744e-07" />
+        <joint name="Right_Ring_0" pos="0 0 0" axis="0 0 1" range="-0.261799 0.261799" actuatorfrcrange="-15 15" damping="0.5" />
+        <geom size="0.001 0.0005" type="cylinder" contype="1" conaffinity="0" density="0" group="1" class="visualgeom" />
+        <geom type="cylinder" rgba="" />
+        <body name="Right_Ring_Phaprox" quat="0.707105 0.707108 0 0">
+          <inertial pos="0.03076 0.00297 0" quat="-0.0706471 0.701039 0.069064 0.706246" mass="0.0232" diaginertia="7.91112e-06 7.14808e-06 2.3467e-06" />
+          <joint name="Right_Ring_1" pos="0 0 0" axis="0 0 1" range="0 1.48353" actuatorfrcrange="-1.15 1.15" damping="0.5" />
+          <geom type="mesh" mesh="hit-hand-2-finger-phaprox" contype="1" conaffinity="0" density="0" group="1" class="visualgeom" />
+          <geom type="mesh" rgba="" mesh="hit-hand-2-finger-phaprox" />
+          <body name="Right_Ring_Phamed" pos="0.055 0 0">
+            <inertial pos="0.0097 -0.00036 0" quat="-0.00366006 0.705533 0.0124811 0.708558" mass="0.0158" diaginertia="2.65376e-06 2.44663e-06 1.18452e-06" />
+            <joint name="Right_Ring_2" pos="0 0 0" axis="0 0 1" range="0 1.13446" actuatorfrcrange="-0.6 0.6" damping="0.5" />
+            <geom type="mesh" mesh="hit-hand-2-finger-phamed" contype="1" conaffinity="0" density="0" group="1" class="visualgeom" />
+            <geom type="mesh" rgba="" mesh="hit-hand-2-finger-phamed" />
+            <body name="Right_Ring_Phadist" pos="0.025 0 0" quat="0.707107 0 0 -0.707107">
+              <inertial pos="0.00072 0.00717 0" quat="0.501864 0.497938 -0.499541 0.500648" mass="0.0137" diaginertia="1.57882e-06 1.55191e-06 8.29695e-07" />
+              <joint name="Right_Ring_3" pos="0 0 0" axis="0 0 1" range="0 1.13446" actuatorfrcrange="-0.35 0.35" damping="0.5" />
+              <geom type="mesh" mesh="hit-hand-2-finger-phadist" contype="1" conaffinity="0" density="0" group="1" class="visualgeom" />
+              <geom type="mesh" rgba="" mesh="hit-hand-2-finger-phadist" />
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="Right_Little_Basecover" pos="0.000971571 -0.0433963 0.193584" quat="0.0616283 -0.704416 -0.0616283 -0.704416">
+        <inertial pos="0.02749 0 0" quat="0.690219 0.153618 0.153618 0.690219" mass="0.0176" diaginertia="1.9874e-06 1.43016e-06 9.56744e-07" />
+        <joint name="Right_Little_0" pos="0 0 0" axis="0 0 1" range="-0.261799 0.261799" actuatorfrcrange="-15 15" damping="0.5" />
+        <geom size="0.001 0.0005" type="cylinder" contype="1" conaffinity="0" density="0" group="1" class="visualgeom" />
+        <geom type="cylinder" rgba="" />
+        <body name="Right_Little_Phaprox" quat="0.707105 0.707108 0 0">
+          <inertial pos="0.03076 0.00297 0" quat="-0.0706471 0.701039 0.069064 0.706246" mass="0.0232" diaginertia="7.91112e-06 7.14808e-06 2.3467e-06" />
+          <joint name="Right_Little_1" pos="0 0 0" axis="0 0 1" range="0 1.48353" actuatorfrcrange="-1.15 1.15" damping="0.5" />
+          <geom type="mesh" mesh="hit-hand-2-finger-phaprox-cropped-diag" contype="1" conaffinity="0" density="0" group="1" class="visualgeom" />
+          <geom type="mesh" rgba="" mesh="hit-hand-2-finger-phaprox-cropped-diag" />
+          <body name="Right_Little_Phamed" pos="0.055 0 0">
+            <inertial pos="0.0097 -0.00036 0" quat="-0.00366006 0.705533 0.0124811 0.708558" mass="0.0158" diaginertia="2.65376e-06 2.44663e-06 1.18452e-06" />
+            <joint name="Right_Little_2" pos="0 0 0" axis="0 0 1" range="0 1.13446" actuatorfrcrange="-0.6 0.6" damping="0.5" />
+            <geom type="mesh" mesh="hit-hand-2-finger-phamed" contype="1" conaffinity="0" density="0" group="1" class="visualgeom" />
+            <geom type="mesh" rgba="" mesh="hit-hand-2-finger-phamed" />
+            <body name="Right_Little_Phadist" pos="0.025 0 0" quat="0.707107 0 0 -0.707107">
+              <inertial pos="0.00072 0.00717 0" quat="0.501864 0.497938 -0.499541 0.500648" mass="0.0137" diaginertia="1.57882e-06 1.55191e-06 8.29695e-07" />
+              <joint name="Right_Little_3" pos="0 0 0" axis="0 0 1" range="0 1.13446" actuatorfrcrange="-0.35 0.35" damping="0.5" />
+              <geom type="mesh" mesh="hit-hand-2-finger-phadist" contype="1" conaffinity="0" density="0" group="1" class="visualgeom" />
+              <geom type="mesh" rgba="" mesh="hit-hand-2-finger-phadist" />
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+
+  <actuator>
+    <motor name="Right_Thumb_0" joint="Right_Thumb_0" ctrllimited="true" ctrlrange="-15 15" gear="1" />
+    <motor name="Right_Thumb_1" joint="Right_Thumb_1" ctrllimited="true" ctrlrange="-1.15 1.15" gear="1" />
+    <motor name="Right_Thumb_2" joint="Right_Thumb_2" ctrllimited="true" ctrlrange="-0.6 0.6" gear="1" />
+    <motor name="Right_Thumb_3" joint="Right_Thumb_3" ctrllimited="true" ctrlrange="-0.35 0.35" gear="1" />
+    <motor name="Right_Index_0" joint="Right_Index_0" ctrllimited="true" ctrlrange="-15 15" gear="1" />
+    <motor name="Right_Index_1" joint="Right_Index_1" ctrllimited="true" ctrlrange="-1.15 1.15" gear="1" />
+    <motor name="Right_Index_2" joint="Right_Index_2" ctrllimited="true" ctrlrange="-0.6 0.6" gear="1" />
+    <motor name="Right_Index_3" joint="Right_Index_3" ctrllimited="true" ctrlrange="-0.35 0.35" gear="1" />
+    <motor name="Right_Middle_0" joint="Right_Middle_0" ctrllimited="true" ctrlrange="-15 15" gear="1" />
+    <motor name="Right_Middle_1" joint="Right_Middle_1" ctrllimited="true" ctrlrange="-1.15 1.15" gear="1" />
+    <motor name="Right_Middle_2" joint="Right_Middle_2" ctrllimited="true" ctrlrange="-0.6 0.6" gear="1" />
+    <motor name="Right_Middle_3" joint="Right_Middle_3" ctrllimited="true" ctrlrange="-0.35 0.35" gear="1" />
+    <motor name="Right_Ring_0" joint="Right_Ring_0" ctrllimited="true" ctrlrange="-15 15" gear="1" />
+    <motor name="Right_Ring_1" joint="Right_Ring_1" ctrllimited="true" ctrlrange="-1.15 1.15" gear="1" />
+    <motor name="Right_Ring_2" joint="Right_Ring_2" ctrllimited="true" ctrlrange="-0.6 0.6" gear="1" />
+    <motor name="Right_Ring_3" joint="Right_Ring_3" ctrllimited="true" ctrlrange="-0.35 0.35" gear="1" />
+    <motor name="Right_Little_0" joint="Right_Little_0" ctrllimited="true" ctrlrange="-15 15" gear="1" />
+    <motor name="Right_Little_1" joint="Right_Little_1" ctrllimited="true" ctrlrange="-1.15 1.15" gear="1" />
+    <motor name="Right_Little_2" joint="Right_Little_2" ctrllimited="true" ctrlrange="-0.6 0.6" gear="1" />
+    <motor name="Right_Little_3" joint="Right_Little_3" ctrllimited="true" ctrlrange="-0.35 0.35" gear="1" />
+  </actuator>
+
+  <sensor>
+    <actuatorpos name="Right_Thumb_0_p" actuator="Right_Thumb_0" />
+    <actuatorvel name="Right_Thumb_0_v" actuator="Right_Thumb_0" />
+    <actuatorfrc name="Right_Thumb_0_f" actuator="Right_Thumb_0" noise="0.001" />
+    <actuatorpos name="Right_Thumb_1_p" actuator="Right_Thumb_1" />
+    <actuatorvel name="Right_Thumb_1_v" actuator="Right_Thumb_1" />
+    <actuatorfrc name="Right_Thumb_1_f" actuator="Right_Thumb_1" noise="0.001" />
+    <actuatorpos name="Right_Thumb_2_p" actuator="Right_Thumb_2" />
+    <actuatorvel name="Right_Thumb_2_v" actuator="Right_Thumb_2" />
+    <actuatorfrc name="Right_Thumb_2_f" actuator="Right_Thumb_2" noise="0.001" />
+    <actuatorpos name="Right_Thumb_3_p" actuator="Right_Thumb_3" />
+    <actuatorvel name="Right_Thumb_3_v" actuator="Right_Thumb_3" />
+    <actuatorfrc name="Right_Thumb_3_f" actuator="Right_Thumb_3" noise="0.001" />
+    <actuatorpos name="Right_Index_0_p" actuator="Right_Index_0" />
+    <actuatorvel name="Right_Index_0_v" actuator="Right_Index_0" />
+    <actuatorfrc name="Right_Index_0_f" actuator="Right_Index_0" noise="0.001" />
+    <actuatorpos name="Right_Index_1_p" actuator="Right_Index_1" />
+    <actuatorvel name="Right_Index_1_v" actuator="Right_Index_1" />
+    <actuatorfrc name="Right_Index_1_f" actuator="Right_Index_1" noise="0.001" />
+    <actuatorpos name="Right_Index_2_p" actuator="Right_Index_2" />
+    <actuatorvel name="Right_Index_2_v" actuator="Right_Index_2" />
+    <actuatorfrc name="Right_Index_2_f" actuator="Right_Index_2" noise="0.001" />
+    <actuatorpos name="Right_Index_3_p" actuator="Right_Index_3" />
+    <actuatorvel name="Right_Index_3_v" actuator="Right_Index_3" />
+    <actuatorfrc name="Right_Index_3_f" actuator="Right_Index_3" noise="0.001" />
+    <actuatorpos name="Right_Middle_0_p" actuator="Right_Middle_0" />
+    <actuatorvel name="Right_Middle_0_v" actuator="Right_Middle_0" />
+    <actuatorfrc name="Right_Middle_0_f" actuator="Right_Middle_0" noise="0.001" />
+    <actuatorpos name="Right_Middle_1_p" actuator="Right_Middle_1" />
+    <actuatorvel name="Right_Middle_1_v" actuator="Right_Middle_1" />
+    <actuatorfrc name="Right_Middle_1_f" actuator="Right_Middle_1" noise="0.001" />
+    <actuatorpos name="Right_Middle_2_p" actuator="Right_Middle_2" />
+    <actuatorvel name="Right_Middle_2_v" actuator="Right_Middle_2" />
+    <actuatorfrc name="Right_Middle_2_f" actuator="Right_Middle_2" noise="0.001" />
+    <actuatorpos name="Right_Middle_3_p" actuator="Right_Middle_3" />
+    <actuatorvel name="Right_Middle_3_v" actuator="Right_Middle_3" />
+    <actuatorfrc name="Right_Middle_3_f" actuator="Right_Middle_3" noise="0.001" />
+    <actuatorpos name="Right_Ring_0_p" actuator="Right_Ring_0" />
+    <actuatorvel name="Right_Ring_0_v" actuator="Right_Ring_0" />
+    <actuatorfrc name="Right_Ring_0_f" actuator="Right_Ring_0" noise="0.001" />
+    <actuatorpos name="Right_Ring_1_p" actuator="Right_Ring_1" />
+    <actuatorvel name="Right_Ring_1_v" actuator="Right_Ring_1" />
+    <actuatorfrc name="Right_Ring_1_f" actuator="Right_Ring_1" noise="0.001" />
+    <actuatorpos name="Right_Ring_2_p" actuator="Right_Ring_2" />
+    <actuatorvel name="Right_Ring_2_v" actuator="Right_Ring_2" />
+    <actuatorfrc name="Right_Ring_2_f" actuator="Right_Ring_2" noise="0.001" />
+    <actuatorpos name="Right_Ring_3_p" actuator="Right_Ring_3" />
+    <actuatorvel name="Right_Ring_3_v" actuator="Right_Ring_3" />
+    <actuatorfrc name="Right_Ring_3_f" actuator="Right_Ring_3" noise="0.001" />
+    <actuatorpos name="Right_Little_0_p" actuator="Right_Little_0" />
+    <actuatorvel name="Right_Little_0_v" actuator="Right_Little_0" />
+    <actuatorfrc name="Right_Little_0_f" actuator="Right_Little_0" noise="0.001" />
+    <actuatorpos name="Right_Little_1_p" actuator="Right_Little_1" />
+    <actuatorvel name="Right_Little_1_v" actuator="Right_Little_1" />
+    <actuatorfrc name="Right_Little_1_f" actuator="Right_Little_1" noise="0.001" />
+    <actuatorpos name="Right_Little_2_p" actuator="Right_Little_2" />
+    <actuatorvel name="Right_Little_2_v" actuator="Right_Little_2" />
+    <actuatorfrc name="Right_Little_2_f" actuator="Right_Little_2" noise="0.001" />
+    <actuatorpos name="Right_Little_3_p" actuator="Right_Little_3" />
+    <actuatorvel name="Right_Little_3_v" actuator="Right_Little_3" />
+    <actuatorfrc name="Right_Little_3_f" actuator="Right_Little_3" noise="0.001" />
+    <framequat name="orientation" objtype="site" noise="0.001" objname="imu" />
+    <gyro name="angular-velocity" site="imu" noise="0.005" cutoff="34.9" />
+  </sensor>
+</mujoco>
